@@ -1,0 +1,37 @@
+.trust-conteiner {
+  display: flex;
+  flex-direction: column;
+
+  height: 20rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: $white-bg;
+  
+  p {
+    margin-top: 0.5rem;
+    line-height: 1.5rem;
+  }
+
+  .feedbacks-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .feedback {
+      display: flex;
+      flex-direction: column;
+      background-color: $green-bg-mirror;
+      padding: 0.5rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+
+      p {
+        font-size: 1.25rem;
+        font-weight: 600;
+        font-style: italic;
+      }
+      span {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}

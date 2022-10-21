@@ -1,0 +1,22 @@
+
+$primary-font: 'Urbanist', sans-serif;
+
+$assets-path: '../assets';
+
+$primary-color: #1ace50;
+$white-bg: #fafafa;
+$green-bg-mirror: rgba(26, 206, 80, 0.5);
+
+$font-color-green: #137731;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $primary-font;
+  font-smooth: always;
+}
+
+@import '../components/Header/Header';
+@import '../components/Modal/Modal';
+@import '../components/Trust/Trust';

@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+  font-smooth: always;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fafafa;
+  height: 4rem;
+  width: 100%;
+  padding: 0 1rem;
+}
+.header-container img {
+  height: 100%;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 20rem;
+  width: 100%;
+  padding: 1rem;
+  background: url(../assets/office-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.modal-container section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.modal-container section h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.25rem;
+}
+.modal-container section h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  color: #137731;
+}
+.modal-container section h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+
+.trust-conteiner {
+  display: flex;
+  flex-direction: column;
+  height: 20rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: #fafafa;
+}
+.trust-conteiner p {
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+}
+.trust-conteiner .feedbacks-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.trust-conteiner .feedbacks-wrapper .feedback {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(26, 206, 80, 0.5);
+  padding: 0.5rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+.trust-conteiner .feedbacks-wrapper .feedback p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: italic;
+}
+.trust-conteiner .feedbacks-wrapper .feedback span {
+  margin-top: 0.5rem;
+}/*# sourceMappingURL=App.css.map */
