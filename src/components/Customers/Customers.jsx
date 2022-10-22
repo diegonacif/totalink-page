@@ -8,7 +8,7 @@ import unilarLogo from '../../assets/customer-logos/unilar.png';
 export const Customers = () => {
   return (
     <div className="customers-container">
-      <hr />
+      {/* <hr /> */}
       <h1>Conheça alguns de nossos clientes:</h1>
 
       <div className="customers-wrapper">
