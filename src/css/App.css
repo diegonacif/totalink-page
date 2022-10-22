@@ -3,7 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Urbanist", sans-serif;
-  font-smooth: always;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .header-container {
@@ -56,7 +62,8 @@
 .trust-conteiner {
   display: flex;
   flex-direction: column;
-  height: 20rem;
+  height: 100%;
+  min-height: 20rem;
   width: 100%;
   padding: 1rem;
   background-color: #fafafa;
@@ -84,4 +91,54 @@
 }
 .trust-conteiner .feedbacks-wrapper .feedback span {
   margin-top: 0.5rem;
+}
+
+.customers-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  min-height: 20rem;
+}
+.customers-container hr {
+  border-top: 1px solid rgba(26, 206, 80, 0.5);
+  border-style: solid none none none;
+  width: 100%;
+  height: 1px;
+}
+.customers-container h1 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.customers-container .customers-wrapper {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  justify-items: center;
+  align-items: center;
+  width: 7rem;
+  height: 7rem;
+  overflow: hidden;
+}
+.customers-container .customers-wrapper img {
+  max-width: 100%;
+}
+.customers-container .customers-wrapper #artCLogo {
+  width: 5.5rem;
+}
+.customers-container .customers-wrapper #interfortLogo {
+  width: 6rem;
+}
+.customers-container .customers-wrapper #mareLogo {
+  width: 6.5rem;
+}
+.customers-container .customers-wrapper #sterbomLogo {
+  width: 4rem;
+}
+.customers-container .customers-wrapper #unilarLogo {
+  width: 5rem;
 }/*# sourceMappingURL=App.css.map */

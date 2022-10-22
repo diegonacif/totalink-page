@@ -14,9 +14,16 @@ $font-color-green: #137731;
   padding: 0;
   box-sizing: border-box;
   font-family: $primary-font;
-  font-smooth: always;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 @import '../components/Header/Header';
 @import '../components/Modal/Modal';
 @import '../components/Trust/Trust';
+@import '../components/Customers/Customers';
