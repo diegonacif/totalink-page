@@ -134,6 +134,10 @@ main {
 .customers-container .customers-wrapper img {
   max-width: 100%;
 }
+.customers-container .customers-wrapper span {
+  align-self: end;
+  padding-bottom: 0.5rem;
+}
 .customers-container .customers-wrapper #artCLogo {
   width: 5.5rem;
 }
