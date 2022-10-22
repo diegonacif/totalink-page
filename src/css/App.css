@@ -152,4 +152,33 @@ main {
 }
 .customers-container .customers-wrapper #unilarLogo {
   width: 5rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.footer .address {
+  display: flex;
+  flex-direction: column;
+  background-color: #cecece;
+  padding: 1rem;
+}
+.footer .address span {
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+}
+.footer .address span + h4 {
+  margin-top: 0.5rem;
+}
+.footer .copyrights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2.5rem;
+  background-color: #0f0f0f;
+  color: #fafafa;
+  font-size: 0.875rem;
 }/*# sourceMappingURL=App.css.map */
