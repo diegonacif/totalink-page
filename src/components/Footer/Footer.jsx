@@ -1,4 +1,5 @@
 import '../../css/App.css';
+import { MapsButton } from '../MapsButton/MapsButton';
 
 export const Footer = () => {
   return (
@@ -10,6 +11,7 @@ export const Footer = () => {
           Centro, Parnamirim/RN<br />
           CEP 59140-295<br />
         </span>
+        <MapsButton />
         <h4>Fones:</h4>
         <span>
           (84) 2020-5444 / 

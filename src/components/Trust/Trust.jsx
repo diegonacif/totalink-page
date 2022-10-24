@@ -13,10 +13,7 @@ export const Trust = () => {
           <p>"Quando precisamos o atendimento foi imediato e o nosso problema resolvido através do comodato."</p>
           <span>Samuel Gondim - SGS Soluções</span>
         </div>
-        <div className="feedback">
-          <p>"Nhênhênhê nhênhê nhenhê nhê!"</p>
-          <span>Amélia - Unigráfica</span>
-        </div>
+       
       </section>
     </div>
   )

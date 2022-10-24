@@ -12,7 +12,7 @@ export const WhatsappButton = () => {
 
   return (
     <>
-      <div className='whatsapp-button' onClick={() => handleShowExpansion()}>
+      <div className='whatsapp-button-container' onClick={() => handleShowExpansion()}>
         <img 
           src={whatsappLogo}
           alt="Botão Whatsapp"
