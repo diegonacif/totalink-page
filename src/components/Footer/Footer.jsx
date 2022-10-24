@@ -1,3 +1,5 @@
+import '../../css/App.css';
+
 export const Footer = () => {
   return (
     <div className="footer">

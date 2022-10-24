@@ -101,6 +101,7 @@ main {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
+  background-color: #fafafa;
   width: 100%;
   max-width: 100vw;
   height: 100%;
@@ -181,4 +182,29 @@ main {
   background-color: #0f0f0f;
   color: #fafafa;
   font-size: 0.875rem;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.whatsapp-button img {
+  width: 3rem;
+  opacity: 0.8;
+}
+
+.whatsapp-expansion {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 8rem;
+  height: 10rem;
+  background-color: rgba(26, 206, 80, 0.5);
 }/*# sourceMappingURL=App.css.map */

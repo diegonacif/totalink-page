@@ -1,0 +1,21 @@
+.whatsapp-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  width: fit-content;
+  height: fit-content;
+
+  img {
+    width: 3rem;
+    opacity: 0.8;
+  }
+}
+
+.whatsapp-expansion {
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 8rem;
+  height: 10rem;
+  background-color: $green-bg-mirror;
+}
