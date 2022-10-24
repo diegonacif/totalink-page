@@ -4,6 +4,7 @@ import interfortLogo from '../../assets/customer-logos/interfort.png';
 import mareLogo from '../../assets/customer-logos/mare-mansa.png';
 import sterbomLogo from '../../assets/customer-logos/sterbom.png';
 import unilarLogo from '../../assets/customer-logos/unilar.png';
+import natalcorLogo from '../../assets/customer-logos/natalcor.png';
 
 export const Customers = () => {
   return (
@@ -30,6 +31,10 @@ export const Customers = () => {
       <div className="customers-wrapper">
         <img src={unilarLogo} alt="ArtC logo" id="unilarLogo" />
         <span>Unilar</span>
+      </div>
+      <div className="customers-wrapper">
+        <img src={natalcorLogo} alt="ArtC logo" id="natalcorLogo" />
+        <span>Natalcor</span>
       </div>
     </div>
   );
