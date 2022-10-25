@@ -241,15 +241,16 @@ main {
 
 .whatsapp-button-container {
   position: absolute;
-  bottom: 3.8rem;
-  right: 2.4rem;
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
   align-self: flex-start;
 }
 .whatsapp-button-container img {
-  width: 3rem;
+  width: 100%;
   transition: opacity 0.1s;
 }
 .whatsapp-button-container img:hover {
@@ -263,9 +264,7 @@ main {
 }
 @media only screen and (min-width: 1025px) {
   .whatsapp-button-container {
-    top: 50%;
-    right: 4rem;
-    transform: translateY(-50%);
+    right: 5rem;
   }
 }
 
@@ -300,7 +299,8 @@ main {
   width: 2.5rem;
   height: 2.5rem;
   position: absolute;
-  top: 3.5rem;
+  top: 50%;
+  transform: translateY(-50%);
   right: 2.5rem;
 }
 .maps-button-container img {
@@ -309,8 +309,6 @@ main {
 }
 @media only screen and (min-width: 1025px) {
   .maps-button-container {
-    top: 50%;
-    right: 4rem;
-    transform: translateY(-50%);
+    right: 5rem;
   }
 }/*# sourceMappingURL=App.css.map */

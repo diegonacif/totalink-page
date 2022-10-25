@@ -1,11 +1,11 @@
 .whatsapp-button-container {
-  // position: fixed;
-  // bottom: 1rem;
-  // right: 1rem;
+  
   position: absolute;
-  bottom: 3.8rem;
-  right: 2.4rem;
-
+  right: 2.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  // bottom: 3.8rem;
+  
   width: 2.5rem;
   height: 2.5rem;
   display: flex;
@@ -13,7 +13,7 @@
 
   
   img {
-    width: 3rem;
+    width: 100%;
     // opacity: 0.8;
     transition: opacity 0.1s;
 
@@ -30,9 +30,7 @@
   }
 
   @media only screen and ($notebook-size) {
-    top: 50%;
-    right: 4rem;
-    transform: translateY(-50%);
+    right: 5rem;
   }
 }
 
