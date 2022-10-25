@@ -34,4 +34,7 @@
       line-height: 1.25rem;
     }
   }
+  @media only screen and ($notebook-size) {
+    padding: 1rem 4rem;
+  }
 }

@@ -3,15 +3,20 @@ $primary-font: 'Urbanist', sans-serif;
 
 $assets-path: '../assets';
 
+// Colors Variables
 $primary-color: #1ace50;
 $white-bg: #fafafa;
 $gray-bg: #cecece;
+$darkgray-bg: #707070;
 $black-bg: #0f0f0f;
-
 $green-bg-mirror-50: rgba(26, 206, 80, 0.5);
 $green-bg-mirror-95: rgba(23, 161, 65, 0.95);
-
 $font-color-green: #137731;
+
+// Media Variables
+$tablet-size: "min-width: 481px";
+$notebook-size: "min-width: 1025px";
+$desktop-size: "min-width: 2561px";
 
 * {
   margin: 0;

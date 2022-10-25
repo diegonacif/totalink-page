@@ -4,22 +4,34 @@
   width: 100%;
   position: relative;
 
-  .address {
+  .information {
     display: flex;
     flex-direction: column;
     background-color: $gray-bg;
     padding: 1rem;
 
-    span {
-      margin-top: 0.5rem;
-      line-height: 1.5rem;
+    .address {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      span {
+        margin-top: 0.5rem;
+        line-height: 1.5rem;
+      }
+      h4:nth-of-type(2) {
+        margin-top: 0.5rem;
+      }
+      span + h4 {
+        margin-top: 0.5rem;
+      }
     }
 
-    span + h4 {
-      margin-top: 0.5rem;
-    }
-    
-    h4:nth-of-type(2) {
+    .phones {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
       margin-top: 0.5rem;
     }
 
@@ -30,6 +42,22 @@
 
       &:first-of-type {
         margin-top: 0.5rem;
+      }
+    }
+
+    @media only screen and ($notebook-size) {
+      padding: 1rem 4rem;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .address {
+        padding: 0 2rem;
+        border-right: 1px solid $darkgray-bg;
+      }
+
+      .phones {
+        padding: 0 2rem;
       }
     }
   }

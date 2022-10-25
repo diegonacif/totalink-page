@@ -6,8 +6,8 @@
   bottom: 3.8rem;
   right: 2.4rem;
 
-  width: 2.9rem;
-  height: 2.9rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   align-self: flex-start;
 
@@ -27,6 +27,12 @@
   .solid {
     opacity: 1;
     transition: opacity 0.3s;
+  }
+
+  @media only screen and ($notebook-size) {
+    top: 50%;
+    right: 4rem;
+    transform: translateY(-50%);
   }
 }
 

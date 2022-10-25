@@ -11,4 +11,8 @@
   img {
     height: 100%;
   }
+
+  @media only screen and ($notebook-size) {
+    padding: 0 4rem;
+  }
 }
