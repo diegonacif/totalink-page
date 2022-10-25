@@ -36,6 +36,7 @@ export const Customers = () => {
         <img src={natalcorLogo} alt="ArtC logo" id="natalcorLogo" />
         <span>Natalcor</span>
       </div>
+      
     </div>
   );
 };

@@ -13,10 +13,12 @@ export const Footer = () => {
         </span>
         <MapsButton />
         <h4>Fones:</h4>
-        <span>
+        <a href="tel:8420205444">(84) 2020-5444</a>
+        <a href="tel:8432722149">(84) 3272-2149</a>
+        {/* <span>
           (84) 2020-5444 / 
           (84) 3272-2149
-        </span>
+        </span> */}
       </div>
       <div className="copyrights">
         <span>© 2022 Total Ink - Todos os direitos reservados.</span>
