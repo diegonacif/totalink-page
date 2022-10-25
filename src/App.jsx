@@ -15,7 +15,7 @@ function App() {
       <Trust />
       <Customers />
       <Footer />
-      <WhatsappButton />
+      {/* <WhatsappButton /> */}
     </main>
     )
 }
