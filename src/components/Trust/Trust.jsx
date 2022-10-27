@@ -2,7 +2,7 @@ import '../../css/App.css';
 
 export const Trust = () => {
   return (
-    <div className="trust-conteiner">
+    <div className="trust-container">
       <section className="resume-text">
         <h1>Uma palavra que nos resume: Confiabilidade</h1>
         <p>Atuamos no mercado desde 2004. Nos tornamos referência em qualidade na remanufatura de cartuchos para impressoras jato de tinta e laser. A Total Ink dispõe de equipamentos com tecnologia de ponta alemã. A única no estado com corpo de funcionários capacitados e em frequente atualização.<br /><br />
