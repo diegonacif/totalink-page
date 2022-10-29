@@ -1,0 +1,49 @@
+.menu-button-container {
+  position: relative;
+
+  svg {
+    cursor: pointer;
+  }
+
+  .menu-modal {
+    position: absolute;
+    top: 2.3rem;
+    right: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+    width: 12rem;
+    height: max-content;
+    padding: 1rem 0.5rem;
+    border-radius: 8px;
+
+    background-color: $black-bg-mirror-95;
+    color: $white-bg;
+    font-weight: bold;
+    
+    .menu-item {
+      width: 100%;
+      text-align: center;
+      cursor: pointer;
+      line-height: 1.75rem;
+      border-radius: 4px;
+      transition: background-color 0.1s;
+
+      & + .menu-item {
+        margin-top: 0.75rem;
+      }
+    }
+  }
+
+  @media only screen and ($notebook-size) {
+    .menu-item {
+      &:hover {
+        background-color: $green-bg-mirror-50;
+        transition: background-color 0.2s;
+      }
+    }
+  }
+}
