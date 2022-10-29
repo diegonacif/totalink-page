@@ -24,6 +24,7 @@ export const MenuButton = () => {
           <div className="menu-item">
             <Link to="/">Home</Link>
           </div>
+          <hr />
           <div className="menu-item">Solicitar Orçamento</div>
           <div className="menu-item">
             <Link to="faq">FAQ</Link>

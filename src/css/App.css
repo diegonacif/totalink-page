@@ -340,6 +340,14 @@
   color: #fafafa;
   font-weight: bold;
 }
+.menu-button-container .menu-modal hr {
+  width: 90%;
+  margin: 0.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
 .menu-button-container .menu-modal .menu-item {
   width: 100%;
   text-align: center;
