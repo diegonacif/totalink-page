@@ -5,11 +5,12 @@ $assets-path: '../assets';
 
 // Colors Variables
 $primary-color: #1ace50;
+$primary-color-2: #108a35;
 $white-bg: #fafafa;
 $gray-bg: #cecece;
 $darkgray-bg: #707070;
 $black-bg: #0f0f0f;
-$black-bg-mirror-95: rgba(15, 15, 15, 0.85);
+$black-bg-mirror-95: rgba(15, 15, 15, 0.95);
 $green-bg-mirror-50: rgba(26, 206, 80, 0.5);
 $green-bg-mirror-95: rgba(23, 161, 65, 0.95);
 $font-color-green: #137731;
@@ -24,14 +25,21 @@ $desktop-size: "min-width: 2561px";
   padding: 0;
   box-sizing: border-box;
   font-family: $primary-font;
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
-}
+
 
 @import '../components/Header/Header';
 @import '../components/Modal/Modal';
@@ -41,3 +49,4 @@ main {
 @import '../components/WhatsappButton/WhatsappButton';
 @import '../components/MapsButton/MapsButton';
 @import '../components/MenuButton/MenuButton';
+@import '../pages/FAQ/FAQ';

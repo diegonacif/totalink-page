@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { List, X } from 'phosphor-react'
 
 import '../../css/App.css';
+import { Link } from 'react-router-dom';
 
 export const MenuButton = () => {
 
@@ -20,9 +21,13 @@ export const MenuButton = () => {
         isMenuOpen
         ?
         <div className="menu-modal">
+          <div className="menu-item">
+            <Link to="/">Home</Link>
+          </div>
           <div className="menu-item">Solicitar Orçamento</div>
-          <div className="menu-item">FAQ</div>
-          <div className="menu-item">Item 3</div>
+          <div className="menu-item">
+            <Link to="faq">FAQ</Link>
+          </div>
         </div>
         :
         null

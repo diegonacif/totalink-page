@@ -4,12 +4,15 @@
   box-sizing: border-box;
   font-family: "Urbanist", sans-serif;
 }
-
-main {
+* main {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+}
+* a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .header-container {
@@ -333,7 +336,7 @@ main {
   height: max-content;
   padding: 1rem 0.5rem;
   border-radius: 8px;
-  background-color: rgba(15, 15, 15, 0.85);
+  background-color: rgba(15, 15, 15, 0.95);
   color: #fafafa;
   font-weight: bold;
 }
@@ -352,5 +355,56 @@ main {
   .menu-button-container .menu-item:hover {
     background-color: rgba(26, 206, 80, 0.5);
     transition: background-color 0.2s;
+  }
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+.faq-container .faq-categories {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+}
+.faq-container .faq-categories .faq-category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  width: 100%;
+  background-color: #108a35;
+  border-radius: 8px;
+}
+.faq-container .faq-categories .faq-category + .faq-category {
+  margin-top: 1rem;
+}
+.faq-container .faq-categories .faq-category a {
+  color: #fafafa;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+@media only screen and (min-width: 1025px) {
+  .faq-container {
+    padding: 0 4rem;
+  }
+  .faq-container .faq-categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .faq-container .faq-categories .faq-category {
+    width: 15rem;
+  }
+  .faq-container .faq-categories .faq-category + .faq-category {
+    margin: 0;
   }
 }/*# sourceMappingURL=App.css.map */
