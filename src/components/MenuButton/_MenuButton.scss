@@ -34,6 +34,9 @@
     }
     
     .menu-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       text-align: center;
       cursor: pointer;
@@ -43,6 +46,11 @@
 
       & + .menu-item {
         margin-top: 0.75rem;
+      }
+
+      a {
+        width: 100%;
+        height: 100%;
       }
     }
   }

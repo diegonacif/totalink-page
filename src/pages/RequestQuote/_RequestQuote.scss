@@ -1,0 +1,19 @@
+.request-quote-container {
+  header {
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(#{$assets-path}/green-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1rem;
+  
+    h1 {
+      font-size: 2rem;
+      line-height: 2.75rem;
+    }
+  }
+}

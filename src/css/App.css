@@ -349,6 +349,9 @@
   border-right: 0;
 }
 .menu-button-container .menu-modal .menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   text-align: center;
   cursor: pointer;
@@ -358,6 +361,10 @@
 }
 .menu-button-container .menu-modal .menu-item + .menu-item {
   margin-top: 0.75rem;
+}
+.menu-button-container .menu-modal .menu-item a {
+  width: 100%;
+  height: 100%;
 }
 @media only screen and (min-width: 1025px) {
   .menu-button-container .menu-item:hover {
@@ -385,6 +392,10 @@
   background-repeat: no-repeat;
   background-position: center;
   padding: 1rem;
+}
+.faq-container header h1 {
+  font-size: 2rem;
+  line-height: 2.75rem;
 }
 .faq-container .faq-categories {
   display: flex;
@@ -426,4 +437,21 @@
   .faq-container .faq-categories .faq-category + .faq-category {
     margin: 0;
   }
+}
+
+.request-quote-container header {
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../assets/green-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+}
+.request-quote-container header h1 {
+  font-size: 2rem;
+  line-height: 2.75rem;
 }/*# sourceMappingURL=App.css.map */
