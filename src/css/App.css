@@ -374,6 +374,18 @@
   min-height: 100vh;
   background-color: #fafafa;
 }
+.faq-container header {
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../assets/green-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+}
 .faq-container .faq-categories {
   display: flex;
   flex-direction: column;
@@ -399,15 +411,14 @@
   font-weight: 600;
 }
 @media only screen and (min-width: 1025px) {
-  .faq-container {
-    padding: 0 4rem;
-  }
   .faq-container .faq-categories {
+    padding: 0 4rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+    margin-top: 2rem;
   }
   .faq-container .faq-categories .faq-category {
     width: 15rem;

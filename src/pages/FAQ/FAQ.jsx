@@ -8,6 +8,9 @@ export const FAQ = () => {
     <>
       <Header />
       <div className="faq-container">
+        <header>
+          <h1>Encontre respostas rápidas pro seu problema, nas categorias abaixo.</h1>
+        </header>
         <div className="faq-categories">
           <div className="faq-category">
             <Link to="#">Toner</Link>

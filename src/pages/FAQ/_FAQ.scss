@@ -6,6 +6,19 @@
   min-height: 100vh;
   background-color: $white-bg;
 
+  header {
+    height: 20rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(#{$assets-path}/green-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 1rem;
+  }
+
   .faq-categories {
     display: flex;
     flex-direction: column;
@@ -35,14 +48,15 @@
   }
 
   @media only screen and ($notebook-size) {
-    padding: 0 4rem;
-
+    
     .faq-categories {
+      padding: 0 4rem;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
       gap: 1rem;
+      margin-top: 2rem;
 
       .faq-category {
         width: 15rem;
