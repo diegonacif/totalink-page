@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 import whatsappLogo from '../../assets/whatsapp-icon.svg';
 import whatsQr from '../../assets/whats-qr.png';
 
-export const WhatsappButton = (address) => {
+export const WhatsappButton = ({ address }) => {
 
   // 'https://wa.me/message/VUCLASIXKAW7D1?src=qr'
 
   // Whatsapp Address
   const whatsappAddress = address;
 
-  console.log(address);
+  
 
   // Expanded Wrapper
   const [showExpansion, setShowExpansion] = useState(false);
@@ -32,6 +32,7 @@ export const WhatsappButton = (address) => {
     return () => window.removeEventListener('resize', updateMedia);
   }, []);
 
+  console.log(whatsappAddress)
 
   return (
     <>
@@ -58,7 +59,7 @@ export const WhatsappButton = (address) => {
           <span>Leia o QR Code</span>
           <img src={whatsQr} alt="Whatsapp QR Code" />
           <span>ou clique no link abaixo</span>
-          <Link to={whatsappAddress}>Whatsapp Total Ink</Link>
+          <a href={whatsappAddress}>Whatsapp Total Ink</a>
         </div>
       }
       
