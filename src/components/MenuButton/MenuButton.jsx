@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 // Outside Click (Hook)
 import { useOnClickOutside } from 'usehooks-ts'
-import { useTransition, animated } from 'react-spring';
+import { useTransition, animated } from '@react-spring/web';
 
 export const MenuButton = () => {
 
@@ -25,10 +25,12 @@ export const MenuButton = () => {
   useOnClickOutside(refContainer, handleClickOutside)
 
   // Modal Animation
-  const transition = useTransition(isMenuOpen, {
+  const transitions = useTransition(isMenuOpen, {
     from: {opacity: 0},
     enter: {opacity: 1},
     leave: {opacity: 0},
+    // config: config.molasses,
+    onRest: () => setIsMenuOpen(!isMenuOpen),
   });
   
   return (
@@ -42,7 +44,7 @@ export const MenuButton = () => {
         <X size={32} weight="bold" onClick={() => handleMenuOpen()} /> :
         <List size={32} weight="bold" onClick={() => handleMenuOpen()} />
       }
-      {/* {
+      {
         isMenuOpen
         ?
         <div className="menu-modal">
@@ -59,27 +61,14 @@ export const MenuButton = () => {
         </div>
         :
         null
-      } */}
-      <div className="test">
-      {
-        transition((style, item) => {
-          item ? 
-          <animated.div className="menu-modal" style={style}>
-            <div className="menu-item">
-              <Link to="/">Home</Link>
-            </div>
-            <hr />
-            <div className="menu-item">
-              <Link to="/quote">Solicitar Orçamento</Link>
-            </div>
-            <div className="menu-item">
-              <Link to="/faq">FAQ</Link>
-            </div>
-          </animated.div> :
-          '';
-        })
       }
-      </div>
+      {
+        transitions(
+          (styles, item) => item && <animated.div style={styles}>Opa doutor!</animated.div>
+        )
+      }
+      
+      
       
     </div>
   )

@@ -322,6 +322,11 @@
 .menu-button-container svg {
   cursor: pointer;
 }
+.menu-button-container .test {
+  display: flex;
+  width: 20rem;
+  height: 20rem;
+}
 .menu-button-container .menu-modal {
   position: absolute;
   top: 2.3rem;
