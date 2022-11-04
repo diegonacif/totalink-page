@@ -8,6 +8,9 @@ import whatsQr from '../../assets/whats-qr.png';
 // Outside Click (Hook)
 import { useOnClickOutside } from 'usehooks-ts'
 
+// Conditional Rendering Transition Lib
+import { useTransition, animated } from '@react-spring/web';
+
 export const WhatsappButton = ({ address }) => {
 
   // Whatsapp da loja
@@ -43,6 +46,14 @@ export const WhatsappButton = ({ address }) => {
 
   useOnClickOutside(refContainer, handleClickOutside)
 
+  // Modal Animation
+  const transitions = useTransition(showExpansion, {
+    from: {opacity: 0},
+    enter: {opacity: 1},
+    leave: {opacity: 0},
+    config: {duration: 200},
+  });
+
 
   return (
     <>
@@ -54,6 +65,7 @@ export const WhatsappButton = ({ address }) => {
           alt="Botão Whatsapp"
           className={showExpansion ? 'solid' : null}
           onClick={() => handleShowExpansion()}
+          ref={refContainer}
           /> :
           <img 
           src={whatsappLogo}
@@ -63,19 +75,21 @@ export const WhatsappButton = ({ address }) => {
           />
         }
       </div>
-      {
-        showExpansion && 
-        <div 
-          className="whatsapp-expansion" 
-          ref={refContainer}
-        >
-          <span>Leia o QR Code</span>
-          <img src={whatsQr} alt="Whatsapp QR Code" />
-          <span>ou clique no link abaixo</span>
-          <a href={whatsappAddress}>Whatsapp Total Ink</a>
-        </div>
+      { 
+        transitions(
+          (styles, item) => item &&
+            <animated.div 
+              className="whatsapp-expansion"
+              
+              style={styles}
+            >
+              <span>Leia o QR Code</span>
+              <img src={whatsQr} alt="Whatsapp QR Code" />
+              <span>ou clique no link abaixo</span>
+              <a href={whatsappAddress}>Whatsapp Total Ink</a>
+            </animated.div>
+        )
       }
-      
     </>
   )
 }

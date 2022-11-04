@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 // Outside Click (Hook)
 import { useOnClickOutside } from 'usehooks-ts'
+
+// Conditional Rendering Transition Lib
 import { useTransition, animated } from '@react-spring/web';
 
 export const MenuButton = () => {
@@ -29,8 +31,7 @@ export const MenuButton = () => {
     from: {opacity: 0},
     enter: {opacity: 1},
     leave: {opacity: 0},
-    // config: config.molasses,
-    onRest: () => setIsMenuOpen(!isMenuOpen),
+    config: {duration: 200},
   });
   
   return (
@@ -44,32 +45,25 @@ export const MenuButton = () => {
         <X size={32} weight="bold" onClick={() => handleMenuOpen()} /> :
         <List size={32} weight="bold" onClick={() => handleMenuOpen()} />
       }
-      {
-        isMenuOpen
-        ?
-        <div className="menu-modal">
-          <div className="menu-item">
-            <Link to="/">Home</Link>
-          </div>
-          <hr />
-          <div className="menu-item">
-            <Link to="/quote">Solicitar Orçamento</Link>
-          </div>
-          <div className="menu-item">
-            <Link to="/faq">FAQ</Link>
-          </div>
-        </div>
-        :
-        null
-      }
+      
+      {/* Conditional Rendering with Transition */}
       {
         transitions(
-          (styles, item) => item && <animated.div style={styles}>Opa doutor!</animated.div>
+          (styles, item) => item &&
+            <animated.div className="menu-modal" style={styles}>
+              <div className="menu-item">
+                <Link to="/">Home</Link>
+              </div>
+              <hr />
+              <div className="menu-item">
+                <Link to="/quote">Solicitar Orçamento</Link>
+              </div>
+              <div className="menu-item">
+                <Link to="/faq">FAQ</Link>
+              </div>
+            </animated.div>
         )
       }
-      
-      
-      
     </div>
   )
 }
