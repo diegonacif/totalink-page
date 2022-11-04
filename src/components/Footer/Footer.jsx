@@ -20,7 +20,7 @@ export const Footer = () => {
         </div>
 
         <div className="phones">
-          <h4>Fones:</h4>
+          <h4>Ligue:</h4>
           <a href={phone1}>(84) 2020-5444</a>
           <a href={phone2}>(84) 3272-2149</a>
           <WhatsappButton address="https://wa.me/message/VUCLASIXKAW7D1?src=qr" />
