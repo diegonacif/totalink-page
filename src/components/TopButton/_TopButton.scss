@@ -1,0 +1,21 @@
+.top-button-container {
+
+  position: fixed;
+  bottom: 2.75rem;
+  right: 0.5rem;
+
+  cursor: pointer;
+
+  svg {
+    transition: all 0.3s;
+  }
+
+  svg:hover {
+    filter: brightness(0.7);
+    transition: all 0.3s;
+  }
+
+  @media only screen and ($notebook-size) {
+    right: 1.5rem;
+  }
+}

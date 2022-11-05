@@ -377,6 +377,25 @@
   }
 }
 
+.top-button-container {
+  position: fixed;
+  bottom: 2.75rem;
+  right: 0.5rem;
+  cursor: pointer;
+}
+.top-button-container svg {
+  transition: all 0.3s;
+}
+.top-button-container svg:hover {
+  filter: brightness(0.7);
+  transition: all 0.3s;
+}
+@media only screen and (min-width: 1025px) {
+  .top-button-container {
+    right: 1.5rem;
+  }
+}
+
 .faq-container {
   display: flex;
   flex-direction: column;
