@@ -36,6 +36,16 @@ $desktop-size: "min-width: 2561px";
   a {
     text-decoration: none;
     color: inherit;
+    -webkit-tap-highlight-color: transparent;
+    &:focus-visible, &:focus-within, &:focus, &:active, &:target {
+      border: 0;
+      outline: 0;
+      background-color: transparent;
+    }
+  }
+
+  img {
+    -webkit-tap-highlight-color: transparent; // remove blue highlight on tap
   }
 }
 
