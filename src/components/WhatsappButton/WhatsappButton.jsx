@@ -80,7 +80,6 @@ export const WhatsappButton = ({ address }) => {
           (styles, item) => item &&
             <animated.div 
               className="whatsapp-expansion"
-              
               style={styles}
             >
               <span>Leia o QR Code</span>

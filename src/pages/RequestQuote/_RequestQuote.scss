@@ -1,8 +1,10 @@
 .request-quote-container {
   header {
+    position: relative;
     height: 20rem;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: url(#{$assets-path}/green-bg.jpg);
@@ -14,6 +16,58 @@
     h1 {
       font-size: 2rem;
       line-height: 2.75rem;
+    }
+
+    .here-link {
+      color: $font-color-green;
+      cursor: pointer;
+
+      transition: filter 0.1s;
+    }
+
+    .whatsapp-expansion {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    
+      position: absolute;
+      top: -2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 15rem;
+      height: fit-content;
+      padding: 1rem 0;
+      background-color: $green-bg-mirror-95;
+      border-radius: 8px;
+    
+      font-size: 1.2rem;
+    
+      img {
+        width: 90%;
+      }
+    
+      a {
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+        padding: 0 1rem;
+        text-align: center;
+      }
+        
+    }
+  }
+
+
+  @media only screen and ($notebook-size) {
+    header {
+      padding: 1rem 4rem;
+
+      .here-link:hover {
+        filter: brightness(0.7);
+        transition: filter 0.3s;
+      }
     }
   }
 }
