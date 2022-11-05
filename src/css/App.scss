@@ -25,6 +25,7 @@ $desktop-size: "min-width: 2561px";
   padding: 0;
   box-sizing: border-box;
   font-family: $primary-font;
+  -webkit-tap-highlight-color: transparent; // remove color highlight on tap
 
   main {
     display: flex;
@@ -36,16 +37,12 @@ $desktop-size: "min-width: 2561px";
   a {
     text-decoration: none;
     color: inherit;
-    -webkit-tap-highlight-color: transparent;
+    // -webkit-tap-highlight-color: transparent;
     &:focus-visible, &:focus-within, &:focus, &:active, &:target {
       border: 0;
       outline: 0;
       background-color: transparent;
     }
-  }
-
-  img {
-    -webkit-tap-highlight-color: transparent; // remove blue highlight on tap
   }
 }
 
