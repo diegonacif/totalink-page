@@ -46,9 +46,9 @@ export const RequestQuote = () => {
 
   // Modal Animation
   const transitions = useTransition(showExpansion, {
-    from: { transform: "translateX(-50%)", y: 50, opacity: 0 },
+    from: { transform: "translateX(-50%)", y: 15, opacity: 0 },
     enter: { y: 0, opacity: 1 },
-    leave: { y: 50, opacity: 0 },
+    leave: { y: 15, opacity: 0 },
     config: { duration: 400, easing: easings.easeInOutCubic },
   });
 

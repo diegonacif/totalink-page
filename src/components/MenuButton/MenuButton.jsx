@@ -28,9 +28,9 @@ export const MenuButton = () => {
 
   // Modal Animation
   const transitions = useTransition(isMenuOpen, {
-    from: {opacity: 0},
-    enter: {opacity: 1},
-    leave: {opacity: 0},
+    from: { x: 10, y: -10, opacity: 0 },
+    enter: { x: 0, y: 0, opacity: 1 },
+    leave: { x: 10, y: -10, opacity: 0 },
     config: {duration: 200},
   });
   

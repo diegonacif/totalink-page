@@ -48,9 +48,9 @@ export const WhatsappButton = ({ address }) => {
 
   // Modal Animation
   const transitions = useTransition(showExpansion, {
-    from: {opacity: 0},
-    enter: {opacity: 1},
-    leave: {opacity: 0},
+    from: { x: 5, y: 5, opacity: 0 },
+    enter: { x: 0, y: 0, opacity: 1 },
+    leave: { x: 5, y: 5, opacity: 0 },
     config: {duration: 200},
   });
 
