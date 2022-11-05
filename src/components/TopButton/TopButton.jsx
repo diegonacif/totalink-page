@@ -9,10 +9,10 @@ export const TopButton = () => {
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 200){
+    if (scrolled > 400){
       setIsVisible(true);
     }
-    else if (scrolled <= 300){
+    else if (scrolled <= 400){
       setIsVisible(false);
     }
   };
@@ -30,7 +30,7 @@ export const TopButton = () => {
     <div className="top-button-container">
       <ArrowCircleUp 
         size={40} 
-        color="#095531" 
+        color="#8d8c8c" 
         weight="duotone" 
         onClick={scrollToTop}
         style={{ display: isVisible ? 'inline' : 'none' }}

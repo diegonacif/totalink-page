@@ -27,6 +27,9 @@
 .header-container img {
   height: 100%;
 }
+.header-container a {
+  height: 100%;
+}
 @media only screen and (min-width: 1025px) {
   .header-container {
     padding: 0 4rem;
