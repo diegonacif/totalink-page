@@ -1,14 +1,16 @@
 import { useState, useRef, useEffect } from 'react'
-import { List, X } from 'phosphor-react'
+import { Link } from 'react-router-dom';
 
 import '../../css/App.css';
-import { Link } from 'react-router-dom';
 
 // Outside Click (Hook)
 import { useOnClickOutside } from 'usehooks-ts'
 
 // Conditional Rendering Transition Lib
 import { useTransition, animated } from '@react-spring/web';
+
+// Hamburguer Menu Button with Animation
+import { Twirl as Hamburguer } from 'hamburger-react';
 
 export const MenuButton = () => {
 
@@ -39,13 +41,15 @@ export const MenuButton = () => {
       className="menu-button-container"
       onClick={() => handleMenuOpen()}
       ref={refContainer} // Outside Click (Reference)
-    >
-      { 
-        isMenuOpen ? 
-        <X size={32} weight="bold" onClick={() => handleMenuOpen()} /> :
-        <List size={32} weight="bold" onClick={() => handleMenuOpen()} />
-      }
-      
+    > 
+      <Hamburguer 
+        toggled={isMenuOpen} 
+        toggle={handleMenuOpen}
+        duration={0.3}
+        rounded
+        label="abrir menu"
+      />
+            
       {/* Conditional Rendering with Transition */}
       {
         transitions(
