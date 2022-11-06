@@ -430,28 +430,56 @@
   line-height: 2.75rem;
 }
 .faq-container .faq-categories {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
   width: 100%;
   height: 100%;
   padding: 2rem 1rem;
 }
 .faq-container .faq-categories .faq-category {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 30%;
   align-items: center;
-  justify-content: center;
-  height: 4rem;
+  height: 7rem;
   width: 100%;
-  background-color: #108a35;
+  padding: 0 0.5rem;
+  background-color: #137731;
   border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
 }
-.faq-container .faq-categories .faq-category + .faq-category {
-  margin-top: 1rem;
+.faq-container .faq-categories .faq-category .toner-card {
+  background: url(../assets/faq-cards/toner1.jpg);
+  background-position: 10%;
 }
-.faq-container .faq-categories .faq-category a {
+.faq-container .faq-categories .faq-category .drum-card {
+  background: url(../assets/faq-cards/fotocondutor.png);
+  background-position: 95%;
+}
+.faq-container .faq-categories .faq-category .error-card {
+  background: url(../assets/faq-cards/problems2.jpg);
+  background-position: 40%;
+}
+.faq-container .faq-categories .faq-category .bulk-card {
+  background: url(../assets/faq-cards/bulk-ink.jpg);
+  background-position: 15%;
+}
+.faq-container .faq-categories .faq-category .faq-category-img {
+  height: 5rem;
+  width: 4rem;
+  border-radius: 4px;
+  transform: rotate(10deg) translateY(0.5rem) translateX(0.1rem);
+  background-size: cover;
+  box-shadow: -2px 3px 7px 0px rgba(0, 0, 0, 0.5);
+}
+.faq-container .faq-categories .faq-category span {
   color: #fafafa;
   font-size: 1.25rem;
   font-weight: 600;
+}
+.faq-container .faq-categories .faq-category span#drum-card-text {
+  font-size: 1.125rem;
 }
 @media only screen and (min-width: 1025px) {
   .faq-container .faq-categories {

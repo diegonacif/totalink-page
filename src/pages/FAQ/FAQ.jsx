@@ -13,15 +13,20 @@ export const FAQ = () => {
         </header>
         <div className="faq-categories">
           <div className="faq-category">
-            <Link to="#">Toner</Link>
+            <span >Toner</span>
+            <div className="faq-category-img toner-card"></div>
           </div>
           <div className="faq-category">
-            <Link to="#">Cilindro / Fotocondutor</Link>
+            <span id="drum-card-text">Fotocondutor</span>
+            <div className="faq-category-img drum-card"></div>
           </div>
           <div className="faq-category">
-            <Link to="#">Erros / Defeitos</Link>
-          </div><div className="faq-category">
-            <Link to="#">Tanques de Tinta / Bulk</Link>
+            <span>Erros / Defeitos</span>
+            <div className="faq-category-img error-card"></div>
+          </div>
+          <div className="faq-category">
+            <span>Tanques de Tinta / Bulk</span>
+            <div className="faq-category-img bulk-card"></div>
           </div>
         </div>
       </div>
