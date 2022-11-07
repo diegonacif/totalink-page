@@ -12,10 +12,12 @@ export const FAQ = () => {
           <h1>Encontre respostas rápidas pro seu problema, nas categorias abaixo.</h1>
         </header>
         <div className="faq-categories">
-          <div className="faq-category">
-            <span >Toner</span>
-            <div className="faq-category-img toner-card"></div>
-          </div>
+          <Link to="/faq/toner">
+            <div className="faq-category">
+              <span >Toner</span>
+              <div className="faq-category-img toner-card"></div>
+            </div>
+          </Link>
           <div className="faq-category">
             <span id="drum-card-text">Fotocondutor</span>
             <div className="faq-category-img drum-card"></div>

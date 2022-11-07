@@ -1,0 +1,24 @@
+.faq-toner-container {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 8rem;
+    padding: 1rem;
+    gap: 1.25rem;
+    margin-top: 1rem;
+    background-color: $green-bg-mirror-50;
+
+    nav {
+      display: flex;
+      gap: 0.5rem;
+      font-weight: 600;
+      a {
+        font-weight: 600;
+      }
+    }
+  }
+}

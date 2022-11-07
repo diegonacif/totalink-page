@@ -45,6 +45,7 @@ export const MenuButton = () => {
       <Hamburguer 
         toggled={isMenuOpen} 
         toggle={handleMenuOpen}
+        size={30}
         duration={0.3}
         rounded
         label="abrir menu"

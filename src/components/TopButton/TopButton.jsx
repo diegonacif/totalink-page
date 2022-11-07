@@ -1,5 +1,5 @@
 import '../../css/App.css';
-import { ArrowCircleUp } from 'phosphor-react'
+import { CaretCircleUp } from 'phosphor-react'
 import { useState } from 'react';
 
 
@@ -28,7 +28,7 @@ export const TopButton = () => {
 
   return (
     <div className="top-button-container">
-      <ArrowCircleUp 
+      <CaretCircleUp 
         size={40} 
         color="#8d8c8c" 
         weight="duotone" 

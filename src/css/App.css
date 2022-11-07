@@ -378,6 +378,11 @@
 .menu-button-container .menu-modal .menu-item a {
   width: 100%;
   height: 100%;
+  border-radius: 4px;
+}
+.menu-button-container .menu-modal .menu-item a:active {
+  background-color: rgba(26, 206, 80, 0.5);
+  transition: background-color 0.1s;
 }
 @media only screen and (min-width: 1025px) {
   .menu-button-container .menu-item:hover {
@@ -497,6 +502,29 @@
   .faq-container .faq-categories .faq-category + .faq-category {
     margin: 0;
   }
+}
+
+.faq-toner-container {
+  display: flex;
+  flex-direction: column;
+}
+.faq-toner-container header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 8rem;
+  padding: 1rem;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  background-color: rgba(26, 206, 80, 0.5);
+}
+.faq-toner-container header nav {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+.faq-toner-container header nav a {
+  font-weight: 600;
 }
 
 .request-quote-container header {
