@@ -17,7 +17,7 @@ export const FaqToner = () => {
         <h1>Problemas com Toner</h1>
       </header>
       <section>
-        <Link to="#" className="question-row">
+        <Link to="/article/how-many-pages" className="question-row">
           <span>Quantas páginas meu toner imprime?</span>
           <img src={lessThan} alt="" />
         </Link>

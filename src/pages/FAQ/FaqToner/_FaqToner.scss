@@ -1,8 +1,7 @@
 .faq-toner-container {
   display: flex;
   flex-direction: column;
-  background: rgb(255,255,255);
-  background: linear-gradient(330deg, rgba(255,255,255,1) 60%, rgba(128,194,129,1) 80%, rgb(18, 150, 27) 100%);
+  @include green-diagonal-gradient;
 
   header {
     display: flex;

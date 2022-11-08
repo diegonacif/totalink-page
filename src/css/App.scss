@@ -7,6 +7,7 @@ $assets-path: '../assets';
 $primary-color: #1ace50;
 $primary-color-2: #108a35;
 $white-bg: #fafafa;
+$gray-bg-mirror: rgba(206, 206, 206, 0.3);
 $gray-bg: #cecece;
 $darkgray-bg: #707070;
 $black-bg: #0f0f0f;
@@ -46,8 +47,13 @@ $desktop-size: "min-width: 2561px";
   }
 }
 
+// Mixins
+@mixin green-diagonal-gradient {
+  background: rgb(255,255,255);
+  background: linear-gradient(330deg, rgba(255,255,255,1) 60%, rgba(128,194,129,1) 80%, rgb(18, 150, 27) 100%);
+}
 
-
+// Module Imports
 @import '../components/Header/Header';
 @import '../components/Modal/Modal';
 @import '../components/Trust/Trust';
@@ -57,6 +63,9 @@ $desktop-size: "min-width: 2561px";
 @import '../components/MapsButton/MapsButton';
 @import '../components/MenuButton/MenuButton';
 @import '../components/TopButton/TopButton';
+
+@import '../articles/Articles';
+
 @import '../pages/FAQ/FAQ';
 @import '../pages/FAQ/FaqToner/FaqToner';
 @import '../pages/RequestQuote/RequestQuote';
