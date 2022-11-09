@@ -3,28 +3,6 @@
   flex-direction: column;
   @include green-diagonal-gradient;
 
-  header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 9rem;
-    padding: 2rem 1rem;
-    gap: 1.25rem;
-    background-color: transparent;
-
-    nav {
-      display: flex;
-      gap: 0.5rem;
-      font-weight: 600;
-      a {
-        font-weight: 600;
-      }
-      img {
-        width: 0.6rem;
-      }
-    }
-  }
-
   section {
     display: flex;
     flex-direction: column;

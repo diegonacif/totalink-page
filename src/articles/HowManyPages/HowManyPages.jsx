@@ -1,4 +1,5 @@
 import { Header } from '../../components/Header/Header';
+import { ArticleHeader } from '../../components/ArticleHeader/ArticleHeader';
 
 import '../../css/App.css';
 
@@ -6,6 +7,10 @@ export const HowManyPages = () => {
   return (
     <div className="article-container">
       <Header />
+      <ArticleHeader
+        navText="Problemas com Toner"
+        titleText="Quantas páginas meu toner imprime?"
+      />
       <main>
         <div className="article-content">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti deserunt saepe corporis facilis qui doloremque ea ipsam eos! Ducimus tempora harum iste doloremque aspernatur saepe incidunt tenetur soluta nihil.</p>

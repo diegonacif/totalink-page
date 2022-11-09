@@ -1,21 +1,19 @@
-import { CaretDoubleRight } from "phosphor-react";
 import { Link } from "react-router-dom";
 import { Header } from "../../../components/Header/Header"
 
 import '../../../css/App.css';
 import lessThan from '../../../assets/greater-than-sign.svg';
+import { ArticleHeader } from "../../../components/ArticleHeader/ArticleHeader";
 
 export const FaqToner = () => {
   return (
     <div className="faq-toner-container">
       <Header />
-      <header>
-        <nav>
-          <Link to="/faq">Início</Link>
-          <img src={lessThan} alt="" />
-        </nav>
-        <h1>Problemas com Toner</h1>
-      </header>
+      <ArticleHeader 
+        navText=""
+        titleText="Problemas com Toner" 
+      />
+      
       <section>
         <Link to="/article/how-many-pages" className="question-row">
           <span>Quantas páginas meu toner imprime?</span>
