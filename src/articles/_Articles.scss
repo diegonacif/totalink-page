@@ -17,4 +17,10 @@
     
     
   }
+
+  @media only screen and ($notebook-size) {
+    main {
+      padding: 1rem 4rem;
+    }
+  }
 }

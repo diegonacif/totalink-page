@@ -26,4 +26,10 @@
       }
     }
   }
+
+  @media only screen and ($notebook-size) {
+    header {
+      padding: 2rem 4rem;
+    }
+  }
 }
