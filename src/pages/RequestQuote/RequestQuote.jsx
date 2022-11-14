@@ -15,7 +15,7 @@ import { useTransition, animated, easings } from '@react-spring/web';
 export const RequestQuote = () => {
 
   // Whatsapp Address
-  const whatsappAddress = "https://wa.me/message/6OTAK6W6W2T6D1";
+  const whatsappAddress = "https://wa.me/message/VUCLASIXKAW7D1?src=qr";
 
   // Expanded Wrapper
   const [showExpansion, setShowExpansion] = useState(false);
