@@ -1,5 +1,5 @@
 import '../../css/App.css';
-import artCLogo from '../../assets/customer-logos/artc.jpg';
+import artCLogo from '../../assets/customer-logos/artc.png';
 import interfortLogo from '../../assets/customer-logos/interfort.png';
 import mareLogo from '../../assets/customer-logos/mare-mansa.png';
 import sterbomLogo from '../../assets/customer-logos/sterbom.png';
