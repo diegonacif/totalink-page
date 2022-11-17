@@ -3,6 +3,7 @@ import '../../css/App.css';
 
 import { Header } from '../../components/Header/Header';
 import { WhatsappButton } from '../../components/WhatsappButton/WhatsappButton';
+import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
 import whatsQr from '../../assets/whats-qr.png';
 
 
@@ -92,6 +93,7 @@ export const RequestQuote = () => {
             )
           }
         </header>
+        <CopyrightFooter />
       </div>
     </>
   )

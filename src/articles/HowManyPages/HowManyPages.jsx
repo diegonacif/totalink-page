@@ -1,4 +1,5 @@
 import { Header } from '../../components/Header/Header';
+import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
 import { ArticleHeader } from '../../components/ArticleHeader/ArticleHeader';
 
 import '../../css/App.css';
@@ -23,6 +24,7 @@ export const HowManyPages = () => {
           <p>Sed ea eveniet quis numquam incidunt voluptatem officia odio eum tenetur architecto vel rerum illo a esse fuga doloremque dignissimos quibusdam magnam, iusto distinctio enim nam voluptates? Molestias, odio voluptates.</p>
         </div>
       </main>
+      <CopyrightFooter />
     </div>
   )
 }

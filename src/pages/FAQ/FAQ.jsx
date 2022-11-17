@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
+import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
 
 import '../../css/App.css';
 
@@ -31,6 +32,7 @@ export const FAQ = () => {
             <div className="faq-category-img bulk-card"></div>
           </div>
         </div>
+        <CopyrightFooter />
       </div>
     </>
   )

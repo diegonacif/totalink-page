@@ -1,4 +1,5 @@
 import '../../css/App.css';
+import { CopyrightFooter } from '../CopyrightFooter/CopyrightFooter';
 import { MapsButton } from '../MapsButton/MapsButton';
 import { WhatsappButton } from '../WhatsappButton/WhatsappButton';
 
@@ -28,9 +29,10 @@ export const Footer = () => {
 
 
       </div>
-      <div className="copyrights">
+      <CopyrightFooter />
+      {/* <div className="copyrights">
         <span>© 2022 Total Ink - Todos os direitos reservados.</span>
-      </div>
+      </div> */}
     </div>
   );
 };

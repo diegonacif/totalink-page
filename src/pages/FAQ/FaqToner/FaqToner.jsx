@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Header } from "../../../components/Header/Header"
+import { Header } from "../../../components/Header/Header";
+import { CopyrightFooter } from "../../../components/CopyrightFooter/CopyrightFooter";
 
 import '../../../css/App.css';
 import lessThan from '../../../assets/greater-than-sign.svg';
@@ -32,7 +33,7 @@ export const FaqToner = () => {
           <img src={lessThan} alt="" />
         </Link>
       </section>
-      
+      <CopyrightFooter />
     </div>
   )
 }
