@@ -1,5 +1,26 @@
 .header-nav-container {
   display: flex;
+  align-items: center;
   height: 100%;
   width: max-content;
+  gap: 1.5rem;
+  padding: 0 0.5rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: $black-bg;
+    padding: 0 0.5rem;
+    height: 60%;
+    border-radius: 4px;
+    transition: background-color 0.1s;
+
+    &:hover {
+      background-color: $green-bg-mirror-50;
+      transition: background-color 0.2s;
+    }
+  }
 }

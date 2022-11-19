@@ -5,7 +5,7 @@ export const HeaderNav = () => {
   return (
     <div className="header-nav-container">
       <Link to="/quote">Solicitar Orçamento</Link>
-      <Link to="/faq">FAQ</Link>
+      <Link to="/faq">Dúvidas Frequentes</Link>
     </div>
   )
 }

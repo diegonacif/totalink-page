@@ -44,10 +44,29 @@
 
 .header-nav-container {
   display: flex;
+  align-items: center;
   height: 100%;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
+  gap: 1.5rem;
+  padding: 0 0.5rem;
+}
+.header-nav-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0f0f0f;
+  padding: 0 0.5rem;
+  height: 60%;
+  border-radius: 4px;
+  transition: background-color 0.1s;
+}
+.header-nav-container a:hover {
+  background-color: rgba(26, 206, 80, 0.5);
+  transition: background-color 0.2s;
 }
 
 .modal-container {
