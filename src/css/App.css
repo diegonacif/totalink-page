@@ -42,6 +42,14 @@
   }
 }
 
+.header-nav-container {
+  display: flex;
+  height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .modal-container {
   display: flex;
   flex-direction: column;
