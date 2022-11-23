@@ -12,7 +12,7 @@ export const HowManyPages = () => {
         navText="Problemas com Toner"
         titleText="Quantas páginas meu toner imprime?"
       />
-      <section className="article-main">
+      <div className="article-main">
         <div className="article-content">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti deserunt saepe corporis facilis qui doloremque ea ipsam eos! Ducimus tempora harum iste doloremque aspernatur saepe incidunt tenetur soluta nihil.</p>
           <p>Quod ducimus suscipit autem cumque sequi nobis consequatur ipsam excepturi neque, minus atque magni adipisci non totam numquam, vitae voluptatibus facere asperiores repellat corrupti voluptatum in voluptates. Id, at distinctio!</p>
@@ -26,7 +26,7 @@ export const HowManyPages = () => {
           <p>Sed ea eveniet quis numquam incidunt voluptatem officia odio eum tenetur architecto vel rerum illo a esse fuga doloremque dignissimos quibusdam magnam, iusto distinctio enim nam voluptates? Molestias, odio voluptates.</p>
           <p>Sed ea eveniet quis numquam incidunt voluptatem officia odio eum tenetur architecto vel rerum illo a esse fuga doloremque dignissimos quibusdam magnam, iusto distinctio enim nam voluptates? Molestias, odio voluptates.</p>
         </div>
-      </section>
+      </div>
       <CopyrightFooter />
     </div>
   )

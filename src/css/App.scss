@@ -17,9 +17,10 @@ $green-bg-mirror-95: rgba(23, 161, 65, 0.95);
 $font-color-green: #137731;
 
 // Media Variables
-$tablet-size: "min-width: 481px";
-$notebook-size: "min-width: 1025px";
-$desktop-size: "min-width: 2561px";
+$mobile-size: "min-width: 0px";
+$tablet-size: "min-width: 768px";
+$notebook-size: "min-width: 1024px";
+$desktop-size: "min-width: 2560px";
 
 * {
   margin: 0;
