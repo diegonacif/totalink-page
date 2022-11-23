@@ -12,7 +12,7 @@ export const HowManyPages = () => {
         navText="Problemas com Toner"
         titleText="Quantas páginas meu toner imprime?"
       />
-      <main>
+      <section className="article-main">
         <div className="article-content">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita corrupti deserunt saepe corporis facilis qui doloremque ea ipsam eos! Ducimus tempora harum iste doloremque aspernatur saepe incidunt tenetur soluta nihil.</p>
           <p>Quod ducimus suscipit autem cumque sequi nobis consequatur ipsam excepturi neque, minus atque magni adipisci non totam numquam, vitae voluptatibus facere asperiores repellat corrupti voluptatum in voluptates. Id, at distinctio!</p>
@@ -22,8 +22,11 @@ export const HowManyPages = () => {
           <p>Cupiditate aliquid provident et enim? Dolores quos enim, voluptatem molestias facilis excepturi perferendis. Dolore inventore non iste magnam atque nam doloribus odit! Ullam inventore odio recusandae quisquam nam, qui assumenda?</p>
           <p>Optio fugit magnam deleniti tenetur ea excepturi sunt maxime! Sed autem quia blanditiis, doloremque temporibus assumenda! Repellat labore aut modi optio minima exercitationem assumenda fuga libero fugit laborum. Temporibus, eveniet!</p>
           <p>Sed ea eveniet quis numquam incidunt voluptatem officia odio eum tenetur architecto vel rerum illo a esse fuga doloremque dignissimos quibusdam magnam, iusto distinctio enim nam voluptates? Molestias, odio voluptates.</p>
+          <p>Sed ea eveniet quis numquam incidunt voluptatem officia odio eum tenetur architecto vel rerum illo a esse fuga doloremque dignissimos quibusdam magnam, iusto distinctio enim nam voluptates? Molestias, odio voluptates.</p>
+          <p>Sed ea eveniet quis numquam incidunt voluptatem officia odio eum tenetur architecto vel rerum illo a esse fuga doloremque dignissimos quibusdam magnam, iusto distinctio enim nam voluptates? Molestias, odio voluptates.</p>
+          <p>Sed ea eveniet quis numquam incidunt voluptatem officia odio eum tenetur architecto vel rerum illo a esse fuga doloremque dignissimos quibusdam magnam, iusto distinctio enim nam voluptates? Molestias, odio voluptates.</p>
         </div>
-      </main>
+      </section>
       <CopyrightFooter />
     </div>
   )
