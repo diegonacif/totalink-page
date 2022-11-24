@@ -10,13 +10,13 @@ export function useBreakpoint() {
 
   useEffect(() => {
     
-    if (size.width < 480) {
+    if (size.width >= 320 && size.width < 600) {
       return setCurrentBreakpoint('mobile')
-    } else if (size.width < 1024) {
+    } else if (size.width >= 600 && size.width < 1024) {
       return setCurrentBreakpoint('tablet')
-    } else if (size.width < 2560) {
+    } else if (size.width >= 1024 && size.width < 1280) {
       return setCurrentBreakpoint('notebook')
-    } else {
+    } else if (size.width >= 1280) {
       return setCurrentBreakpoint('desktop')
     }
   }, [size]);
