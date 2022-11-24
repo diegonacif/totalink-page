@@ -38,9 +38,19 @@
 .header-container a {
   height: 100%;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 600px) {
   .header-container {
     padding: 0 4rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header-container {
+    padding: 0 6rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .header-container {
+    padding: 0 calc(8rem + 5vw);
   }
 }
 
@@ -104,9 +114,19 @@
   font-weight: 400;
   line-height: 1.25rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 600px) {
   .modal-container {
     padding: 1rem 4rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .modal-container {
+    padding: 1rem 6rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .modal-container {
+    padding: 1rem calc(8rem + 5vw);
   }
 }
 
@@ -143,9 +163,19 @@
 .trust-container .feedbacks-wrapper .feedback span {
   margin-top: 0.5rem;
 }
+@media only screen and (min-width: 600px) {
+  .trust-container {
+    padding: 2rem 4rem;
+  }
+}
 @media only screen and (min-width: 1024px) {
   .trust-container {
-    padding: 2rem 8rem;
+    padding: 2rem 6rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .trust-container {
+    padding: 2rem calc(8rem + 5vw);
   }
 }
 
@@ -208,9 +238,19 @@
 .customers-container .customers-wrapper #natalcorLogo {
   width: 4.5rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 600px) {
   .customers-container {
     padding: 0 4rem 1rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .customers-container {
+    padding: 0 6rem 1rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .customers-container {
+    padding: 0 calc(8rem + 5vw) 1rem;
   }
 }
 

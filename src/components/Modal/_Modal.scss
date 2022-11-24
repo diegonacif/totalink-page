@@ -34,7 +34,15 @@
       line-height: 1.25rem;
     }
   }
-  @media only screen and ($notebook-size) {
+  @media only screen and ($tablet-size) {
     padding: 1rem 4rem;
+  }
+
+  @media only screen and ($notebook-size) {
+    padding: 1rem 6rem;
+  }
+
+  @media only screen and ($desktop-size) {
+    padding: 1rem calc(8rem + 5vw);
   }
 }

@@ -35,7 +35,16 @@
       }
     }
   }
+
+  @media only screen and ($tablet-size) {
+    padding: 2rem 4rem;
+  }
+
   @media only screen and ($notebook-size) {
-    padding: 2rem 8rem;
+    padding: 2rem 6rem;
+  }
+
+  @media only screen and ($desktop-size) {
+    padding: 2rem calc(8rem + 5vw);
   }
 }

@@ -62,7 +62,16 @@
     }
 
   }
-  @media only screen and ($notebook-size) {
+
+  @media only screen and ($tablet-size) {
     padding: 0 4rem 1rem;
+  }
+
+  @media only screen and ($notebook-size) {
+    padding: 0 6rem 1rem;
+  }
+
+  @media only screen and ($desktop-size) {
+    padding: 0 calc(8rem + 5vw) 1rem;
   }
 }

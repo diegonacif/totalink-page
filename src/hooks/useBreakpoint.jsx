@@ -6,7 +6,7 @@ export function useBreakpoint() {
 
   const [currentBreakpoint, setCurrentBreakpoint] = useState('');
 
-  console.log(size);
+  // console.log(size);
 
   useEffect(() => {
     
