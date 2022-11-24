@@ -21,7 +21,7 @@ export const Header = () => {
         <MenuButton /> :
         null
       }
-      { breakpoint === 'laptop' || breakpoint === 'desktop' ?
+      { breakpoint === 'notebook' || breakpoint === 'desktop' ?
         <HeaderNav /> :
         null
       }
