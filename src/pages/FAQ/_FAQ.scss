@@ -84,10 +84,65 @@
     }
   }
 
-  @media only screen and ($notebook-size) {
-    
+  @media only screen and ($tablet-size) {
+
+    header {
+      padding: 1rem 4rem;
+    }
+    // padding: 1rem 4rem;
+
     .faq-categories {
       padding: 0 4rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .faq-category {
+        width: 15rem;
+
+        & + .faq-category {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and ($notebook-size) {
+    // padding: 1rem 6rem;
+    header {
+      padding: 1rem 6rem;
+    }
+
+    .faq-categories {
+      padding: 0 6rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      .faq-category {
+        width: 15rem;
+
+        & + .faq-category {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  @media only screen and ($desktop-size) {
+    // padding: 1rem calc(8rem + 5vw);
+    header {
+      padding: 1rem calc(8rem + 5vw);
+    }
+
+    .faq-categories {
+      padding: 0 calc(8rem + 5vw);
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;

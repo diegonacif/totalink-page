@@ -299,9 +299,37 @@
 .footer .information a:first-of-type {
   margin-top: 0.5rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 600px) {
   .footer .information {
     padding: 1rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer .information .address {
+    padding: 0 2rem;
+    border-right: 1px solid #707070;
+  }
+  .footer .information .phones {
+    padding: 0 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .footer .information {
+    padding: 1rem 6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer .information .address {
+    padding: 0 2rem;
+    border-right: 1px solid #707070;
+  }
+  .footer .information .phones {
+    padding: 0 2rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .footer .information {
+    padding: 1rem calc(8rem + 5vw);
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -626,9 +654,52 @@
 .faq-container .faq-categories .faq-category span#drum-card-text {
   font-size: 1.125rem;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 600px) {
+  .faq-container header {
+    padding: 1rem 4rem;
+  }
   .faq-container .faq-categories {
     padding: 0 4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .faq-container .faq-categories .faq-category {
+    width: 15rem;
+  }
+  .faq-container .faq-categories .faq-category + .faq-category {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .faq-container header {
+    padding: 1rem 6rem;
+  }
+  .faq-container .faq-categories {
+    padding: 0 6rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .faq-container .faq-categories .faq-category {
+    width: 15rem;
+  }
+  .faq-container .faq-categories .faq-category + .faq-category {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .faq-container header {
+    padding: 1rem calc(8rem + 5vw);
+  }
+  .faq-container .faq-categories {
+    padding: 0 calc(8rem + 5vw);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -732,9 +803,27 @@
   padding: 0 1rem;
   text-align: center;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 600px) {
   .request-quote-container header {
     padding: 1rem 4rem;
+  }
+  .request-quote-container header .here-link:hover {
+    filter: brightness(0.7);
+    transition: filter 0.3s;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .request-quote-container header {
+    padding: 1rem 6rem;
+  }
+  .request-quote-container header .here-link:hover {
+    filter: brightness(0.7);
+    transition: filter 0.3s;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .request-quote-container header {
+    padding: 1rem calc(8rem + 5vw);
   }
   .request-quote-container header .here-link:hover {
     filter: brightness(0.7);

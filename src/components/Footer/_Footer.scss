@@ -47,8 +47,24 @@
       }
     }
 
+    @media only screen and ($tablet-size) {
+    padding: 1rem 4rem;
+
+    display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .address {
+        padding: 0 2rem;
+        border-right: 1px solid $darkgray-bg;
+      }
+
+      .phones {
+        padding: 0 2rem;
+      }
+  }
+
     @media only screen and ($notebook-size) {
-      padding: 1rem 4rem;
+      padding: 1rem 6rem;
 
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -61,6 +77,22 @@
       .phones {
         padding: 0 2rem;
       }
+    }
+
+    @media only screen and ($desktop-size) {
+      padding: 1rem calc(8rem + 5vw);
+  
+      display: grid;
+        grid-template-columns: 1fr 1fr;
+  
+        .address {
+          padding: 0 2rem;
+          border-right: 1px solid $darkgray-bg;
+        }
+  
+        .phones {
+          padding: 0 2rem;
+        }
     }
   }
 
