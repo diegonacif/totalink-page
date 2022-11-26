@@ -85,7 +85,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 20rem;
+  height: calc(100vh - 4rem);
   width: 100%;
   padding: 1rem;
   background: url(../assets/office-bg.jpg);
@@ -95,24 +95,33 @@
 }
 .modal-container section {
   display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
 }
-.modal-container section h1 {
+.modal-container section .modal-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2rem;
+}
+.modal-container section .modal-text h1 {
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.25rem;
 }
-.modal-container section h4 {
+.modal-container section .modal-text h4 {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5rem;
   color: #137731;
 }
-.modal-container section h6 {
+.modal-container section .modal-text h6 {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.25rem;
+}
+.modal-container section img {
+  width: 20rem;
 }
 @media only screen and (min-width: 600px) {
   .modal-container {
