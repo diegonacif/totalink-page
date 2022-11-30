@@ -23,7 +23,10 @@ const transitions = useTransition(printerVisible, {
     <div className="modal-container">
       <section>
         <div className="modal-text">
-          <h1>Não perca mais tempo nem dinheiro.</h1>
+          <h1>
+            Precisando de impressoras ?<br />
+            Não perca mais tempo nem dinheiro.
+          </h1>
           <h4>Conte com a confiabilidade dos equipamentos Total Ink na sua empresa.</h4>
           <h6>As mais modernas impressoras e um suporte técnico rápido, ao seu alcance.</h6>
         </div>
