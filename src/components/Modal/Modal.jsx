@@ -1,23 +1,26 @@
 import { useTransition, animated } from '@react-spring/web';
 import { useState, useEffect } from 'react';
+import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 import '../../css/App.css';
-import brother from '../../assets/hp-color-laser.png';
+import samsung from '../../assets/samsung5835.png';
 
 export const Modal = () => {
 
-// Printer Animation
-const [printerVisible, setPrinterVisible] = useState(false);
-useEffect(() => {
-  setPrinterVisible(true);
-}, [])
-const transitions = useTransition(printerVisible, {
-  from: { x: 20, y: 0, opacity: 0 },
-  enter: { x: 0, y: 0, opacity: 1 },
-  leave: { x: 20, y: 0, opacity: 0 },
-  config: {duration: 1000},
-  delay: 300
-});
+  // Printer Animation
+  const [printerVisible, setPrinterVisible] = useState(false);
+  useEffect(() => {
+    setPrinterVisible(true);
+  }, [])
+  const transitions = useTransition(printerVisible, {
+    from: { x: 20, y: 0, opacity: 0 },
+    enter: { x: 0, y: 0, opacity: 1 },
+    leave: { x: 20, y: 0, opacity: 0 },
+    config: {duration: 1000},
+    delay: 300
+  });
+
+  const breakpoint = useBreakpoint();
 
   return (
     <div className="modal-container">
@@ -27,14 +30,16 @@ const transitions = useTransition(printerVisible, {
             Precisando de impressoras ?<br />
             Não perca mais tempo nem dinheiro.
           </h1>
-          <h4>Conte com a confiabilidade dos equipamentos Total Ink na sua empresa.</h4>
+          <h4>Soluções em outsourcing com a confiabilidade dos equipamentos Total Ink na sua empresa.</h4>
           <h6>As mais modernas impressoras e um suporte técnico rápido, ao seu alcance.</h6>
         </div>
         {
+          breakpoint === 'notebook' || breakpoint === 'desktop' ?
           transitions(
             (styles, item) => item &&
-            <animated.img src={brother} alt="impressora hp color" style={styles} />
-          )
+            <animated.img src={samsung} alt="impressora hp color" style={styles} />
+          ) :
+          null
         }
       </section>
     </div>
