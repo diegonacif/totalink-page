@@ -97,7 +97,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  filter: blur(4px);
+  filter: blur(5px);
   background: url(../assets/printer-room.png);
   background-size: cover;
   background-position: center;
@@ -119,19 +119,21 @@
   font-size: 2rem;
   font-weight: 600;
   line-height: 2.25rem;
+  color: #fafafa;
   text-shadow: 2px 1px 5px rgb(28, 42, 28);
 }
 .modal-container section .modal-text h4 {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5rem;
-  color: #fafafa;
+  color: #3bff4b;
   text-shadow: 2px 1px 4px rgb(28, 42, 28);
 }
 .modal-container section .modal-text h6 {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.25rem;
+  color: #fafafa;
   text-shadow: 1px 1px 4px rgb(28, 42, 28);
 }
 .modal-container section img {
