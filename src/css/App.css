@@ -828,6 +828,9 @@
   padding: 0 1rem;
   text-align: center;
 }
+.request-quote-container section {
+  padding: 1rem;
+}
 @media only screen and (min-width: 600px) {
   .request-quote-container header {
     padding: 1rem 4rem;
@@ -835,6 +838,9 @@
   .request-quote-container header .here-link:hover {
     filter: brightness(0.7);
     transition: filter 0.3s;
+  }
+  .request-quote-container section {
+    padding: 1rem 4rem;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -845,6 +851,9 @@
     filter: brightness(0.7);
     transition: filter 0.3s;
   }
+  .request-quote-container section {
+    padding: 1rem 6rem;
+  }
 }
 @media only screen and (min-width: 1280px) {
   .request-quote-container header {
@@ -853,5 +862,8 @@
   .request-quote-container header .here-link:hover {
     filter: brightness(0.7);
     transition: filter 0.3s;
+  }
+  .request-quote-container section {
+    padding: 1rem calc(8rem + 5vw);
   }
 }/*# sourceMappingURL=App.css.map */

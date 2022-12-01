@@ -58,26 +58,7 @@ export const ContactUs = () => {
       <Header />
       <div className="request-quote-container">
         <header>
-          <h1>Para informações sobre orçamento para locação, entre em contato diretamente com nosso Diretor Comercial clicando&nbsp;
-            {
-              isDesktop ?
-              <span 
-                onClick={() => handleShowExpansion()} 
-                ref={refContainer}
-                className="here-link"
-              >
-                  aqui
-              </span>
-              :
-              <span 
-                onClick={() => window.location.href = whatsappAddress}
-                className="here-link"
-              >
-                aqui
-              </span>
-            }
-            .
-          </h1>
+          <h1>Selecione sobre o que deseja falar conosco.</h1>
           {
             transitions(
               (styles, item) => item &&
@@ -93,6 +74,12 @@ export const ContactUs = () => {
             )
           }
         </header>
+        <section>
+          <div>
+            <label>Assunto</label>
+            <input type="text" />
+          </div>
+        </section>
         <CopyrightFooter />
       </div>
     </>

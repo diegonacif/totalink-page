@@ -63,6 +63,10 @@
     }
   }
 
+  section {
+    padding: 1rem;
+  }
+
   @media only screen and ($tablet-size) {
     header {
       padding: 1rem 4rem;
@@ -71,6 +75,9 @@
         filter: brightness(0.7);
         transition: filter 0.3s;
       }
+    }
+    section {
+      padding: 1rem 4rem;
     }
   }
 
@@ -83,6 +90,9 @@
         transition: filter 0.3s;
       }
     }
+    section {
+      padding: 1rem 6rem;
+    }
   }
 
   @media only screen and ($desktop-size) {
@@ -93,6 +103,9 @@
         filter: brightness(0.7);
         transition: filter 0.3s;
       }
+    }
+    section {
+      padding: 1rem calc(8rem + 5vw);
     }
   }
 }
