@@ -120,21 +120,21 @@
   font-weight: 600;
   line-height: 2.25rem;
   color: #fafafa;
-  text-shadow: 2px 1px 5px rgb(28, 42, 28);
+  text-shadow: 2px 1px 5px rgb(25, 25, 25);
 }
 .modal-container section .modal-text h4 {
   font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.5rem;
   color: #3bff4b;
-  text-shadow: 2px 1px 4px rgb(28, 42, 28);
+  text-shadow: 2px 1px 4px rgb(25, 25, 25);
 }
 .modal-container section .modal-text h6 {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.25rem;
   color: #fafafa;
-  text-shadow: 1px 1px 4px rgb(28, 42, 28);
+  text-shadow: 1px 1px 4px rgb(25, 25, 25);
 }
 .modal-container section img {
   width: 20rem;
