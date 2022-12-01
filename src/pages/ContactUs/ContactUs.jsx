@@ -13,7 +13,7 @@ import { useOnClickOutside } from 'usehooks-ts'
 // Conditional Rendering Transition Lib
 import { useTransition, animated, easings } from '@react-spring/web';
 
-export const RequestQuote = () => {
+export const ContactUs = () => {
 
   // Whatsapp Address
   const whatsappAddress = "https://wa.me/message/VUCLASIXKAW7D1?src=qr";
