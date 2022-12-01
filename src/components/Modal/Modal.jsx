@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 import '../../css/App.css';
-import samsung from '../../assets/samsung5835.png';
+import printerImg from '../../assets/konica-minolta.png';
 
 export const Modal = () => {
 
@@ -13,10 +13,10 @@ export const Modal = () => {
     setPrinterVisible(true);
   }, [])
   const transitions = useTransition(printerVisible, {
-    from: { x: 20, y: 0, opacity: 0 },
+    from: { x: -15, y: -20, opacity: 0 },
     enter: { x: 0, y: 0, opacity: 1 },
-    leave: { x: 20, y: 0, opacity: 0 },
-    config: {duration: 1000},
+    leave: { x: -15, y: -20, opacity: 0 },
+    config: {duration: 700},
     delay: 300
   });
 
@@ -37,7 +37,7 @@ export const Modal = () => {
           breakpoint === 'notebook' || breakpoint === 'desktop' ?
           transitions(
             (styles, item) => item &&
-            <animated.img src={samsung} alt="impressora hp color" style={styles} />
+            <animated.img src={printerImg} alt="impressora hp color" style={styles} />
           ) :
           null
         }
