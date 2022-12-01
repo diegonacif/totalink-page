@@ -24,6 +24,7 @@ export const Modal = () => {
 
   return (
     <div className="modal-container">
+      <div className="blur-bg"></div>
       <section>
         <div className="modal-text">
           <h1>

@@ -82,22 +82,33 @@
 }
 
 .modal-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: calc(100vh - 4rem);
   width: 100%;
   padding: 1rem;
-  background: url(../assets/office-bg.jpg);
+  overflow: hidden;
+}
+.modal-container .blur-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(4px);
+  background: url(../assets/printer-room.png);
   background-size: cover;
   background-position: center;
-  overflow: hidden;
+  z-index: 0;
 }
 .modal-container section {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  z-index: 1;
 }
 .modal-container section .modal-text {
   display: flex;
