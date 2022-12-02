@@ -61,10 +61,13 @@ export const MenuButton = () => {
               </div>
               <hr />
               <div className="menu-item">
-                <Link to="/quote">Solicitar Orçamento</Link>
+                <Link to="#">Sobre Nós</Link>
               </div>
               <div className="menu-item">
-                <Link to="/faq">FAQ</Link>
+                <Link to="/contact">Fale Conosco</Link>
+              </div>
+              <div className="menu-item">
+                <Link to="/faq">Dúvidas Frequentes</Link>
               </div>
             </animated.div>
         )
