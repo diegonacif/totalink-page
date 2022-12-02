@@ -16,8 +16,7 @@ import { useTransition, animated, easings } from '@react-spring/web';
 
 export const ContactUs = () => {
 
-  // Whatsapp Address
-  const whatsappAddress = "https://wa.me/message/VUCLASIXKAW7D1?src=qr";
+  
 
   // Expanded Wrapper
   const [showExpansion, setShowExpansion] = useState(false);
@@ -64,7 +63,14 @@ export const ContactUs = () => {
     mode: "all"
   });
 
-  console.log(getValues("subject"))
+  // Whatsapp
+  const whatsappAddress = "https://wa.me/message/VUCLASIXKAW7D1?src=qr";
+  const [whatsappMessage, setWhatsappMessage] = useState('');
+  useEffect(() => {
+    setWhatsappMessage(getValues("subject"));
+  }, [watch("subject")])
+
+  const whatsappContact = whatsappAddress + "?text=" + whatsappMessage
 
   return (
     <>
@@ -92,7 +98,9 @@ export const ContactUs = () => {
             <label>Assunto</label>
             <input type="text" {...register("subject")} />
           </div>
-          <button onClick="#">Enviar</button>
+          <button onClick={() => {
+            window.open(whatsappContact)
+            }}>Enviar</button>
         </section>
         <CopyrightFooter />
       </div>
