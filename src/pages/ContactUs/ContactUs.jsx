@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
+import { useForm } from 'react-hook-form';
 import '../../css/App.css';
 
 import { Header } from '../../components/Header/Header';
@@ -53,13 +54,25 @@ export const ContactUs = () => {
     config: { duration: 400, easing: easings.easeInOutCubic },
   });
 
+  // Controlador Hook Form
+  const {
+    watch,
+    register,
+    setValue,
+    getValues
+  } = useForm({
+    mode: "all"
+  });
+
+  console.log(getValues("subject"))
+
   return (
     <>
       <Header />
       <div className="request-quote-container">
         <header>
           <h1>Selecione sobre o que deseja falar conosco.</h1>
-          {
+          {/* {
             transitions(
               (styles, item) => item &&
                 <animated.div 
@@ -72,13 +85,14 @@ export const ContactUs = () => {
                   <a href={whatsappAddress}>Whatsapp Diretor Comercial</a>
                 </animated.div>
             )
-          }
+          } */}
         </header>
         <section>
           <div>
             <label>Assunto</label>
-            <input type="text" />
+            <input type="text" {...register("subject")} />
           </div>
+          <button onClick="#">Enviar</button>
         </section>
         <CopyrightFooter />
       </div>
