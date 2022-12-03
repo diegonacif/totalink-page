@@ -96,7 +96,7 @@ export const ContactUs = () => {
   // Conditional Button
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   useEffect(() => {
-    errors.subject === undefined || errors.department === undefined ?
+    errors.subject || errors.department ?
     setIsButtonDisabled(true) :
     setIsButtonDisabled(false)
   }, [watch()])
