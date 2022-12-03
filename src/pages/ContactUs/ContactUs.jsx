@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from "yup";
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import '../../css/App.css';
 
@@ -53,14 +55,22 @@ export const ContactUs = () => {
     config: { duration: 400, easing: easings.easeInOutCubic },
   });
 
-  // Controlador Hook Form
+  // Yup Validation
+  const schema = yup.object({
+    department: yup.string().required(),
+    subject: yup.string().required(),
+  }).required();
+
+  // Hook Form Controller
   const {
     watch,
     register,
     setValue,
-    getValues
+    getValues,
+    formState: { errors }
   } = useForm({
-    mode: "all"
+    mode: "all",
+    resolver: yupResolver(schema)
   });
 
   // Whatsapp //
@@ -78,6 +88,19 @@ export const ContactUs = () => {
     );
   }, [watch("department"), watch("subject")])
 
+  // Conditional Button
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  useEffect(() => {
+    errors.subject !== undefined ?
+    setIsButtonDisabled(true) :
+    setIsButtonDisabled(false)
+  }, [watch()])
+
+  console.log(errors.subject);
+  // console.log(isButtonDisabled);
+
+  
+
   return (
     <>
       <Header />
@@ -85,10 +108,11 @@ export const ContactUs = () => {
         <header>
           <h1>Entre em contato através do nosso WhatsApp. Insira as informações abaixo para que possamos atendê-lo da melhor forma.</h1>
         </header>
-        <section>
+        <form>
           <div className="form-input-wp">
             <label>Setor:</label>
-            <select type="text" {...register("department")}>
+            <select type="text" defaultValue={""} {...register("department")}>
+              <option value="" disabled>Selecione uma opção</option>
               <option value="Pedido de toner">Pedido de toners</option>
               <option value="Problemas técnicos">Problemas técnicos</option>
               <option value="Setor financeiro">Setor financeiro</option>
@@ -97,15 +121,19 @@ export const ContactUs = () => {
           </div>
           <div className="form-input-wp">
             <label>Assunto:</label>
-            <input type="text" {...register("subject")} />
+            <input 
+              type="text" 
+              id="subject" 
+              aria-invalid={errors.subject ? "true" : "false"}
+              {...register("subject")} />
           </div>
-          <a 
-            href={whatsappAdress + encodeURI(whatsappMessage)}
-            target="_blank"
+          <button 
+            onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
+            disabled={isButtonDisabled}
           >
-              Enviar mensagem
-          </a>
-        </section>
+            Enviar mensagem
+          </button>
+        </form>
         <CopyrightFooter />
       </div>
     </>

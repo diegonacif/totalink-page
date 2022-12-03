@@ -828,25 +828,25 @@
   padding: 0 1rem;
   text-align: center;
 }
-.request-quote-container section {
+.request-quote-container form {
   display: flex;
   flex-direction: column;
   padding: 1rem;
 }
-.request-quote-container section .form-input-wp {
+.request-quote-container form .form-input-wp {
   display: flex;
   flex-direction: column;
 }
-.request-quote-container section .form-input-wp:not(:first-child) {
+.request-quote-container form .form-input-wp:not(:first-child) {
   margin-top: 1.5rem;
 }
-.request-quote-container section .form-input-wp :is(input, select) {
+.request-quote-container form .form-input-wp :is(input, select) {
   width: 100%;
   height: 1.5rem;
   margin-top: 0.25rem;
   padding: 0 0.25rem;
 }
-.request-quote-container section a {
+.request-quote-container form button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -855,6 +855,8 @@
   margin-top: 2rem;
   background-color: rgb(154, 236, 154);
   border-radius: 4px;
+  border: 0;
+  font-size: 1rem;
   font-weight: 600;
 }
 @media only screen and (min-width: 600px) {
