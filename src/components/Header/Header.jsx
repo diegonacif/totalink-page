@@ -9,7 +9,7 @@ import { HeaderNav } from '../HeaderNav/HeaderNav';
 export const Header = () => {
   const breakpoint = useBreakpoint();
 
-  console.log(breakpoint);
+  // console.log(breakpoint);
 
   return (
     <div className="header-container">

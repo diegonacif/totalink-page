@@ -829,7 +829,33 @@
   text-align: center;
 }
 .request-quote-container section {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+}
+.request-quote-container section .form-input-wp {
+  display: flex;
+  flex-direction: column;
+}
+.request-quote-container section .form-input-wp:not(:first-child) {
+  margin-top: 1.5rem;
+}
+.request-quote-container section .form-input-wp :is(input, select) {
+  width: 100%;
+  height: 1.5rem;
+  margin-top: 0.25rem;
+  padding: 0 0.25rem;
+}
+.request-quote-container section a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 2rem;
+  margin-top: 2rem;
+  background-color: rgb(154, 236, 154);
+  border-radius: 4px;
+  font-weight: 600;
 }
 @media only screen and (min-width: 600px) {
   .request-quote-container header {

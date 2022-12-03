@@ -1,12 +1,12 @@
 import { useEffect, useState, useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import { useBreakpoint } from '../../hooks/useBreakpoint';
 import '../../css/App.css';
 
 import { Header } from '../../components/Header/Header';
 import { WhatsappButton } from '../../components/WhatsappButton/WhatsappButton';
 import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
 import whatsQr from '../../assets/whats-qr.png';
-
 
 // Outside Click (Hook)
 import { useOnClickOutside } from 'usehooks-ts'
@@ -16,7 +16,7 @@ import { useTransition, animated, easings } from '@react-spring/web';
 
 export const ContactUs = () => {
 
-  
+  const breakpoint = useBreakpoint();
 
   // Expanded Wrapper
   const [showExpansion, setShowExpansion] = useState(false);
@@ -25,16 +25,16 @@ export const ContactUs = () => {
   }
 
   // Screen size condition
-  const [isDesktop, setIsDesktop] = useState(false);
-  useEffect(() => {
-    window.innerWidth > 480 ? setIsDesktop(true) : setIsDesktop(false);
+  // const [isDesktop, setIsDesktop] = useState(false);
+  // useEffect(() => {
+  //   window.innerWidth > 480 ? setIsDesktop(true) : setIsDesktop(false);
 
-    const updateMedia = () => {
-      window.innerWidth > 480 ? setIsDesktop(true) : setIsDesktop(false);
-    };
-    window.addEventListener('resize', updateMedia);
-    return () => window.removeEventListener('resize', updateMedia);
-  }, []);
+  //   const updateMedia = () => {
+  //     window.innerWidth > 480 ? setIsDesktop(true) : setIsDesktop(false);
+  //   };
+  //   window.addEventListener('resize', updateMedia);
+  //   return () => window.removeEventListener('resize', updateMedia);
+  // }, []);
 
   // Outside Click (Variable)
   const refContainer = useRef(null);
@@ -63,44 +63,48 @@ export const ContactUs = () => {
     mode: "all"
   });
 
-  // Whatsapp
-  const whatsappAddress = "https://wa.me/message/VUCLASIXKAW7D1?src=qr";
+  // Whatsapp //
+
+  const whatsappNumber = "5584991751476"
+
+  const whatsappAdress = breakpoint == "notebook" || breakpoint == "desktop" ?
+  `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=` : // Abre diretamente a versão web
+  `https://wa.me/${whatsappNumber}?text=`; // Para uso geral
+
   const [whatsappMessage, setWhatsappMessage] = useState('');
   useEffect(() => {
-    setWhatsappMessage(getValues("subject"));
-  }, [watch("subject")])
-
-  const whatsappContact = whatsappAddress + "?text=" + whatsappMessage
+    setWhatsappMessage(
+      `Setor: ${getValues("department")}\nAssunto: ${getValues("subject")}`
+    );
+  }, [watch("department"), watch("subject")])
 
   return (
     <>
       <Header />
       <div className="request-quote-container">
         <header>
-          <h1>Selecione sobre o que deseja falar conosco.</h1>
-          {/* {
-            transitions(
-              (styles, item) => item &&
-                <animated.div 
-                  className="whatsapp-expansion"
-                  style={styles}
-                >
-                  <span>Leia o QR Code</span>
-                  <img src={whatsQr} alt="Whatsapp QR Code" />
-                  <span>ou clique no link abaixo</span>
-                  <a href={whatsappAddress}>Whatsapp Diretor Comercial</a>
-                </animated.div>
-            )
-          } */}
+          <h1>Entre em contato através do nosso WhatsApp. Insira as informações abaixo para que possamos atendê-lo da melhor forma.</h1>
         </header>
         <section>
-          <div>
-            <label>Assunto</label>
+          <div className="form-input-wp">
+            <label>Setor:</label>
+            <select type="text" {...register("department")}>
+              <option value="Pedido de toner">Pedido de toners</option>
+              <option value="Problemas técnicos">Problemas técnicos</option>
+              <option value="Setor financeiro">Setor financeiro</option>
+              <option value="Locação de impressoras">Locação de impressoras</option>
+            </select>
+          </div>
+          <div className="form-input-wp">
+            <label>Assunto:</label>
             <input type="text" {...register("subject")} />
           </div>
-          <button onClick={() => {
-            window.open(whatsappContact)
-            }}>Enviar</button>
+          <a 
+            href={whatsappAdress + encodeURI(whatsappMessage)}
+            target="_blank"
+          >
+              Enviar mensagem
+          </a>
         </section>
         <CopyrightFooter />
       </div>
