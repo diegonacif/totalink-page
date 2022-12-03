@@ -67,11 +67,16 @@ export const ContactUs = () => {
     register,
     setValue,
     getValues,
+    trigger,
     formState: { errors }
   } = useForm({
     mode: "all",
     resolver: yupResolver(schema)
   });
+
+  useEffect(() => {
+    trigger();
+  }, [trigger]);
 
   // Whatsapp //
 
@@ -91,12 +96,12 @@ export const ContactUs = () => {
   // Conditional Button
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   useEffect(() => {
-    errors.subject !== undefined ?
+    errors.subject === undefined || errors.department === undefined ?
     setIsButtonDisabled(true) :
     setIsButtonDisabled(false)
   }, [watch()])
 
-  console.log(errors.subject);
+  console.log(errors);
   // console.log(isButtonDisabled);
 
   
