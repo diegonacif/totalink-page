@@ -1,10 +1,11 @@
-.request-quote-container {
+.contact-us-container {
   position: relative;
   height: 100%;
   min-height: calc(100vh - 4rem);
   padding-bottom: 3.5rem;
 
   header {
+    @include responsive-padding;
     position: relative;
     height: 20rem;
     width: 100%;
@@ -16,7 +17,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 1rem;
   
     h1 {
       font-size: 2rem;
@@ -64,9 +64,11 @@
   }
 
   form {
+    @include responsive-padding;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    width: 100%;
+    margin-top: 2rem;
 
     .form-input-wp {
       display: flex;
@@ -82,8 +84,8 @@
         margin-top: 0.25rem;
         padding: 0 0.25rem;
       }
-
     }
+
     button {
       display: flex;
       align-items: center;
@@ -101,43 +103,28 @@
 
   @media only screen and ($tablet-size) {
     header {
-      padding: 1rem 4rem;
-
       .here-link:hover {
         filter: brightness(0.7);
         transition: filter 0.3s;
       }
-    }
-    section {
-      padding: 1rem 4rem;
     }
   }
 
   @media only screen and ($notebook-size) {
     header {
-      padding: 1rem 6rem;
-
       .here-link:hover {
         filter: brightness(0.7);
         transition: filter 0.3s;
       }
-    }
-    section {
-      padding: 1rem 6rem;
     }
   }
 
   @media only screen and ($desktop-size) {
     header {
-      padding: 1rem calc(8rem + 5vw);
-
       .here-link:hover {
         filter: brightness(0.7);
         transition: filter 0.3s;
       }
-    }
-    section {
-      padding: 1rem calc(8rem + 5vw);
     }
   }
 }

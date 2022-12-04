@@ -109,7 +109,7 @@ export const ContactUs = () => {
   return (
     <>
       <Header />
-      <div className="request-quote-container">
+      <div className="contact-us-container">
         <header>
           <h1>Entre em contato através do nosso WhatsApp. Insira as informações abaixo para que possamos atendê-lo da melhor forma.</h1>
         </header>

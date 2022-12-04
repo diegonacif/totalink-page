@@ -60,6 +60,20 @@ $desktop-size: "min-width: 1280px";
   max-width: 80rem;
 }
 
+@mixin responsive-padding($pt: 0, $pb: 0) {
+  padding: $pt 1rem $pb;
+
+  @media only screen and ($tablet-size) {
+    padding: $pt 4rem $pb;
+  }
+  @media only screen and ($notebook-size) {
+    padding: $pt 6rem $pb;
+  }
+  @media only screen and ($desktop-size) {
+    padding: $pt calc(8rem + 5vw) $pb;
+  }
+}
+
 // Module Imports
 @import '../components/Header/Header';
 @import '../components/HeaderNav/HeaderNav';
