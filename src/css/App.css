@@ -873,6 +873,9 @@
   margin-top: 1.5rem;
 }
 .contact-us-container form .form-input-wp :is(input, select) {
+  background-color: #fafafa;
+  border: 2px solid rgba(6, 90, 33, 0.7254901961);
+  border-radius: 4px;
   width: 100%;
   height: 1.75rem;
   margin-top: 0.25rem;
