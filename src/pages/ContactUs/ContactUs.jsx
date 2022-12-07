@@ -62,6 +62,8 @@ export const ContactUs = () => {
   const schema = yup.object({
     department: yup.string().required(),
     subject: yup.string().required(),
+    model: yup.string().required(),
+    quantity: yup.number().required(),
   }).required();
 
   // Hook Form Controller
@@ -99,15 +101,24 @@ export const ContactUs = () => {
   // Conditional Button
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   useEffect(() => {
-    errors.subject || errors.department ?
-    setIsButtonDisabled(true) :
-    setIsButtonDisabled(false)
+    if(getValues("department") === "Pedido de toner") {
+      errors.model || errors.quantity ?
+      setIsButtonDisabled(true) :
+      setIsButtonDisabled(false)
+    } else if ((getValues("department") === "Problemas técnicos")) {
+      errors.model || errors.subject ?
+      setIsButtonDisabled(true) :
+      setIsButtonDisabled(false)
+    } else if ((getValues("department") === "Setor financeiro")) {
+      errors.subject ?
+      setIsButtonDisabled(true) :
+      setIsButtonDisabled(false)
+    } else if ((getValues("department") === "Locação de impressoras")) {
+      setIsButtonDisabled(false)
+    }
   }, [watch()])
 
   console.log(errors);
-  // console.log(isButtonDisabled);
-
-  
 
   return (
     <>
@@ -134,17 +145,77 @@ export const ContactUs = () => {
               <MenuItem value="Locação de impressoras">Locação de impressoras</MenuItem>
             </TextField>
           </div>
-          <div className="form-input-wp">
-            <TextField 
-              id="subject"
-              label="Assunto" 
-              required
-              color="success"
-              variant="standard"
-              aria-invalid={errors.subject ? "true" : "false"} 
-              {...register("subject")}
-            />
-          </div>
+          {
+            getValues("department") === "Pedido de toner" ?
+            <>
+              <div className="form-input-wp">
+                <TextField 
+                  id="subject"
+                  label="Modelo do toner ou da impressora" 
+                  required
+                  color="success"
+                  variant="standard"
+                  aria-invalid={errors.subject ? "true" : "false"} 
+                  {...register("model")}
+                />
+              </div>
+              <div className="form-input-wp">
+                <TextField 
+                  id="subject"
+                  label="Quantidade" 
+                  required
+                  color="success"
+                  variant="standard"
+                  aria-invalid={errors.subject ? "true" : "false"} 
+                  {...register("quantity")}
+                />
+              </div>
+            </> :
+            undefined
+          }
+          {
+            getValues("department") === "Problemas técnicos" ?
+            <>
+              <div className="form-input-wp">
+                <TextField 
+                  id="subject"
+                  label="Modelo da impressora" 
+                  required
+                  color="success"
+                  variant="standard"
+                  aria-invalid={errors.subject ? "true" : "false"} 
+                  {...register("model")}
+                />
+              </div>
+              <div className="form-input-wp">
+                <TextField 
+                  id="subject"
+                  label="Informe o problema apresentado" 
+                  required
+                  color="success"
+                  variant="standard"
+                  aria-invalid={errors.subject ? "true" : "false"} 
+                  {...register("subject")}
+                />
+              </div>
+            </> :
+            undefined
+          }
+          {
+            getValues("department") === "Setor financeiro" ?
+            <div className="form-input-wp">
+              <TextField 
+                id="subject"
+                label="Assunto" 
+                required
+                color="success"
+                variant="standard"
+                aria-invalid={errors.subject ? "true" : "false"} 
+                {...register("subject")}
+              />
+            </div> :
+            undefined
+          }
           <button 
             onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
             disabled={isButtonDisabled}
