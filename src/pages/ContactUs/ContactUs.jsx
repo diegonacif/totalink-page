@@ -121,6 +121,8 @@ export const ContactUs = () => {
             <TextField 
               label="Setor"
               select 
+              required
+              color="success"
               variant="standard"
               defaultValue={""} 
               {...register("department")}
@@ -136,6 +138,8 @@ export const ContactUs = () => {
             <TextField 
               id="subject"
               label="Assunto" 
+              required
+              color="success"
               variant="standard"
               aria-invalid={errors.subject ? "true" : "false"} 
               {...register("subject")}
