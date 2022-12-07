@@ -5,6 +5,9 @@ import * as yup from "yup";
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 import '../../css/App.css';
 
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+
 import { Header } from '../../components/Header/Header';
 import { WhatsappButton } from '../../components/WhatsappButton/WhatsappButton';
 import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
@@ -115,22 +118,28 @@ export const ContactUs = () => {
         </header>
         <form>
           <div className="form-input-wp">
-            <label>Setor:</label>
-            <select type="text" defaultValue={""} {...register("department")}>
-              <option value="" disabled>Selecione uma opção</option>
-              <option value="Pedido de toner">Pedido de toners</option>
-              <option value="Problemas técnicos">Problemas técnicos</option>
-              <option value="Setor financeiro">Setor financeiro</option>
-              <option value="Locação de impressoras">Locação de impressoras</option>
-            </select>
+            <TextField 
+              label="Setor"
+              select 
+              variant="standard"
+              defaultValue={""} 
+              {...register("department")}
+            >
+              <MenuItem value="" disabled>Selecione uma opção</MenuItem>
+              <MenuItem value="Pedido de toner">Pedido de toners</MenuItem>
+              <MenuItem value="Problemas técnicos">Problemas técnicos</MenuItem>
+              <MenuItem value="Setor financeiro">Setor financeiro</MenuItem>
+              <MenuItem value="Locação de impressoras">Locação de impressoras</MenuItem>
+            </TextField>
           </div>
           <div className="form-input-wp">
-            <label>Assunto:</label>
-            <input 
-              type="text" 
-              id="subject" 
-              aria-invalid={errors.subject ? "true" : "false"}
-              {...register("subject")} />
+            <TextField 
+              id="subject"
+              label="Assunto" 
+              variant="standard"
+              aria-invalid={errors.subject ? "true" : "false"} 
+              {...register("subject")}
+            />
           </div>
           <button 
             onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
