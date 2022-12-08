@@ -73,6 +73,8 @@ export const ContactUs = () => {
     setValue,
     getValues,
     trigger,
+    reset,
+    clearErrors,
     formState: { errors }
   } = useForm({
     mode: "all",
@@ -117,6 +119,14 @@ export const ContactUs = () => {
       setIsButtonDisabled(false)
     }
   }, [watch()])
+
+  useEffect(() => {
+    reset({
+      model: '',
+      subject: '',
+      quantity: '',
+    })
+  }, [watch("department")])
 
   console.log(errors);
 
