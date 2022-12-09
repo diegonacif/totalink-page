@@ -73,20 +73,12 @@
     .form-input-wp {
       display: flex;
       flex-direction: column;
+      height: 100%;
+      justify-content: center;
 
       &:not(:first-child) {
         margin-top: 1.5rem;
       }
-
-      // :is(input, select) {
-      //   background-color: $white-bg;
-      //   border: 2px solid #065a21b9;
-      //   border-radius: 4px;
-      //   width: 100%;
-      //   height: 1.75rem;
-      //   margin-top: 0.25rem;
-      //   padding: 0 0.25rem;
-      // }
     }
 
     button {
@@ -111,6 +103,8 @@
         transition: filter 0.3s;
       }
     }
+
+    
   }
 
   @media only screen and ($notebook-size) {
@@ -118,6 +112,24 @@
       .here-link:hover {
         filter: brightness(0.7);
         transition: filter 0.3s;
+      }
+    }
+
+    form {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template: 1fr 1fr;
+      align-content: center;
+      gap: 1rem;
+
+      .form-input-wp {
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+
+      button {
+       grid-column-start: span 3;
       }
     }
   }

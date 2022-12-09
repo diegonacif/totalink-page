@@ -148,7 +148,7 @@ export const ContactUs = () => {
           <h1>Entre em contato através do nosso WhatsApp. Insira as informações abaixo para que possamos atendê-lo da melhor forma.</h1>
         </header>
         <form>
-          <div className="form-input-wp">
+          <div className="form-input-wp input-select">
             <TextField 
               label="Setor"
               select 

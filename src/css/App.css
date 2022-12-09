@@ -911,6 +911,8 @@
 .contact-us-container form .form-input-wp {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: center;
 }
 .contact-us-container form .form-input-wp:not(:first-child) {
   margin-top: 1.5rem;
@@ -938,6 +940,19 @@
   .contact-us-container header .here-link:hover {
     filter: brightness(0.7);
     transition: filter 0.3s;
+  }
+  .contact-us-container form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template: 1fr 1fr;
+    align-content: center;
+    gap: 1rem;
+  }
+  .contact-us-container form .form-input-wp:not(:first-child) {
+    margin-top: 0;
+  }
+  .contact-us-container form button {
+    grid-column-start: span 3;
   }
 }
 @media only screen and (min-width: 1280px) {
