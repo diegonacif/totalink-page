@@ -38,11 +38,15 @@
       row-gap: 2rem;
 
       h1 {
-        font-size: 2rem;
+        font-size: 1.75rem;
         font-weight: 600;
         line-height: 2.25rem;
         color: $white-bg;
         text-shadow: 2px 1px 5px rgb(25, 25, 25);
+
+        &:not(:last-child) {
+          margin-bottom: 0.25rem;
+        }
       }
   
       h4 {

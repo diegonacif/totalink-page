@@ -117,11 +117,14 @@
   row-gap: 2rem;
 }
 .modal-container section .modal-text h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 600;
   line-height: 2.25rem;
   color: #fafafa;
   text-shadow: 2px 1px 5px rgb(25, 25, 25);
+}
+.modal-container section .modal-text h1:not(:last-child) {
+  margin-bottom: 0.25rem;
 }
 .modal-container section .modal-text h4 {
   font-size: 1.25rem;

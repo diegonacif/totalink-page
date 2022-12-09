@@ -27,10 +27,10 @@ export const Modal = () => {
       <div className="blur-bg"></div>
       <section>
         <div className="modal-text">
-          <h1>
-            Precisando de impressoras ?<br />
-            Não perca mais tempo nem dinheiro.
-          </h1>
+          <div>
+            <h1>Precisando de impressoras ?</h1>
+            <h1>Não perca mais tempo nem dinheiro.</h1>
+          </div>
           <h4>Soluções em outsourcing com a confiabilidade dos equipamentos Total Ink na sua empresa.</h4>
           <h6>As mais modernas impressoras e um suporte técnico rápido, ao seu alcance.</h6>
         </div>
