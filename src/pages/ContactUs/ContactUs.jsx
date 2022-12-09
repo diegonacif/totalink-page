@@ -96,9 +96,17 @@ export const ContactUs = () => {
   const [whatsappMessage, setWhatsappMessage] = useState('');
   useEffect(() => {
     setWhatsappMessage(
-      `Setor: ${getValues("department")}\nAssunto: ${getValues("subject")}`
+      getValues("department") === "Pedido de toner" ?
+      `Setor: ${getValues("department")}\nModelo do Toner/Impressora: ${getValues("model")}\nQuantidade: ${getValues("quantity")}` :
+      getValues("department") === "Problemas técnicos" ?
+      `Setor: ${getValues("department")}\nModelo do Toner/Impressora: ${getValues("model")}\nProblema apresentado: ${getValues("subject")}` :
+      getValues("department") === "Setor financeiro" ?
+      `Setor: ${getValues("department")}\nAssunto: ${getValues("subject")}` :
+      getValues("department") === "Locação de impressoras" ?
+      `Setor: ${getValues("department")}` :
+      ''
     );
-  }, [watch("department"), watch("subject")])
+  }, [watch("department"), watch("subject"), watch("model"), watch("quantity")])
 
   // Conditional Button
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
