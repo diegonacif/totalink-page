@@ -89,6 +89,10 @@
         display: flex;
         flex-direction: column;
         row-gap: 2rem;
+
+        h1 {
+          font-size: 2rem;
+        }
       }
 
       img {
