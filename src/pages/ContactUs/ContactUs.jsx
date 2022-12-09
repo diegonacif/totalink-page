@@ -99,7 +99,7 @@ export const ContactUs = () => {
       getValues("department") === "Pedido de toner" ?
       `Setor: ${getValues("department")}\nModelo do Toner/Impressora: ${getValues("model")}\nQuantidade: ${getValues("quantity")}` :
       getValues("department") === "Problemas técnicos" ?
-      `Setor: ${getValues("department")}\nModelo do Toner/Impressora: ${getValues("model")}\nProblema apresentado: ${getValues("subject")}` :
+      `Setor: ${getValues("department")}\nModelo da Impressora: ${getValues("model")}\nProblema apresentado: ${getValues("subject")}` :
       getValues("department") === "Setor financeiro" ?
       `Setor: ${getValues("department")}\nAssunto: ${getValues("subject")}` :
       getValues("department") === "Locação de impressoras" ?
