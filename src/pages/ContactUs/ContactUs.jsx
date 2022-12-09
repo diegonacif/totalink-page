@@ -73,7 +73,7 @@ export const ContactUs = () => {
     setValue,
     getValues,
     trigger,
-    reset,
+    resetField,
     clearErrors,
     formState: { errors }
   } = useForm({
@@ -120,15 +120,17 @@ export const ContactUs = () => {
     }
   }, [watch()])
 
+  // Clear fields on department changing
   useEffect(() => {
-    reset({
-      model: '',
-      subject: '',
-      quantity: '',
-    })
+    setValue("subject", '');
+    setValue("model", '');
+    setValue("quantity", '');
+    trigger();
   }, [watch("department")])
 
-  console.log(errors);
+  // console.log(errors);
+  console.log(getValues("subject"));
+
 
   return (
     <>
