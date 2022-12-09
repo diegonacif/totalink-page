@@ -5,6 +5,7 @@
   justify-content: center;
 
   height: calc(100vh - 4rem);
+  min-height: 38rem;
   width: 100%;
   padding: 1rem;
   
@@ -25,9 +26,10 @@
 
   section {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 4rem;
     z-index: 1;
     
     .modal-text {
@@ -60,7 +62,7 @@
     }
 
     img {
-      width: 20rem;
+      width: 13rem;
     }
   }
 
@@ -70,6 +72,25 @@
 
   @media only screen and ($notebook-size) {
     padding: 1rem 6rem;
+
+    section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 4rem;
+      z-index: 1;
+      
+      .modal-text {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+      }
+
+      img {
+        width: 20rem;
+      }
+    }
   }
 
   @media only screen and ($desktop-size) {

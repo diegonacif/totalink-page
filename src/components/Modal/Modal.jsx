@@ -35,12 +35,10 @@ export const Modal = () => {
           <h6>As mais modernas impressoras e um suporte técnico rápido, ao seu alcance.</h6>
         </div>
         {
-          breakpoint === 'notebook' || breakpoint === 'desktop' ?
           transitions(
             (styles, item) => item &&
             <animated.img src={printerImg} alt="impressora hp color" style={styles} />
-          ) :
-          null
+          )
         }
       </section>
     </div>

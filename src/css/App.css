@@ -87,6 +87,7 @@
   flex-direction: column;
   justify-content: center;
   height: calc(100vh - 4rem);
+  min-height: 38rem;
   width: 100%;
   padding: 1rem;
   overflow: hidden;
@@ -104,9 +105,10 @@
 }
 .modal-container section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 4rem;
   z-index: 1;
 }
 .modal-container section .modal-text {
@@ -136,7 +138,7 @@
   text-shadow: 1px 1px 4px rgb(25, 25, 25);
 }
 .modal-container section img {
-  width: 20rem;
+  width: 13rem;
 }
 @media only screen and (min-width: 600px) {
   .modal-container {
@@ -146,6 +148,22 @@
 @media only screen and (min-width: 1024px) {
   .modal-container {
     padding: 1rem 6rem;
+  }
+  .modal-container section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    z-index: 1;
+  }
+  .modal-container section .modal-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+  }
+  .modal-container section img {
+    width: 20rem;
   }
 }
 @media only screen and (min-width: 1280px) {
