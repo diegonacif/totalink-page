@@ -955,6 +955,9 @@
   .contact-us-container form .form-input-wp:not(:first-child) {
     margin-top: 0;
   }
+  .contact-us-container form .wide-input {
+    grid-column-start: span 3;
+  }
   .contact-us-container form button {
     grid-column-start: span 3;
   }

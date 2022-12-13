@@ -223,11 +223,13 @@ export const ContactUs = () => {
           }
           {
             getValues("department") === "Setor financeiro" ?
-            <div className="form-input-wp">
+            <div className="form-input-wp wide-input">
               <TextField 
                 id="subject"
                 label="Assunto" 
                 required
+                multiline
+                maxRows={4}
                 color="success"
                 variant="standard"
                 aria-invalid={errors.subject ? "true" : "false"} 
