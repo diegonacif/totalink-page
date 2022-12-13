@@ -604,6 +604,10 @@
   background-color: rgba(206, 206, 206, 0.3);
   border-radius: 8px;
   padding: 1rem;
+  gap: 1.5rem;
+}
+.article-container .article-main .article-content p {
+  line-height: 1.25rem;
 }
 @media only screen and (min-width: 1024px) {
   .article-container .article-main {
