@@ -226,7 +226,7 @@ export const ContactUs = () => {
             <div className="form-input-wp wide-input">
               <TextField 
                 id="subject"
-                label="Assunto" 
+                label="Assunto"
                 required
                 multiline
                 maxRows={4}
