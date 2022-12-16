@@ -191,6 +191,9 @@
   margin-top: 0.5rem;
   line-height: 1.5rem;
 }
+.trust-container h1 {
+  font-family: "Alexandria", sans-serif;
+}
 .trust-container .feedbacks-wrapper {
   display: flex;
   flex-direction: column;
@@ -256,6 +259,7 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  font-family: "Alexandria", sans-serif;
   padding-top: 3rem;
   border-top: 1px solid rgba(26, 206, 80, 0.5);
 }
@@ -316,6 +320,7 @@
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  font-family: "Alexandria", sans-serif;
   padding-top: 3rem;
   border-top: 1px solid rgba(26, 206, 80, 0.5);
 }

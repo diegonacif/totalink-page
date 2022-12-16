@@ -13,6 +13,10 @@
     line-height: 1.5rem;
   }
 
+  h1 {
+    font-family: $title-font;
+  }
+
   .feedbacks-wrapper {
     display: flex;
     flex-direction: column;
