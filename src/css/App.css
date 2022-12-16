@@ -194,6 +194,7 @@
 .trust-container h1 {
   font-family: "Alexandria", sans-serif;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 .trust-container .feedbacks-wrapper {
   display: flex;
@@ -261,6 +262,7 @@
   height: -moz-fit-content;
   height: fit-content;
   font-family: "Alexandria", sans-serif;
+  font-weight: 600;
   padding-top: 2rem;
   border-top: 1px solid rgba(26, 206, 80, 0.5);
 }
@@ -332,6 +334,7 @@
   height: -moz-fit-content;
   height: fit-content;
   font-family: "Alexandria", sans-serif;
+  font-weight: 600;
   padding-top: 2rem;
   border-top: 1px solid rgba(26, 206, 80, 0.5);
 }
