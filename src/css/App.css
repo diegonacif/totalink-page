@@ -193,6 +193,7 @@
 }
 .trust-container h1 {
   font-family: "Alexandria", sans-serif;
+  font-size: 1.5rem;
 }
 .trust-container .feedbacks-wrapper {
   display: flex;
@@ -231,7 +232,7 @@
 }
 
 .services-container {
-  padding: 0 1rem 0;
+  padding: 0 1rem 3rem;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -239,17 +240,17 @@
 }
 @media only screen and (min-width: 600px) {
   .services-container {
-    padding: 0 4rem 0;
+    padding: 0 4rem 3rem;
   }
 }
 @media only screen and (min-width: 1024px) {
   .services-container {
-    padding: 0 6rem 0;
+    padding: 0 6rem 3rem;
   }
 }
 @media only screen and (min-width: 1280px) {
   .services-container {
-    padding: 0 calc(8rem + 5vw) 0;
+    padding: 0 calc(8rem + 5vw) 3rem;
   }
 }
 .services-container h1 {
@@ -260,13 +261,14 @@
   height: -moz-fit-content;
   height: fit-content;
   font-family: "Alexandria", sans-serif;
-  padding-top: 3rem;
+  padding-top: 2rem;
   border-top: 1px solid rgba(26, 206, 80, 0.5);
 }
 .services-container section {
   display: flex;
   flex-direction: column;
-  row-gap: 1rem;
+  row-gap: 2rem;
+  padding-top: 2rem;
 }
 .services-container section .service-wrapper {
   display: flex;
@@ -281,20 +283,29 @@
 }
 .services-container section .service-wrapper span {
   text-align: center;
+  font-family: "Alexandria", sans-serif;
+  font-size: 1.25rem;
+}
+.services-container section hr {
+  border-top: 1px solid rgba(26, 206, 80, 0.5);
+  border-bottom: 0;
+  width: 70%;
+  display: flex;
+  margin: 0 auto;
 }
 .services-container section .remanufatura {
-  width: 18rem;
+  width: 17rem;
   height: 12rem;
   background: url(../assets/cartucho60.png);
 }
 .services-container section .outsourcing {
   width: 18rem;
-  height: 14rem;
+  height: 12.5rem;
   background: url(../assets/outsourcing.png);
 }
 .services-container section .maintenance {
   width: 19rem;
-  height: 16rem;
+  height: 14rem;
   background: url(../assets/manutencao.png);
 }
 
@@ -321,7 +332,7 @@
   height: -moz-fit-content;
   height: fit-content;
   font-family: "Alexandria", sans-serif;
-  padding-top: 3rem;
+  padding-top: 2rem;
   border-top: 1px solid rgba(26, 206, 80, 0.5);
 }
 .customers-container .customers-wrapper {

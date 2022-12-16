@@ -1,5 +1,5 @@
 .services-container {
-  @include responsive-padding;
+  @include responsive-padding(0, 3rem);
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
@@ -11,23 +11,23 @@
     width: 100%;
     height: fit-content;
     font-family: $title-font;
-    // font-weight: 700;
 
-    padding-top: 3rem;
+    padding-top: 2rem;
     border-top: 1px solid $green-bg-mirror-50;
   }
 
   section {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    row-gap: 2rem;
+    padding-top: 2rem;
     
     .service-wrapper {
       display: flex;
       flex-direction: column;
       row-gap: 0.5rem;
 
-      .service-img {
+     .service-img {
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center center;
@@ -36,24 +36,34 @@
 
       span {
         text-align: center;
+        font-family: $title-font;
+        font-size: 1.25rem;
       }
 
     }
+
+    hr {
+      border-top: 1px solid $green-bg-mirror-50;
+      border-bottom: 0;
+      width: 70%;
+      display: flex;
+      margin: 0 auto;
+    }
     .remanufatura {
-      width: 18rem;
+      width: 17rem;
       height: 12rem;
       background: url(#{$assets-path}/cartucho60.png);
     }
 
     .outsourcing {
       width: 18rem;
-      height: 14rem;
+      height: 12.5rem;
       background: url(#{$assets-path}/outsourcing.png);
     }
 
     .maintenance {
       width: 19rem;
-      height: 16rem;
+      height: 14rem;
       background: url(#{$assets-path}/manutencao.png);
     }
   }

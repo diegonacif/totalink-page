@@ -9,11 +9,13 @@ export const Services = () => {
           <span>Remanufatura</span>
           <p>O uso de cartuchos remanufaturados oferece economia sem perda na qualidade de impressão. A Total Ink investe em tecnologia para garantir a qualidade da sua impressão e ajuda a sua empresa a reduzir os impactos ambientais gerados pelo descarte dos cartuchos usados.</p>
         </div>
+        <hr />
         <div className="service-wrapper">
           <div className="service-img outsourcing"></div>
           <span>Outsourcing</span>
           <p>Tenha sempre um equipamento de ponta na sua empresa. Com a opção de comodato oferecida pela Total In você conta sempre com equipamentos novos além da redução de custos de suprimentos e gerenciamento, maior padrão além de maior eficiência e controle.</p>
         </div>
+        <hr />
         <div className="service-wrapper">
           <div className="service-img maintenance"></div>
           <span>Manutenção, coleta e entrega.</span>
