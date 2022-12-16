@@ -179,13 +179,28 @@
 }
 
 .trust-container {
+  padding: 2rem 1rem 0;
   display: flex;
   flex-direction: column;
   height: 100%;
   min-height: 20rem;
   width: 100%;
-  padding: 1rem;
   background-color: #fafafa;
+}
+@media only screen and (min-width: 600px) {
+  .trust-container {
+    padding: 2rem 4rem 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .trust-container {
+    padding: 2rem 6rem 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .trust-container {
+    padding: 2rem calc(8rem + 5vw) 0;
+  }
 }
 .trust-container p {
   margin-top: 0.5rem;
@@ -215,21 +230,6 @@
 }
 .trust-container .feedbacks-wrapper .feedback span {
   margin-top: 0.5rem;
-}
-@media only screen and (min-width: 600px) {
-  .trust-container {
-    padding: 2rem 4rem;
-  }
-}
-@media only screen and (min-width: 1024px) {
-  .trust-container {
-    padding: 2rem 6rem;
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .trust-container {
-    padding: 2rem calc(8rem + 5vw);
-  }
 }
 
 .services-container {
@@ -296,21 +296,30 @@
   margin: 0 auto;
 }
 .services-container section .remanufatura {
-  width: 17rem;
-  height: 12rem;
+  width: 18rem;
+  height: 14rem;
   background: url(../assets/cartucho60.png);
 }
 .services-container section .outsourcing {
   width: 18rem;
-  height: 12.5rem;
+  height: 14rem;
   background: url(../assets/outsourcing.png);
 }
 .services-container section .maintenance {
-  width: 19rem;
+  width: 18rem;
   height: 14rem;
   background: url(../assets/manutencao.png);
 }
-
+@media only screen and (min-width: 1024px) {
+  .services-container section {
+    flex-direction: row;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+  }
+  .services-container section hr {
+    display: none;
+  }
+}
 .customers-container {
   position: relative;
   display: flex;

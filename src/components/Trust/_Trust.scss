@@ -1,11 +1,12 @@
 .trust-container {
+  @include responsive-padding(2rem, 0);
   display: flex;
   flex-direction: column;
 
   height: 100%;
   min-height: 20rem;
   width: 100%;
-  padding: 1rem;
+  // padding: 1rem;
   background-color: $white-bg;
   
   p {
@@ -40,17 +41,5 @@
         margin-top: 0.5rem;
       }
     }
-  }
-
-  @media only screen and ($tablet-size) {
-    padding: 2rem 4rem;
-  }
-
-  @media only screen and ($notebook-size) {
-    padding: 2rem 6rem;
-  }
-
-  @media only screen and ($desktop-size) {
-    padding: 2rem calc(8rem + 5vw);
   }
 }

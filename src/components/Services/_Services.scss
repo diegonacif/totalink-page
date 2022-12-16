@@ -51,21 +51,40 @@
       margin: 0 auto;
     }
     .remanufatura {
-      width: 17rem;
-      height: 12rem;
+      width: 18rem;
+      height: 14rem;
       background: url(#{$assets-path}/cartucho60.png);
     }
 
     .outsourcing {
       width: 18rem;
-      height: 12.5rem;
+      height: 14rem;
       background: url(#{$assets-path}/outsourcing.png);
     }
 
     .maintenance {
-      width: 19rem;
+      width: 18rem;
       height: 14rem;
       background: url(#{$assets-path}/manutencao.png);
     }
+  }
+
+  @media only screen and ($tablet-size) {
+    // padding: 2rem 4rem;
+  }
+
+  @media only screen and ($notebook-size) {
+    section {
+      flex-direction: row;
+      column-gap: 2rem;
+
+      hr {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and ($desktop-size) {
+    // padding: 2rem calc(8rem + 5vw);
   }
 }
