@@ -15,26 +15,32 @@ export const FAQ = () => {
           <h1>Encontre respostas rápidas pro seu problema, nas categorias abaixo.</h1>
         </header>
         <div className="faq-categories">
-          <Fade left cascade duration={800}>
-            <Link to="/faq/toner">
+          <Link to="/faq/toner">
+            <Fade left cascade duration={800}>
               <div className="faq-category">
                 <span >Toner</span>
                 <div className="faq-category-img toner-card"></div>
               </div>
-            </Link>
-            <div className="faq-category">
+            </Fade>
+          </Link>
+          <div className="faq-category">
+            <Fade left cascade duration={800}>
               <span id="drum-card-text">Fotocondutor</span>
               <div className="faq-category-img drum-card"></div>
-            </div>
-            <div className="faq-category">
+            </Fade>
+          </div>
+          <div className="faq-category">
+            <Fade left cascade duration={800}>
               <span>Erros / Defeitos</span>
               <div className="faq-category-img error-card"></div>
-            </div>
-            <div className="faq-category">
+            </Fade>
+          </div>
+          <div className="faq-category">
+            <Fade left cascade duration={800}>
               <span>Tanques de Tinta / Bulk</span>
               <div className="faq-category-img bulk-card"></div>
-            </div>
-          </Fade>
+            </Fade>
+          </div>
         </div>
         <CopyrightFooter />
       </div>
