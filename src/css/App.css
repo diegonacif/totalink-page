@@ -760,7 +760,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(../assets/green-bg.jpg);
+  background: url(../assets/green-bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -928,7 +928,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(../assets/green-bg.jpg);
+  background: url(../assets/green-bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
