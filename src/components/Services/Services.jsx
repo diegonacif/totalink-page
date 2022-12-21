@@ -3,18 +3,18 @@ import Fade from 'react-reveal/Fade';
 export const Services = () => {
   return (
     <div className="services-container">
-      <Fade left cascade duration={800}>
+      <Fade left>
         <h1>Saiba como a Total Ink pode simplificar seu dia-a-dia!</h1>
         <p>Conheça alguns dos nossos serviços! Se você não achou o que procura, entre em contato conosco. Temos um amplo leque de soluções para parques de impressão, venda de produtos e suporte a equipamentos. Conte com nossos 12 anos de tradição para te ajudar a crescer.</p>
         <section>
-          <Fade left cascade duration={800}>
+          <Fade left>
             <div className="service-wrapper">
               <div className="service-img remanufatura"></div>
               <span>Remanufatura</span>
               <p>O uso de cartuchos remanufaturados oferece economia sem perda na qualidade de impressão. A Total Ink investe em tecnologia para garantir a qualidade da sua impressão e ajuda a sua empresa a reduzir os impactos ambientais gerados pelo descarte dos cartuchos usados.</p>
             </div>
           </Fade>
-          <Fade left cascade duration={800}>
+          <Fade left>
             <hr />
             <div className="service-wrapper">
               <div className="service-img outsourcing"></div>
@@ -22,7 +22,7 @@ export const Services = () => {
               <p>Tenha sempre um equipamento de ponta na sua empresa. Com a opção de comodato oferecida pela Total In você conta sempre com equipamentos novos além da redução de custos de suprimentos e gerenciamento, maior padrão além de maior eficiência e controle.</p>
             </div>
           </Fade>
-          <Fade left cascade duration={800}>
+          <Fade left>
             <hr />
             <div className="service-wrapper">
               <div className="service-img maintenance"></div>

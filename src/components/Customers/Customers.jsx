@@ -11,7 +11,7 @@ import Fade from 'react-reveal/Fade';
 export const Customers = () => {
   return (
     <div className="customers-container">
-      <Fade left cascade duration={800}>
+      <Fade left>
         <h1>Conheça alguns de nossos clientes:</h1>
 
         <div className="customers-wrapper">

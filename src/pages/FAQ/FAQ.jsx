@@ -16,27 +16,27 @@ export const FAQ = () => {
         </header>
         <div className="faq-categories">
           <Link to="/faq/toner">
-            <Fade left cascade duration={800}>
-              <div className="faq-category">
+            <div className="faq-category">
+              <Fade left>
                 <span >Toner</span>
                 <div className="faq-category-img toner-card"></div>
-              </div>
-            </Fade>
+              </Fade>
+            </div>
           </Link>
           <div className="faq-category">
-            <Fade left cascade duration={800}>
+            <Fade left>
               <span id="drum-card-text">Fotocondutor</span>
               <div className="faq-category-img drum-card"></div>
             </Fade>
           </div>
           <div className="faq-category">
-            <Fade left cascade duration={800}>
+            <Fade left>
               <span>Erros / Defeitos</span>
               <div className="faq-category-img error-card"></div>
             </Fade>
           </div>
           <div className="faq-category">
-            <Fade left cascade duration={800}>
+            <Fade left>
               <span>Tanques de Tinta / Bulk</span>
               <div className="faq-category-img bulk-card"></div>
             </Fade>
