@@ -9,6 +9,7 @@ import {
 
 import { FAQ } from './pages/FAQ/FAQ';
 import { FaqToner } from './pages/FAQ/FaqToner/FaqToner';
+import { AboutUs } from './pages/AboutUs/AboutUs';
 import { ContactUs } from './pages/ContactUs/ContactUs';
 import { WhitePage } from './pages/WhitePage';
 import { HowManyPages } from './articles/HowManyPages/HowManyPages';
@@ -22,6 +23,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<FAQ />} />
           <Route path="toner" element={<FaqToner />} />
         </Route>
+        <Route path="aboutus" element={<AboutUs />} />
         <Route path="contact" element={<ContactUs />} />
         <Route path="article" element={<WhitePage />}>
           <Route index element={<WhitePage />} />

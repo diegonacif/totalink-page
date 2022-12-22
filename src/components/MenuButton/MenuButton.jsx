@@ -61,7 +61,7 @@ export const MenuButton = () => {
               </div>
               <hr />
               <div className="menu-item">
-                <Link to="#">Sobre Nós</Link>
+                <Link to="/aboutus">Sobre Nós</Link>
               </div>
               <div className="menu-item">
                 <Link to="/contact">Fale Conosco</Link>

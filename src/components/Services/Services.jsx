@@ -1,11 +1,21 @@
 import Fade from 'react-reveal/Fade';
 
 export const Services = () => {
+  // Cálculo de idade
+  const timeNow = new Date();
+  const birth = new Date(2004, 11, 23);
+  const age = convertMill(timeNow - birth);
+
+  function convertMill (mSeconds) {
+    var checkYear = Math.floor(mSeconds / 31536000000);
+    return checkYear;
+  }
+
   return (
     <div className="services-container">
       <Fade left>
         <h1>Saiba como a Total Ink pode simplificar seu dia-a-dia!</h1>
-        <p>Conheça alguns dos nossos serviços! Se você não achou o que procura, entre em contato conosco. Temos um amplo leque de soluções para parques de impressão, venda de produtos e suporte a equipamentos. Conte com nossos 12 anos de tradição para te ajudar a crescer.</p>
+        <p>Conheça alguns dos nossos serviços! Se você não achou o que procura, entre em contato conosco. Temos um amplo leque de soluções para parques de impressão, venda de produtos e suporte a equipamentos. Conte com nossos {age} anos de tradição para te ajudar a crescer.</p>
       </Fade>
       <section>
         <Fade left>

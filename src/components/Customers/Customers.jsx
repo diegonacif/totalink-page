@@ -18,22 +18,22 @@ export const Customers = () => {
           <img src={artCLogo} alt="ArtC logo" id="artCLogo" />
           <span>Art&C</span>
         </div>
-        <div className="customers-wrapper">
+        {/* <div className="customers-wrapper">
           <img src={interfortLogo} alt="Interfort logo" id="interfortLogo" />
           <span>Interfort</span>
-        </div>
-        <div className="customers-wrapper">
+        </div> */}
+        {/* <div className="customers-wrapper">
           <img src={mareLogo} alt="ArtC logo" id="mareLogo" />
           <span>Maré Mansa</span>
-        </div>
+        </div> */}
         <div className="customers-wrapper">
           <img src={sterbomLogo} alt="ArtC logo" id="sterbomLogo" />
           <span>Sterbom</span>
         </div>
-        <div className="customers-wrapper">
+        {/* <div className="customers-wrapper">
           <img src={unilarLogo} alt="ArtC logo" id="unilarLogo" />
           <span>Unilar</span>
-        </div>
+        </div> */}
         <div className="customers-wrapper">
           <img src={natalcorLogo} alt="ArtC logo" id="natalcorLogo" />
           <span>Natalcor</span>
