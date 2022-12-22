@@ -1,8 +1,9 @@
 .services-container {
   @include responsive-padding(0, 3rem);
   display: flex;
-  width: 100vw;
   flex-direction: column;
+  width: 100vw;
+  height: 100%;
   row-gap: 1rem;
   background-color: $white-bg;
 
@@ -23,11 +24,13 @@
     flex-direction: column;
     row-gap: 2rem;
     padding-top: 2rem;
+    align-items: center;
     
     .service-wrapper {
       display: flex;
       flex-direction: column;
       row-gap: 0.5rem;
+      max-width: 25rem;
 
      .service-img {
         background-repeat: no-repeat;
@@ -75,10 +78,14 @@
   }
 
   @media only screen and ($notebook-size) {
+    // padding: 2rem 6rem;
     section {
       flex-direction: row;
+      flex-wrap: wrap;
       column-gap: 2rem;
-
+      align-items: flex-start;
+      justify-content: center;
+  
       hr {
         display: none;
       }
@@ -87,5 +94,14 @@
 
   @media only screen and ($desktop-size) {
     // padding: 2rem calc(8rem + 5vw);
+    section {
+      flex-direction: row;
+       flex-wrap: nowrap;
+      column-gap: 2rem;
+  
+      hr {
+        display: none;
+      }
+    }
   }
 }
