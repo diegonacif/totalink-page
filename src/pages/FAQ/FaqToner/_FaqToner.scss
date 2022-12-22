@@ -4,9 +4,10 @@
   @include green-diagonal-gradient;
 
   section {
+    @include responsive-padding;
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
+    // padding: 0 1rem;
 
     .question-row {
       display: flex;
@@ -24,9 +25,9 @@
     }
   }
 
-  @media only screen and ($notebook-size) {
-    section {
-      padding: 0 4rem;
-    }
-  }
+  // @media only screen and ($notebook-size) {
+  //   section {
+  //     // padding: 0 4rem;
+  //   }
+  // }
 }

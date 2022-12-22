@@ -2,6 +2,7 @@
   width: 100%;
   
   header {
+    @include responsive-padding(2rem, 2rem);
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -28,9 +29,9 @@
     }
   }
 
-  @media only screen and ($notebook-size) {
-    header {
-      padding: 2rem 4rem;
-    }
-  }
+  // @media only screen and ($notebook-size) {
+  //   header {
+  //     padding: 2rem 4rem;
+  //   }
+  // }
 }

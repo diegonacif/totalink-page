@@ -1,6 +1,5 @@
 
 $primary-font: 'Urbanist', sans-serif;
-// $title-font: 'Secular One', sans-serif;
 $title-font: 'Alexandria', sans-serif;
 
 $assets-path: '../assets';
@@ -43,7 +42,6 @@ $desktop-size: "min-width: 1280px";
   a {
     text-decoration: none;
     color: inherit;
-    // -webkit-tap-highlight-color: transparent;
     &:focus-visible, &:focus-within, &:focus, &:active, &:target {
       border: 0;
       outline: 0;
