@@ -23,8 +23,13 @@
       width: 100%;
       background-color: $gray-bg-mirror;
       border-radius: 8px;
-      padding: 1rem;
+      padding: 1.5rem 1rem;
       gap: 1.5rem;
+
+      img {
+        max-width: 40rem;
+        align-self: center;
+      }
 
       p {
         line-height: 1.25rem;
