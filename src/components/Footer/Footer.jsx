@@ -25,9 +25,9 @@ export const Footer = () => {
 
         <div className="phones">
           <h4>Ligue:</h4>
-          <a href={phone1}>(84) 2020-5444</a>
-          <a href={phone2}>(84) 3272-2149</a>
-          <a href={phone3}>(84) 98128-3798</a>
+          <a className="phone-link" href={phone1}>(84) 2020-5444</a>
+          <a className="phone-link" href={phone2}>(84) 3272-2149</a>
+          <a className="phone-link" href={phone3}>(84) 98128-3798</a>
           {/* <WhatsappButton address="https://wa.me/message/VUCLASIXKAW7D1?src=qr" /> */}
           <Link to="/contact" className="whatsapp-button-wrapper">
             <img src={whatsappLogo}/>
