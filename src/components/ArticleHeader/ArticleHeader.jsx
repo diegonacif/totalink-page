@@ -6,6 +6,9 @@ export const ArticleHeader = ({ navText, titleText }) => {
   const title = titleText ? titleText : null;
   
   const navigate = useNavigate();
+  const NavigateUp = () => {
+    navigate(-1);
+  }
 
   return (
     <div className="article-header">
@@ -17,7 +20,7 @@ export const ArticleHeader = ({ navText, titleText }) => {
             ?
             <div className="nav-variable-wrapper">
               <img src={greaterThan} alt="" />
-              <Link to={navigate(-1)}>{nav}</Link>
+              <span onClick={NavigateUp}>{nav}</span>
             </div> 
             :
             null

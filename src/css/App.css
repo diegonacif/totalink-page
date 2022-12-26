@@ -805,6 +805,9 @@
 .article-header header nav .nav-variable-wrapper img {
   width: 0.6rem;
 }
+.article-header header nav .nav-variable-wrapper span {
+  cursor: pointer;
+}
 
 .faq-container {
   position: relative;
