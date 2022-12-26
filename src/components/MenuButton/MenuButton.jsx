@@ -35,6 +35,8 @@ export const MenuButton = () => {
     leave: { x: 10, y: -10, opacity: 0 },
     config: {duration: 200},
   });
+
+  const controlUrl = "http://54.94.82.25:4173";
   
   return (
     <div 
@@ -57,17 +59,17 @@ export const MenuButton = () => {
           (styles, item) => item &&
             <animated.div className="menu-modal" style={styles}>
               <div className="menu-item">
-                <Link to="/">Home</Link>
-              </div>
-              <hr />
-              <div className="menu-item">
                 <Link to="/aboutus">Sobre Nós</Link>
               </div>
               <div className="menu-item">
                 <Link to="/contact">Fale Conosco</Link>
               </div>
-              <div className="menu-item">
+              {/* <div className="menu-item">
                 <Link to="/faq">Dúvidas Frequentes</Link>
+              </div> */}
+              <hr />
+              <div className="menu-item">
+              <a href={controlUrl}>Área Restrita</a>
               </div>
             </animated.div>
         )
