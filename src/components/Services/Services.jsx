@@ -33,14 +33,14 @@ export const Services = () => {
             <p>Tenha sempre um equipamento de ponta na sua empresa. Com a opção de comodato oferecida pela Total Ink, você conta sempre com equipamentos novos além da redução de custos de suprimentos e gerenciamento, maior padrão, além de maior eficiência e controle.</p>
           </div>
         </Fade>
-        <Fade left>
+        {/* <Fade left>
           <hr />
           <div className="service-wrapper">
             <div className="service-img maintenance"></div>
             <span>Manutenção, coleta e entrega.</span>
             <p>A Total Ink dispõe de coleta e entrega de equipamentos, cartuchos, toners, além de serviços de manutenção corretiva e preventiva de impressoras. Aqui você encontra a solução completa com atendimento personalizado para pequenas, médias e grandes empresas.</p>
           </div>
-        </Fade>
+        </Fade> */}
       </section>
     </div>
   )
