@@ -87,7 +87,7 @@ export const ContactUs = () => {
 
   // Whatsapp //
 
-  const whatsappNumber = "5584991751476"
+  const whatsappNumber = "5584981283798"
 
   const whatsappAdress = breakpoint == "notebook" || breakpoint == "desktop" ?
   `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=` : // Abre diretamente a versão web
@@ -135,10 +135,6 @@ export const ContactUs = () => {
     setValue("quantity", '');
     trigger();
   }, [watch("department")])
-
-  // console.log(errors);
-  console.log(getValues("subject"));
-
 
   return (
     <>
