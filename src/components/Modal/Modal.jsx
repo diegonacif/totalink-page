@@ -1,5 +1,5 @@
-import { useTransition, animated } from '@react-spring/web';
 import { useState, useEffect } from 'react';
+import { useTransition, animated } from '@react-spring/web';
 import { useBreakpoint } from '../../hooks/useBreakpoint';
 
 import '../../css/App.css';
@@ -7,7 +7,7 @@ import printerImg from '../../assets/konica-minolta.png';
 
 export const Modal = () => {
 
-  // Printer Animation
+  // Animations
   const [printerVisible, setPrinterVisible] = useState(false);
   useEffect(() => {
     setPrinterVisible(true);

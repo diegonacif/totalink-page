@@ -9,37 +9,23 @@ import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 
 import { Header } from '../../components/Header/Header';
-import { WhatsappButton } from '../../components/WhatsappButton/WhatsappButton';
 import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
-import whatsQr from '../../assets/whats-qr.png';
 
 // Outside Click (Hook)
 import { useOnClickOutside } from 'usehooks-ts'
 
 // Conditional Rendering Transition Lib
-import { useTransition, animated, easings } from '@react-spring/web';
+import { useTransition, animated } from '@react-spring/web';
 
 export const ContactUs = () => {
 
   const breakpoint = useBreakpoint();
 
   // Expanded Wrapper
-  const [showExpansion, setShowExpansion] = useState(false);
-  const handleShowExpansion = () => {
-    setShowExpansion(!showExpansion);
-  }
-
-  // Screen size condition
-  // const [isDesktop, setIsDesktop] = useState(false);
-  // useEffect(() => {
-  //   window.innerWidth > 480 ? setIsDesktop(true) : setIsDesktop(false);
-
-  //   const updateMedia = () => {
-  //     window.innerWidth > 480 ? setIsDesktop(true) : setIsDesktop(false);
-  //   };
-  //   window.addEventListener('resize', updateMedia);
-  //   return () => window.removeEventListener('resize', updateMedia);
-  // }, []);
+  const [isBgVisible, setIsBgVisible] = useState(false);
+  useEffect(() => {
+    setIsBgVisible(true);
+  }, [])
 
   // Outside Click (Variable)
   const refContainer = useRef(null);
@@ -51,11 +37,19 @@ export const ContactUs = () => {
   useOnClickOutside(refContainer, handleClickOutside)
 
   // Modal Animation
-  const transitions = useTransition(showExpansion, {
-    from: { transform: "translateX(-50%)", y: 15, opacity: 0 },
-    enter: { y: 0, opacity: 1 },
-    leave: { y: 15, opacity: 0 },
-    config: { duration: 400, easing: easings.easeInOutCubic },
+  const bgInTransition = useTransition(isBgVisible, {
+    from: { scale: 1.1, opacity: 0.95 },
+    enter: { scale: 1, opacity: 1 },
+    leave: { scale: 1.1, opacity: 0.95 },
+    config: {duration: 700},
+    // delay: 300
+  });
+  const textInTransition = useTransition(isBgVisible, {
+    from: { scale: 0.85, opacity: 0.95 },
+    enter: { scale: 1, opacity: 1 },
+    leave: { scale: 0.85, opacity: 0.95 },
+    config: {duration: 700},
+    // delay: 300
   });
 
   // Yup Validation
@@ -140,9 +134,20 @@ export const ContactUs = () => {
     <>
       <Header />
       <div className="contact-us-container">
-        <header>
-          <h1>Entre em contato através do nosso WhatsApp. Insira as informações abaixo para que possamos atendê-lo da melhor forma.</h1>
-        </header>
+        {
+          bgInTransition(
+            (styles, item) => item &&
+            <animated.header style={styles}>
+              {
+                textInTransition(
+                  (styles, item) => item &&
+                  <animated.h1 style={styles}>Entre em contato através do nosso WhatsApp. Insira as informações abaixo para que possamos atendê-lo da melhor forma.</animated.h1>
+                )
+              }
+            </animated.header>
+          )
+        }
+          
         <form>
           <div className="form-input-wp input-select">
             <TextField 
