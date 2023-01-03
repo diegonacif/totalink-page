@@ -12,11 +12,18 @@ export const Modal = () => {
   useEffect(() => {
     setPrinterVisible(true);
   }, [])
-  const transitions = useTransition(printerVisible, {
+  const bgInTransition = useTransition(printerVisible, {
+    from: { scale: 1.2, opacity: 0.95 },
+    enter: { scale: 1, opacity: 1 },
+    leave: { scale: 1.2, opacity: 0.95 },
+    config: {duration: 800},
+    delay: 300
+  });
+  const printerInTransition = useTransition(printerVisible, {
     from: { x: -15, y: -20, opacity: 0 },
     enter: { x: 0, y: 0, opacity: 1 },
     leave: { x: -15, y: -20, opacity: 0 },
-    config: {duration: 700},
+    config: {duration: 800},
     delay: 300
   });
 
@@ -24,7 +31,13 @@ export const Modal = () => {
 
   return (
     <div className="modal-container">
-      <div className="blur-bg"></div>
+      {
+        bgInTransition(
+          (styles, item) => item &&
+          <animated.div className="blur-bg" style={styles}></animated.div>
+        )
+      }
+      {/* <div className="blur-bg"></div> */}
       <section>
         <div className="modal-text">
           <div>
@@ -35,7 +48,7 @@ export const Modal = () => {
           <h6>As mais modernas impressoras e um suporte técnico rápido, ao seu alcance.</h6>
         </div>
         {
-          transitions(
+          printerInTransition(
             (styles, item) => item &&
             <animated.img src={printerImg} alt="impressora hp color" style={styles} />
           )
