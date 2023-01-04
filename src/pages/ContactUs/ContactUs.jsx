@@ -134,19 +134,20 @@ export const ContactUs = () => {
     <>
       <Header />
       <div className="contact-us-container">
-        {
-          bgInTransition(
-            (styles, item) => item &&
-            <animated.header style={styles}>
-              {
-                textInTransition(
-                  (styles, item) => item &&
-                  <animated.h1 style={styles}>Entre em contato através do nosso WhatsApp. Insira as informações abaixo para que possamos atendê-lo da melhor forma.</animated.h1>
-                )
-              }
-            </animated.header>
-          )
-        }
+        <header>
+          {
+            bgInTransition(
+              (styles, item) => item &&
+              <animated.div className="header-bg" style={styles}></animated.div>
+            )
+          }
+          {
+            textInTransition(
+              (styles, item) => item &&
+              <animated.h1 style={styles}>Entre em contato através do nosso WhatsApp. Insira as informações abaixo para que possamos atendê-lo da melhor forma.</animated.h1>
+            )
+          }
+        </header>
           
         <form>
           <div className="form-input-wp input-select">

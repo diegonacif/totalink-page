@@ -1005,10 +1005,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(../assets/green-bg.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  overflow: hidden;
 }
 @media only screen and (min-width: 600px) {
   .contact-us-container header {
@@ -1025,9 +1022,22 @@
     padding: 0 calc(8rem + 5vw) 0;
   }
 }
+.contact-us-container header .header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20rem;
+  width: 100%;
+  background: url(../assets/green-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 0;
+}
 .contact-us-container header h1 {
   font-size: 1.75rem;
   line-height: 2.75rem;
+  z-index: 1;
 }
 .contact-us-container header .here-link {
   color: #137731;
