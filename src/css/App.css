@@ -35,6 +35,8 @@
 }
 .header-container img {
   height: 100%;
+  border-radius: 16px;
+  transition: background-color 0.1s;
 }
 .header-container a {
   height: 100%;
@@ -47,6 +49,10 @@
 @media only screen and (min-width: 1024px) {
   .header-container {
     padding: 0 6rem;
+  }
+  .header-container img:hover {
+    background-color: rgba(26, 206, 80, 0.5);
+    transition: background-color 0.2s;
   }
 }
 @media only screen and (min-width: 1280px) {

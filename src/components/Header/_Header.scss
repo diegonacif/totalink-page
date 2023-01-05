@@ -11,6 +11,8 @@
 
   img {
     height: 100%;
+    border-radius: 16px;
+    transition: background-color 0.1s;
   }
 
   a {
@@ -23,6 +25,11 @@
 
   @media only screen and ($notebook-size) {
     padding: 0 6rem;
+
+    img:hover {
+      background-color: $green-bg-mirror-50;
+      transition: background-color 0.2s;
+    }
   }
 
   @media only screen and ($desktop-size) {
