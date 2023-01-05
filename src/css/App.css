@@ -872,6 +872,7 @@
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
+  transition: all 0.1s;
 }
 .faq-container .faq-categories .faq-category .toner-card {
   background: url(../assets/faq-cards/toner1.jpg);
@@ -943,6 +944,10 @@
   }
   .faq-container .faq-categories .faq-category + .faq-category {
     margin: 0;
+  }
+  .faq-container .faq-categories .faq-category:hover {
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.2s;
   }
 }
 @media only screen and (min-width: 1280px) {
