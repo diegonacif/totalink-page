@@ -827,20 +827,31 @@
   padding-bottom: 3.5rem;
 }
 .faq-container header {
+  position: relative;
   height: 20rem;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  overflow: hidden;
+}
+.faq-container header .header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20rem;
+  width: 100%;
   background: url(../assets/green-bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 1rem;
+  z-index: 0;
 }
 .faq-container header h1 {
   font-size: 2rem;
   line-height: 2.75rem;
+  z-index: 1;
 }
 .faq-container .faq-categories {
   display: grid;

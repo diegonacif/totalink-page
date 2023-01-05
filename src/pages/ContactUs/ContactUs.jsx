@@ -21,7 +21,6 @@ export const ContactUs = () => {
 
   const breakpoint = useBreakpoint();
 
-  // Expanded Wrapper
   const [isBgVisible, setIsBgVisible] = useState(false);
   useEffect(() => {
     setIsBgVisible(true);

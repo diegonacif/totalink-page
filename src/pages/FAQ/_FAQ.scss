@@ -9,20 +9,33 @@
   padding-bottom: 3.5rem;
 
   header {
+    position: relative;
     height: 20rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(#{$assets-path}/green-bg.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
     padding: 1rem;
+    overflow: hidden;
+
+    .header-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20rem;
+      width: 100%;
+
+      background: url(#{$assets-path}/green-bg.webp);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: 0;
+    }
 
     h1 {
       font-size: 2rem;
       line-height: 2.75rem;
+      z-index: 1;
     }
   }
 
