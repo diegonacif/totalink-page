@@ -7,13 +7,17 @@
     @include responsive-padding;
     display: flex;
     flex-direction: column;
+    margin-top: 0.5rem;
     // padding: 0 1rem;
 
     .question-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 2rem 0;
+      padding: 2rem 0.25rem;
+      border-radius: 12px;
+
+      transition: background-color 0.1s;
 
       span {
         font-size: 1.125rem;
@@ -25,9 +29,10 @@
     }
   }
 
-  // @media only screen and ($notebook-size) {
-  //   section {
-  //     // padding: 0 4rem;
-  //   }
-  // }
+  @media only screen and ($notebook-size) {
+    .question-row:hover {
+      background-color: rgba(73, 134, 63, 0.1);
+      transition: background-color 0.2s;
+    }
+  }
 }

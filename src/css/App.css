@@ -981,6 +981,7 @@
   padding: 0 1rem 0;
   display: flex;
   flex-direction: column;
+  margin-top: 0.5rem;
 }
 @media only screen and (min-width: 600px) {
   .faq-toner-container section {
@@ -1001,7 +1002,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 0;
+  padding: 2rem 0.25rem;
+  border-radius: 12px;
+  transition: background-color 0.1s;
 }
 .faq-toner-container section .question-row span {
   font-size: 1.125rem;
@@ -1009,6 +1012,12 @@
 }
 .faq-toner-container section img {
   width: 0.9rem;
+}
+@media only screen and (min-width: 1024px) {
+  .faq-toner-container .question-row:hover {
+    background-color: rgba(73, 134, 63, 0.1);
+    transition: background-color 0.2s;
+  }
 }
 
 .contact-us-container {
