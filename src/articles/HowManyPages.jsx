@@ -1,9 +1,9 @@
-import { Header } from '../../components/Header/Header';
-import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
-import { ArticleHeader } from '../../components/ArticleHeader/ArticleHeader';
+import { Header } from '../components/Header/Header';
+import { CopyrightFooter } from '../components/CopyrightFooter/CopyrightFooter';
+import { ArticleHeader } from '../components/ArticleHeader/ArticleHeader';
 
-import coberturaImg from '../../assets/faq-assets/area-de-cobertura.png';
-import '../../css/App.css';
+import coberturaImg from '../assets/faq-assets/area-de-cobertura.png';
+import '../css/App.css';
 
 export const HowManyPages = () => {
   return (

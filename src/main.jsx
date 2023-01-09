@@ -12,7 +12,8 @@ import { FaqToner } from './pages/FAQ/FaqToner/FaqToner';
 import { AboutUs } from './pages/AboutUs/AboutUs';
 import { ContactUs } from './pages/ContactUs/ContactUs';
 import { WhitePage } from './pages/WhitePage';
-import { HowManyPages } from './articles/HowManyPages/HowManyPages';
+import { HowManyPages } from './articles/HowManyPages';
+import { StainPages } from './articles/StainPages';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path="article" element={<WhitePage />}>
           <Route index element={<WhitePage />} />
           <Route path="how-many-pages" element={<HowManyPages />} />
+          <Route path="stain-pages" element={<StainPages />} />
         </Route>
       </Routes>
     </BrowserRouter>

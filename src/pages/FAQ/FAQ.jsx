@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
+import { Note } from 'phosphor-react'
 
 import { useTransition, animated } from '@react-spring/web';
 import Fade from 'react-reveal/Fade';
@@ -68,12 +69,15 @@ export const FAQ = () => {
               <div className="faq-category-img error-card"></div>
             </Fade>
           </div>
-          <div className="faq-category">
-            <Fade left>
-              <span>Tanques de Tinta / Bulk</span>
-              <div className="faq-category-img bulk-card"></div>
-            </Fade>
-          </div>
+          <Link to="/article/stain-pages">
+            <div className="faq-category">
+              <Fade left>
+                <span>Impressões com manchas</span>
+                <Note size={48} color="#75fc63" weight="duotone" />
+                {/* <div className="faq-category-img bulk-card"></div> */}
+              </Fade>
+            </div>
+          </Link>
         </div>
         <CopyrightFooter />
       </div>

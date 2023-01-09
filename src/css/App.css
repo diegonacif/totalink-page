@@ -764,6 +764,8 @@
   width: 100%;
   max-width: 40rem;
   align-self: center;
+  border-radius: 8px;
+  box-shadow: 8px 8px 15px 0px rgba(0, 0, 0, 0.5);
 }
 .article-container .article-main .article-content p {
   line-height: 1.25rem;
@@ -873,6 +875,9 @@
   overflow: hidden;
   cursor: pointer;
   transition: all 0.1s;
+}
+.faq-container .faq-categories .faq-category .react-reveal:nth-child(2) {
+  justify-self: center;
 }
 .faq-container .faq-categories .faq-category .toner-card {
   background: url(../assets/faq-cards/toner1.jpg);
