@@ -44,9 +44,9 @@
     }
   }
 
-  // @media only screen and ($notebook-size) {
-  //   .article-main {
-  //     padding: 1rem 4rem;
-  //   }
-  // }
+  @media only screen and ($tablet-size) {
+    .article-main > .article-content > img {
+      max-width: 30rem;
+    }
+  }
 }
