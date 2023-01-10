@@ -16,6 +16,7 @@ import { useOnClickOutside } from 'usehooks-ts'
 
 // Conditional Rendering Transition Lib
 import { useTransition, animated } from '@react-spring/web';
+import { Chat } from '../../components/Chat/Chat';
 
 export const ContactUs = () => {
 
@@ -148,7 +149,7 @@ export const ContactUs = () => {
           }
         </header>
           
-        <form>
+        {/* <form>
           <div className="form-input-wp input-select">
             <TextField 
               label="Setor"
@@ -245,7 +246,8 @@ export const ContactUs = () => {
           >
             Enviar mensagem
           </button>
-        </form>
+        </form> */}
+        <Chat />
         <CopyrightFooter />
       </div>
     </>

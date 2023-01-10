@@ -1,0 +1,87 @@
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  overflow: hidden;
+
+  -webkit-box-shadow: 3px 5px 10px 1px rgba(0,0,0,0.65);
+  -moz-box-shadow: 3px 5px 10px 1px rgba(0,0,0,0.65);
+  box-shadow: 3px 5px 10px 1px rgba(0,0,0,0.65);
+
+  .header {
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    padding: 0 1rem;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    .avatar {
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      background-color: green;
+    }
+
+    span {
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-left: 0.75rem;
+    }
+  }
+
+  .chat-row {
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    height: 2rem;
+    overflow: hidden;
+
+    span {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0 0.75rem;
+      margin-left: 0.5rem;
+      
+      border-radius: 16px;
+    }
+  }
+
+  .question {
+    span {
+      background-color:#1fc2eb;
+    }
+  }
+  .answer {
+    justify-content: flex-end;
+    svg {
+      order: 2;
+    }
+    span {
+      order: 1;
+      background-color:#1feb74;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+
+    input {
+      height: 100%;
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+      background-color:rgba(0, 0, 0, 0.1)
+    }
+  }
+}
