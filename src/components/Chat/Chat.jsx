@@ -167,7 +167,8 @@ export const Chat = () => {
         {
           getValues("department") === "Problemas técnicos" ?
           <>
-            <div className="form-input-wp">
+            <div className="chat-row question">
+              <UserCircle size={38} color="#ffffff" weight="duotone" />
               <input 
                 id="subject"
                 label="Modelo da impressora" 
@@ -178,7 +179,8 @@ export const Chat = () => {
                 {...register("model")}
               />
             </div>
-            <div className="form-input-wp">
+            <div className="chat-row question">
+              <UserCircle size={38} color="#ffffff" weight="duotone" />
               <input 
                 id="subject"
                 label="Informe o problema apresentado" 
@@ -196,7 +198,8 @@ export const Chat = () => {
         {/* Condition Financial */}
         {
           getValues("department") === "Setor financeiro" ?
-          <div className="form-input-wp wide-input">
+          <div className="chat-row question">
+            <UserCircle size={38} color="#ffffff" weight="duotone" />
             <input 
               id="subject"
               label="Assunto"
