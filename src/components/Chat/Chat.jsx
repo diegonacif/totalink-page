@@ -1,4 +1,5 @@
 import { UserCircle } from 'phosphor-react';
+import totalLogo from '../../assets/totalink-logo.png';
 import '../../css/App.css';
 
 export const Chat = () => {
@@ -14,12 +15,14 @@ export const Chat = () => {
           <span>Qualquer coisa escrita</span>
         </div>
         <div className="chat-row answer">
-          <UserCircle size={38} color="#ffffff" weight="duotone" />
+          <div className="answer-avatar">
+            <img src={totalLogo} alt="Total Ink logo" />
+          </div>
           <span>Qualquer coisa escrita</span>
         </div>
       </main>
       <div className="footer">
-        <input type="text" />
+        <input type="text" placeholder="Insira sua mensagem" />
       </div>
     </div>
   )

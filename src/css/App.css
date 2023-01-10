@@ -769,13 +769,25 @@
 .chat-container .answer {
   justify-content: flex-end;
 }
-.chat-container .answer svg {
+.chat-container .answer .answer-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   order: 2;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(36, 219, 36, 0.9);
+}
+.chat-container .answer .answer-avatar img {
+  width: 32px;
 }
 .chat-container .answer span {
   order: 1;
   background-color: #1feb74;
   margin-right: 0.5rem;
+  margin-left: 0;
 }
 .chat-container .footer {
   display: flex;
@@ -790,6 +802,7 @@
   border: 0;
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.1);
+  padding: 0 0.5rem;
 }
 
 .article-container {
