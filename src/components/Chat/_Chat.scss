@@ -49,7 +49,7 @@
       height: 100%;
       width: fit-content;
       padding: 0.25rem 0.75rem;
-      margin-left: 0.5rem;
+      margin-right: 0.4rem;
       border: 0;
       border-radius: 16px;
       font-size: 1rem;
@@ -60,15 +60,17 @@
     }
   }
 
-  .question {
+  .answer {
+    justify-content: flex-end;
+
     span, select, input {
       background-color:#1fc2eb;
     }
   }
-  .answer {
-    justify-content: flex-end;
+  .question {
+    justify-content: flex-start;
 
-    .answer-avatar {
+    .question-avatar {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -84,9 +86,13 @@
     }
     span, select, input {
       background-color:#1feb74;
-      margin-right: 0.5rem;
-      margin-left: 0;
+      margin-left: 0.5rem;
+      margin-right: 0;
     }
+  }
+
+  .btn-continue {
+    background-color:rgba(0, 0, 0, 0.1);
   }
 
   .footer {

@@ -33,7 +33,13 @@ export const Chat = () => {
     formState: { errors }
   } = useForm({
     mode: "all",
-    resolver: yupResolver(schema)
+    resolver: yupResolver(schema),
+    defaultValues: {
+      department: "",
+      subject: "",
+      model: "",
+      quantity: "",
+    }
   });
 
   useEffect(() => {
@@ -98,15 +104,14 @@ export const Chat = () => {
         <span className="">Fale conosco</span>
       </div>
       <main>
-        <div className="chat-row answer">
-          <span>Com qual setor você deseja falar?</span>
-          <div className="answer-avatar">
+        <div className="chat-row question">
+          <div className="question-avatar">
             <img src={totalLogo} alt="Total Ink logo" />
           </div>
+          <span>Com qual setor você deseja falar?</span>
         </div>
 
-        <div className="chat-row question">
-          <UserCircle size={38} color="#ffffff" weight="duotone" />
+        <div className="chat-row answer">
           <select 
             name="department" 
             id="department"  
@@ -118,21 +123,21 @@ export const Chat = () => {
             <option value="Setor financeiro">Setor financeiro</option>
             <option value="Locação de impressoras">Locação de impressoras</option>
           </select>
+          <UserCircle size={38} color="#ffffff" weight="duotone" />
         </div>
 
         {/* Condition Toner */}
         {
           getValues("department") === "Pedido de toner" ?
           <>
-            <div className="chat-row answer">
-              <span>Precisamos saber, por favor, qual o modelo do toner ou impressora.</span>
-              <div className="answer-avatar">
+            <div className="chat-row question">
+              <div className="question-avatar">
                 <img src={totalLogo} alt="Total Ink logo" />
               </div>
+              <span>Precisamos saber, por favor, qual o modelo do toner ou impressora.</span>
             </div>
 
-            <div className="chat-row question">
-              <UserCircle size={38} color="#ffffff" weight="duotone" />
+            <div className="chat-row answer">
               <input 
                 id="subject"
                 label="Modelo do toner ou da impressora" 
@@ -140,25 +145,38 @@ export const Chat = () => {
                 aria-invalid={errors.subject ? "true" : "false"} 
                 {...register("model")}
               />
-            </div>
-
-            <div className="chat-row answer">
-              <span>Agora nos diga quantos você está precisando.</span>
-              <div className="answer-avatar">
-                <img src={totalLogo} alt="Total Ink logo" />
-              </div>
-            </div>
-
-            <div className="chat-row question">
               <UserCircle size={38} color="#ffffff" weight="duotone" />
-              <input 
-                id="subject"
-                label="Quantidade" 
-                required
-                aria-invalid={errors.subject ? "true" : "false"} 
-                {...register("quantity")}
-              />
             </div>
+
+            { 
+              watch("model").length >= 3 ?
+              <>
+                <div className="chat-row question">
+                  <div className="question-avatar">
+                    <img src={totalLogo} alt="Total Ink logo" />
+                  </div>
+                  <span>Agora nos diga quantos você está precisando.</span>
+                </div>
+
+                <div className="chat-row answer">
+                  <input 
+                    id="subject"
+                    label="Quantidade" 
+                    required
+                    aria-invalid={errors.subject ? "true" : "false"} 
+                    {...register("quantity")}
+                  />
+                  <UserCircle size={38} color="#ffffff" weight="duotone" />
+                </div>
+
+                {
+                  watch("quantity").length > 0 ?
+                  <button className="btn-continue">Continuar</button> :
+                  null
+                }
+              </> :
+              null
+            }
           </> :
           undefined
         }
@@ -167,8 +185,7 @@ export const Chat = () => {
         {
           getValues("department") === "Problemas técnicos" ?
           <>
-            <div className="chat-row question">
-              <UserCircle size={38} color="#ffffff" weight="duotone" />
+            <div className="chat-row answer">
               <input 
                 id="subject"
                 label="Modelo da impressora" 
@@ -178,9 +195,9 @@ export const Chat = () => {
                 aria-invalid={errors.subject ? "true" : "false"} 
                 {...register("model")}
               />
-            </div>
-            <div className="chat-row question">
               <UserCircle size={38} color="#ffffff" weight="duotone" />
+            </div>
+            <div className="chat-row answer">
               <input 
                 id="subject"
                 label="Informe o problema apresentado" 
@@ -190,6 +207,7 @@ export const Chat = () => {
                 aria-invalid={errors.subject ? "true" : "false"} 
                 {...register("subject")}
               />
+              <UserCircle size={38} color="#ffffff" weight="duotone" />
             </div>
           </> :
           undefined
@@ -198,8 +216,7 @@ export const Chat = () => {
         {/* Condition Financial */}
         {
           getValues("department") === "Setor financeiro" ?
-          <div className="chat-row question">
-            <UserCircle size={38} color="#ffffff" weight="duotone" />
+          <div className="chat-row answer">
             <input 
               id="subject"
               label="Assunto"
@@ -211,6 +228,7 @@ export const Chat = () => {
               aria-invalid={errors.subject ? "true" : "false"} 
               {...register("subject")}
             />
+            <UserCircle size={38} color="#ffffff" weight="duotone" />
           </div> :
           undefined
         }
