@@ -719,34 +719,55 @@
 }
 
 .chat-container {
+  padding: 0 1rem 0;
+  margin-top: 1rem;
+}
+@media only screen and (min-width: 600px) {
+  .chat-container {
+    padding: 0 4rem 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .chat-container {
+    padding: 0 6rem 0;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .chat-container {
+    padding: 0 calc(8rem + 5vw) 0;
+  }
+}
+.chat-container .chat-bg {
   display: flex;
   flex-direction: column;
-  margin: 0.5rem;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.65);
 }
-.chat-container .header {
+.chat-container .chat-bg .header {
   display: flex;
   align-items: center;
   height: 4rem;
   padding: 0 1rem;
   background-color: rgba(0, 0, 0, 0.1);
 }
-.chat-container .header .avatar {
+.chat-container .chat-bg .header .avatar {
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
   background-color: green;
 }
-.chat-container .header span {
+.chat-container .chat-bg .header span {
   color: white;
   font-weight: 600;
   font-size: 1.1rem;
   margin-left: 0.75rem;
 }
-.chat-container .chat-row {
+.chat-container .chat-bg main {
+  padding-bottom: 1rem;
+}
+.chat-container .chat-bg .chat-row {
   display: flex;
   align-items: center;
   padding: 0 1rem;
@@ -758,7 +779,7 @@
   height: fit-content;
   overflow: hidden;
 }
-.chat-container .chat-row span, .chat-container .chat-row select, .chat-container .chat-row input {
+.chat-container .chat-bg .chat-row span, .chat-container .chat-bg .chat-row select, .chat-container .chat-bg .chat-row input {
   display: flex;
   align-items: center;
   min-height: 2rem;
@@ -772,19 +793,19 @@
   border-radius: 16px;
   font-size: 1rem;
 }
-.chat-container .chat-row select {
+.chat-container .chat-bg .chat-row select {
   height: 2rem;
 }
-.chat-container .answer {
+.chat-container .chat-bg .answer {
   justify-content: flex-end;
 }
-.chat-container .answer span, .chat-container .answer select, .chat-container .answer input {
+.chat-container .chat-bg .answer span, .chat-container .chat-bg .answer select, .chat-container .chat-bg .answer input {
   background-color: #1fc2eb;
 }
-.chat-container .question {
+.chat-container .chat-bg .question {
   justify-content: flex-start;
 }
-.chat-container .question .question-avatar {
+.chat-container .chat-bg .question .question-avatar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -794,25 +815,35 @@
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid rgba(36, 219, 36, 0.9);
 }
-.chat-container .question .question-avatar img {
+.chat-container .chat-bg .question .question-avatar img {
   width: 32px;
 }
-.chat-container .question span, .chat-container .question select, .chat-container .question input {
+.chat-container .chat-bg .question span, .chat-container .chat-bg .question select, .chat-container .chat-bg .question input {
   background-color: #1feb74;
   margin-left: 0.5rem;
   margin-right: 0;
 }
-.chat-container .btn-continue {
-  background-color: rgba(0, 0, 0, 0.1);
+.chat-container .chat-bg .btn-continue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.75rem;
+  width: 6rem;
+  margin-top: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #e3f5ea;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #ffffff;
 }
-.chat-container .footer {
+.chat-container .chat-bg .footer {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 3rem;
   padding: 0.5rem 1rem;
 }
-.chat-container .footer input {
+.chat-container .chat-bg .footer input {
   height: 100%;
   width: 100%;
   border: 0;

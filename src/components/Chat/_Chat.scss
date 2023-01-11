@@ -1,114 +1,137 @@
 .chat-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 12px;
-  overflow: hidden;
-
-  -webkit-box-shadow: 3px 5px 10px 1px rgba(0,0,0,0.65);
-  -moz-box-shadow: 3px 5px 10px 1px rgba(0,0,0,0.65);
-  box-shadow: 3px 5px 10px 1px rgba(0,0,0,0.65);
-
-  .header {
+  @include responsive-padding;
+  margin-top: 1rem;
+  
+  .chat-bg {
     display: flex;
-    align-items: center;
-    height: 4rem;
-    padding: 0 1rem;
-    background-color: rgba(0, 0, 0, 0.1);
-
-    .avatar {
-      height: 3rem;
-      width: 3rem;
-      border-radius: 50%;
-      background-color: green;
-    }
-
-    span {
-      color: white;
-      font-weight: 600;
-      font-size: 1.1rem;
-      margin-left: 0.75rem;
-    }
-  }
-
-  .chat-row {
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    margin-top: 1rem;
-    width: 100%;
-    min-height: 2rem;
-    height: fit-content;
+    flex-direction: column;
+    // margin: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
     overflow: hidden;
+  
+    -webkit-box-shadow: 3px 5px 10px 1px rgba(0,0,0,0.65);
+    -moz-box-shadow: 3px 5px 10px 1px rgba(0,0,0,0.65);
+    box-shadow: 3px 5px 10px 1px rgba(0,0,0,0.65);
 
-    span, select, input {
+    .header {
       display: flex;
       align-items: center;
+      height: 4rem;
+      padding: 0 1rem;
+      background-color: rgba(0, 0, 0, 0.1);
+  
+      .avatar {
+        height: 3rem;
+        width: 3rem;
+        border-radius: 50%;
+        background-color: green;
+      }
+  
+      span {
+        color: white;
+        font-weight: 600;
+        font-size: 1.1rem;
+        margin-left: 0.75rem;
+      }
+    }
+
+    main {
+      padding-bottom: 1rem;
+    }
+  
+    .chat-row {
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      margin-top: 1rem;
+      width: 100%;
       min-height: 2rem;
-      height: 100%;
-      width: fit-content;
-      padding: 0.25rem 0.75rem;
-      margin-right: 0.4rem;
-      border: 0;
-      border-radius: 16px;
-      font-size: 1rem;
+      height: fit-content;
+      overflow: hidden;
+  
+      span, select, input {
+        display: flex;
+        align-items: center;
+        min-height: 2rem;
+        height: 100%;
+        width: fit-content;
+        padding: 0.25rem 0.75rem;
+        margin-right: 0.4rem;
+        border: 0;
+        border-radius: 16px;
+        font-size: 1rem;
+      }
+  
+      select {
+        height: 2rem;
+      }
     }
-
-    select {
-      height: 2rem;
+  
+    .answer {
+      justify-content: flex-end;
+  
+      span, select, input {
+        background-color:#1fc2eb;
+      }
     }
-  }
-
-  .answer {
-    justify-content: flex-end;
-
-    span, select, input {
-      background-color:#1fc2eb;
+    .question {
+      justify-content: flex-start;
+  
+      .question-avatar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(36, 219, 36, 0.9);
+  
+        img {
+          width: 32px;
+        }
+      }
+      span, select, input {
+        background-color:#1feb74;
+        margin-left: 0.5rem;
+        margin-right: 0;
+      }
     }
-  }
-  .question {
-    justify-content: flex-start;
-
-    .question-avatar {
+  
+    .btn-continue {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 1.75rem;
+      width: 6rem;
+      margin-top: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 2px solid #e3f5ea;
+      // border: 0;
+      border-radius: 12px;
+  
+      font-weight: 600;
+      color: #ffffff;
+  
+    }
+  
+    .footer {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background-color: rgba(255, 255, 255, 0.2);
-      border: 2px solid rgba(36, 219, 36, 0.9);
-
-      img {
-        width: 32px;
+      height: 3rem;
+      padding: 0.5rem 1rem;
+  
+      input {
+        height: 100%;
+        width: 100%;
+        border: 0;
+        border-radius: 8px;
+        background-color:rgba(0, 0, 0, 0.1);
+        padding: 0 0.5rem;
       }
     }
-    span, select, input {
-      background-color:#1feb74;
-      margin-left: 0.5rem;
-      margin-right: 0;
-    }
   }
 
-  .btn-continue {
-    background-color:rgba(0, 0, 0, 0.1);
-  }
-
-  .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 3rem;
-    padding: 0.5rem 1rem;
-
-    input {
-      height: 100%;
-      width: 100%;
-      border: 0;
-      border-radius: 8px;
-      background-color:rgba(0, 0, 0, 0.1);
-      padding: 0 0.5rem;
-    }
-  }
 }
