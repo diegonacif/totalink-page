@@ -172,7 +172,12 @@ export const Chat = () => {
 
                   {
                     watch("quantity").length > 0 ?
-                    <button className="btn-continue">Continuar</button> :
+                    <button
+                      className="btn-continue"
+                      onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
+                    >
+                      Continuar
+                    </button> :
                     null
                   }
                 </> :
@@ -227,7 +232,12 @@ export const Chat = () => {
                   </div>
                   {
                     watch("subject").length > 5 ?
-                    <button className="btn-continue">Continuar</button> :
+                    <button
+                      className="btn-continue"
+                      onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
+                    >
+                      Continuar
+                    </button> :
                     null
                   }
                 </> :
@@ -240,22 +250,54 @@ export const Chat = () => {
           {/* Condition Financial */}
           {
             getValues("department") === "Setor financeiro" ?
-            <div className="chat-row answer">
-              <input 
-                id="subject"
-                label="Assunto"
-                required
-                multiline
-                maxRows={4}
-                color="success"
-                variant="standard"
-                aria-invalid={errors.subject ? "true" : "false"} 
-                {...register("subject")}
-              />
-              <UserCircle size={38} color="#ffffff" weight="duotone" />
-            </div> :
+            <>
+              <div className="chat-row question">
+                <div className="question-avatar">
+                  <img src={totalLogo} alt="Total Ink logo" />
+                </div>
+                <span>Sobre qual assunto você deseja tratar ?</span>
+              </div>
+              <div className="chat-row answer">
+                <input 
+                  id="subject"
+                  label="Assunto"
+                  required
+                  multiline
+                  maxRows={4}
+                  color="success"
+                  variant="standard"
+                  aria-invalid={errors.subject ? "true" : "false"} 
+                  {...register("subject")}
+                />
+                <UserCircle size={38} color="#ffffff" weight="duotone" />
+              </div>
+              {
+                watch("subject").length > 5 ?
+                <button
+                  className="btn-continue"
+                  onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
+                >
+                  Continuar
+                </button> :
+                null
+              }
+            </> :
             undefined
           }
+
+          {/* Condition Quote */}
+          {
+            getValues("department") === "Locação de impressoras" ?
+            <button
+              className="btn-continue"
+              onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
+            >
+              Continuar
+            </button> :
+            undefined
+          }
+
+          
         </main>
         {/* <div className="footer">
           <input type="text" placeholder="Insira sua mensagem" />
