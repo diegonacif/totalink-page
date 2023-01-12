@@ -186,6 +186,12 @@ export const Chat = () => {
           {
             getValues("department") === "Problemas técnicos" ?
             <>
+              <div className="chat-row question">
+                <div className="question-avatar">
+                  <img src={totalLogo} alt="Total Ink logo" />
+                </div>
+                <span>Nos informe, por favor, o modelo da impressora.</span>
+              </div>
               <div className="chat-row answer">
                 <input 
                   id="subject"
@@ -198,18 +204,35 @@ export const Chat = () => {
                 />
                 <UserCircle size={38} color="#ffffff" weight="duotone" />
               </div>
-              <div className="chat-row answer">
-                <input 
-                  id="subject"
-                  label="Informe o problema apresentado" 
-                  required
-                  color="success"
-                  variant="standard"
-                  aria-invalid={errors.subject ? "true" : "false"} 
-                  {...register("subject")}
-                />
-                <UserCircle size={38} color="#ffffff" weight="duotone" />
-              </div>
+              { 
+                watch("model").length > 5 ?
+                <>
+                  <div className="chat-row question">
+                    <div className="question-avatar">
+                      <img src={totalLogo} alt="Total Ink logo" />
+                    </div>
+                    <span>Agora nos diga qual problema está acontecendo.</span>
+                  </div>
+                  <div className="chat-row answer">
+                    <input 
+                      id="subject"
+                      label="Informe o problema apresentado" 
+                      required
+                      color="success"
+                      variant="standard"
+                      aria-invalid={errors.subject ? "true" : "false"} 
+                      {...register("subject")}
+                    />
+                    <UserCircle size={38} color="#ffffff" weight="duotone" />
+                  </div>
+                  {
+                    watch("subject").length > 5 ?
+                    <button className="btn-continue">Continuar</button> :
+                    null
+                  }
+                </> :
+                null
+              }
             </> :
             undefined
           }
