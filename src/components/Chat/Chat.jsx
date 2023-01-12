@@ -3,13 +3,15 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import { UserCircle } from 'phosphor-react';
-
 import { useBreakpoint } from '../../hooks/useBreakpoint';
+import Fade from 'react-reveal/Fade';
 
 import totalLogo from '../../assets/totalink-logo.png';
 import '../../css/App.css';
 
 export const Chat = () => {
+
+  
 
   const breakpoint = useBreakpoint();
 
@@ -97,6 +99,11 @@ export const Chat = () => {
     trigger();
   }, [watch("department")])
 
+  const [isContinueButtonShow, setIsContinueButtonShow] = useState(false);
+  useEffect(() => {
+    watch("quantity").length === 0 ? setIsContinueButtonShow(false) : setIsContinueButtonShow(true);
+  }, [watch("quantity")])
+
   return (
     <div className="chat-container">
       <div className="chat-bg">
@@ -105,81 +112,92 @@ export const Chat = () => {
           <span className="">Fale conosco</span>
         </div>
         <main>
-          <div className="chat-row question">
-            <div className="question-avatar">
-              <img src={totalLogo} alt="Total Ink logo" />
+          <Fade left>
+            <div className="chat-row question">
+              <div className="question-avatar">
+                <img src={totalLogo} alt="Total Ink logo" />
+              </div>
+              <span>Com qual setor você deseja falar?</span>
             </div>
-            <span>Com qual setor você deseja falar?</span>
-          </div>
+          </Fade>
 
-          <div className="chat-row answer">
-            <select 
-              name="department" 
-              id="department"  
-              {...register("department")}
-            >
-              <option value="" disabled>Selecione uma opção</option>
-              <option value="Pedido de toner">Pedido de toners</option>
-              <option value="Problemas técnicos">Problemas técnicos</option>
-              <option value="Setor financeiro">Setor financeiro</option>
-              <option value="Locação de impressoras">Locação de impressoras</option>
-            </select>
-            <UserCircle size={38} color="#ffffff" weight="duotone" />
-          </div>
+          <Fade right>
+            <div className="chat-row answer">
+              <select 
+                name="department" 
+                id="department"  
+                {...register("department")}
+              >
+                <option value="" disabled>Selecione uma opção</option>
+                <option value="Pedido de toner">Pedido de toners</option>
+                <option value="Problemas técnicos">Problemas técnicos</option>
+                <option value="Setor financeiro">Setor financeiro</option>
+                <option value="Locação de impressoras">Locação de impressoras</option>
+              </select>
+              <UserCircle size={38} color="#ffffff" weight="duotone" />
+            </div>
+          </Fade>
 
           {/* Condition Toner */}
           {
             getValues("department") === "Pedido de toner" ?
             <>
-              <div className="chat-row question">
-                <div className="question-avatar">
-                  <img src={totalLogo} alt="Total Ink logo" />
+              <Fade left>
+                <div className="chat-row question">
+                  <div className="question-avatar">
+                    <img src={totalLogo} alt="Total Ink logo" />
+                  </div>
+                  <span>Precisamos saber, por favor, qual o modelo do toner ou impressora.</span>
                 </div>
-                <span>Precisamos saber, por favor, qual o modelo do toner ou impressora.</span>
-              </div>
-
-              <div className="chat-row answer">
-                <input 
-                  id="subject"
-                  label="Modelo do toner ou da impressora" 
-                  required
-                  aria-invalid={errors.subject ? "true" : "false"} 
-                  {...register("model")}
-                />
-                <UserCircle size={38} color="#ffffff" weight="duotone" />
-              </div>
+              </Fade>
+              
+              <Fade right>
+                <div className="chat-row answer">
+                  <input 
+                    id="subject"
+                    label="Modelo do toner ou da impressora" 
+                    required
+                    aria-invalid={errors.subject ? "true" : "false"} 
+                    {...register("model")}
+                  />
+                  <UserCircle size={38} color="#ffffff" weight="duotone" />
+                </div>
+              </Fade>
 
               { 
                 watch("model").length >= 3 ?
                 <>
-                  <div className="chat-row question">
-                    <div className="question-avatar">
-                      <img src={totalLogo} alt="Total Ink logo" />
+                  <Fade left>
+                    <div className="chat-row question">
+                      <div className="question-avatar">
+                        <img src={totalLogo} alt="Total Ink logo" />
+                      </div>
+                      <span>Agora nos diga quantos você está precisando.</span>
                     </div>
-                    <span>Agora nos diga quantos você está precisando.</span>
-                  </div>
+                  </Fade>
 
-                  <div className="chat-row answer">
-                    <input 
-                      id="subject"
-                      label="Quantidade" 
-                      required
-                      aria-invalid={errors.subject ? "true" : "false"} 
-                      {...register("quantity")}
-                    />
-                    <UserCircle size={38} color="#ffffff" weight="duotone" />
-                  </div>
-
-                  {
-                    watch("quantity").length > 0 ?
+                  <Fade right>
+                    <div className="chat-row answer">
+                      <input 
+                        id="subject"
+                        label="Quantidade" 
+                        required
+                        aria-invalid={errors.subject ? "true" : "false"} 
+                        {...register("quantity")}
+                      />
+                      <UserCircle size={38} color="#ffffff" weight="duotone" />
+                    </div>
+                  </Fade>
+                  
+                  <Fade bottom collapse when={isContinueButtonShow}>
                     <button
                       className="btn-continue"
                       onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
                     >
                       Continuar
-                    </button> :
-                    null
-                  }
+                    </button>
+                  </Fade>
+                   
                 </> :
                 null
               }
@@ -299,6 +317,7 @@ export const Chat = () => {
 
           
         </main>
+        {/* <button onClick={() => setTest(!test)}>show/hide</button> */}
         {/* <div className="footer">
           <input type="text" placeholder="Insira sua mensagem" />
         </div> */}
