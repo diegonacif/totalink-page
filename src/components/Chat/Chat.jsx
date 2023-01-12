@@ -103,7 +103,7 @@ export const Chat = () => {
     watch("subject").length === 0 ?
     setIsContinueButtonShow(false) :
     setIsContinueButtonShow(true)
-  }, [watch()])
+  }, [watch("quantity"), watch("subject")])
 
   console.log(isContinueButtonShow, watch("quantity"), watch("subject"))
 
