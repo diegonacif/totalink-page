@@ -99,9 +99,10 @@ export const Chat = () => {
 
   const [isContinueButtonShow, setIsContinueButtonShow] = useState(false);
   useEffect(() => {
-    watch("quantity").length === 0 && watch("subject").length === 0 ? 
-    setIsContinueButtonShow(false) : 
-    setIsContinueButtonShow(true);
+    watch("quantity").length === 0 & 
+    watch("subject").length === 0 ?
+    setIsContinueButtonShow(false) :
+    setIsContinueButtonShow(true)
   }, [watch()])
 
   console.log(isContinueButtonShow, watch("quantity"), watch("subject"))
