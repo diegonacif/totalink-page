@@ -11,8 +11,6 @@ import '../../css/App.css';
 
 export const Chat = () => {
 
-  
-
   const breakpoint = useBreakpoint();
 
    // Yup Validation
@@ -101,8 +99,12 @@ export const Chat = () => {
 
   const [isContinueButtonShow, setIsContinueButtonShow] = useState(false);
   useEffect(() => {
-    watch("quantity").length === 0 ? setIsContinueButtonShow(false) : setIsContinueButtonShow(true);
-  }, [watch("quantity")])
+    watch("quantity").length === 0 && watch("subject").length === 0 ? 
+    setIsContinueButtonShow(false) : 
+    setIsContinueButtonShow(true);
+  }, [watch()])
+
+  console.log(isContinueButtonShow, watch("quantity"), watch("subject"))
 
   return (
     <div className="chat-container">
@@ -209,55 +211,61 @@ export const Chat = () => {
           {
             getValues("department") === "Problemas técnicos" ?
             <>
-              <div className="chat-row question">
-                <div className="question-avatar">
-                  <img src={totalLogo} alt="Total Ink logo" />
+              <Fade left>
+                <div className="chat-row question">
+                  <div className="question-avatar">
+                    <img src={totalLogo} alt="Total Ink logo" />
+                  </div>
+                  <span>Nos informe, por favor, o modelo da impressora.</span>
                 </div>
-                <span>Nos informe, por favor, o modelo da impressora.</span>
-              </div>
-              <div className="chat-row answer">
-                <input 
-                  id="subject"
-                  label="Modelo da impressora" 
-                  required
-                  color="success"
-                  variant="standard"
-                  aria-invalid={errors.subject ? "true" : "false"} 
-                  {...register("model")}
-                />
-                <UserCircle size={38} color="#ffffff" weight="duotone" />
-              </div>
+              </Fade>
+              <Fade right>
+                <div className="chat-row answer">
+                  <input 
+                    id="subject"
+                    label="Modelo da impressora" 
+                    required
+                    color="success"
+                    variant="standard"
+                    aria-invalid={errors.subject ? "true" : "false"} 
+                    {...register("model")}
+                  />
+                  <UserCircle size={38} color="#ffffff" weight="duotone" />
+                </div>
+              </Fade>
               { 
                 watch("model").length > 5 ?
                 <>
-                  <div className="chat-row question">
-                    <div className="question-avatar">
-                      <img src={totalLogo} alt="Total Ink logo" />
+                  <Fade left>
+                    <div className="chat-row question">
+                      <div className="question-avatar">
+                        <img src={totalLogo} alt="Total Ink logo" />
+                      </div>
+                      <span>Agora nos diga qual problema está acontecendo.</span>
                     </div>
-                    <span>Agora nos diga qual problema está acontecendo.</span>
-                  </div>
-                  <div className="chat-row answer">
-                    <input 
-                      id="subject"
-                      label="Informe o problema apresentado" 
-                      required
-                      color="success"
-                      variant="standard"
-                      aria-invalid={errors.subject ? "true" : "false"} 
-                      {...register("subject")}
-                    />
-                    <UserCircle size={38} color="#ffffff" weight="duotone" />
-                  </div>
-                  {
-                    watch("subject").length > 5 ?
+                  </Fade>
+                  <Fade right>
+                    <div className="chat-row answer">
+                      <input 
+                        id="subject"
+                        label="Informe o problema apresentado" 
+                        required
+                        color="success"
+                        variant="standard"
+                        aria-invalid={errors.subject ? "true" : "false"} 
+                        {...register("subject")}
+                      />
+                      <UserCircle size={38} color="#ffffff" weight="duotone" />
+                    </div>
+                  </Fade>
+                  <Fade bottom collapse when={isContinueButtonShow}>
                     <button
                       className="btn-continue"
                       onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
                     >
                       Continuar
-                    </button> :
-                    null
-                  }
+                    </button>
+                  </Fade>
                 </> :
                 null
               }
@@ -268,37 +276,39 @@ export const Chat = () => {
           {/* Condition Financial */}
           {
             getValues("department") === "Setor financeiro" ?
-            <>
-              <div className="chat-row question">
-                <div className="question-avatar">
-                  <img src={totalLogo} alt="Total Ink logo" />
+            <>  
+              <Fade left>
+                <div className="chat-row question">
+                  <div className="question-avatar">
+                    <img src={totalLogo} alt="Total Ink logo" />
+                  </div>
+                  <span>Sobre qual assunto você deseja tratar ?</span>
                 </div>
-                <span>Sobre qual assunto você deseja tratar ?</span>
-              </div>
-              <div className="chat-row answer">
-                <input 
-                  id="subject"
-                  label="Assunto"
-                  required
-                  multiline
-                  maxRows={4}
-                  color="success"
-                  variant="standard"
-                  aria-invalid={errors.subject ? "true" : "false"} 
-                  {...register("subject")}
-                />
-                <UserCircle size={38} color="#ffffff" weight="duotone" />
-              </div>
-              {
-                watch("subject").length > 5 ?
+              </Fade>
+              <Fade right>
+                <div className="chat-row answer">
+                  <input 
+                    id="subject"
+                    label="Assunto"
+                    required
+                    multiline
+                    maxRows={4}
+                    color="success"
+                    variant="standard"
+                    aria-invalid={errors.subject ? "true" : "false"} 
+                    {...register("subject")}
+                  />
+                  <UserCircle size={38} color="#ffffff" weight="duotone" />
+                </div>
+              </Fade>
+              <Fade bottom collapse when={isContinueButtonShow}>
                 <button
                   className="btn-continue"
                   onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
                 >
                   Continuar
-                </button> :
-                null
-              }
+                </button>
+              </Fade>
             </> :
             undefined
           }
@@ -306,12 +316,14 @@ export const Chat = () => {
           {/* Condition Quote */}
           {
             getValues("department") === "Locação de impressoras" ?
-            <button
-              className="btn-continue"
-              onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
-            >
-              Continuar
-            </button> :
+            <Fade bottom>
+              <button
+                className="btn-continue"
+                onClick={() => {window.open(whatsappAdress + encodeURI(whatsappMessage))}}
+              >
+                Continuar
+              </button>
+            </Fade> :
             undefined
           }
 
