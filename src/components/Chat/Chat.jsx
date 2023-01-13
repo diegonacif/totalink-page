@@ -105,8 +105,6 @@ export const Chat = () => {
     setIsContinueButtonShow(true)
   }, [watch("quantity"), watch("subject")])
 
-  console.log(isContinueButtonShow, watch("quantity"), watch("subject"))
-
   return (
     <div className="chat-container">
       <div className="chat-bg">
