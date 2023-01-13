@@ -909,6 +909,23 @@
   padding: 1.5rem 1rem;
   gap: 1.5rem;
 }
+.article-container .article-main .article-content .section-toggle {
+  display: flex;
+  align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: rgba(26, 206, 80, 0.5);
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 8px;
+  margin: 0 auto;
+  transition: background-color 0.1s;
+}
+.article-container .article-main .article-content .section-toggle svg {
+  margin-top: 0.1rem;
+  margin-left: 0.5rem;
+}
 .article-container .article-main .article-content img {
   width: 100%;
   max-width: 40rem;
@@ -920,7 +937,11 @@
   line-height: 1.25rem;
 }
 @media only screen and (min-width: 600px) {
-  .article-container .article-main > .article-content > img {
+  .article-container .article-main .article-content .section-toggle:hover {
+    background-color: rgba(23, 161, 65, 0.95);
+    transition: background-color 0.3s;
+  }
+  .article-container .article-main .article-content img {
     max-width: 30rem;
   }
 }

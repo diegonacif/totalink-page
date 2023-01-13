@@ -14,6 +14,7 @@ import { ContactUs } from './pages/ContactUs/ContactUs';
 import { WhitePage } from './pages/WhitePage';
 import { HowManyPages } from './articles/HowManyPages';
 import { StainPages } from './articles/StainPages';
+import { FlawPages } from './articles/FlawPages';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -30,6 +31,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<WhitePage />} />
           <Route path="how-many-pages" element={<HowManyPages />} />
           <Route path="stain-pages" element={<StainPages />} />
+          <Route path="flaw-pages" element={<FlawPages />} />
         </Route>
       </Routes>
     </BrowserRouter>

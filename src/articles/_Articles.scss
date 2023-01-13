@@ -27,6 +27,23 @@
       padding: 1.5rem 1rem;
       gap: 1.5rem;
 
+      .section-toggle {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        background-color: $green-bg-mirror-50;
+        cursor: pointer;
+        padding: 0.25rem 0.5rem;
+        border-radius: 8px;
+        margin: 0 auto;
+        transition: background-color 0.1s;
+
+        svg {
+          margin-top: 0.1rem;
+          margin-left: 0.5rem;
+        }
+      }
+
       img {
         width: 100%;
         max-width: 40rem;
@@ -45,8 +62,16 @@
   }
 
   @media only screen and ($tablet-size) {
-    .article-main > .article-content > img {
-      max-width: 30rem;
+    .article-main {
+      .article-content {
+        .section-toggle:hover {
+          background-color: $green-bg-mirror-95;
+          transition: background-color 0.3s;
+        }
+        img {
+          max-width: 30rem;
+        }
+      }
     }
   }
 }

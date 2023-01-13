@@ -63,18 +63,19 @@ export const FAQ = () => {
               <div className="faq-category-img drum-card"></div>
             </Fade>
           </div>
-          <div className="faq-category">
-            <Fade left>
-              <span>Erros / Defeitos</span>
-              <div className="faq-category-img error-card"></div>
-            </Fade>
-          </div>
+          <Link to="/article/flaw-pages">
+            <div className="faq-category">
+              <Fade left>
+                <span>Impressões com falhas</span>
+                <Note size={48} color="#75fc63" weight="duotone" />
+              </Fade>
+            </div>
+          </Link>
           <Link to="/article/stain-pages">
             <div className="faq-category">
               <Fade left>
                 <span>Impressões com manchas</span>
                 <Note size={48} color="#75fc63" weight="duotone" />
-                {/* <div className="faq-category-img bulk-card"></div> */}
               </Fade>
             </div>
           </Link>
