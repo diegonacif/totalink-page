@@ -720,7 +720,9 @@
 
 .chat-container {
   padding: 0 1rem 0;
-  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 @media only screen and (min-width: 600px) {
   .chat-container {
@@ -739,16 +741,21 @@
 }
 .chat-container .chat-bg {
   display: flex;
+  width: 100%;
+  max-width: 60rem;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 3px 5px 10px 1px rgba(0, 0, 0, 0.65);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border: 3px solid rgb(139, 255, 128);
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #1ace50, 0 0 0.8rem #1ace50, 0 0 2.8rem #1ace50, inset 0 0 1.3rem #1ace50;
 }
 .chat-container .chat-bg .header {
   display: flex;
   align-items: center;
-  height: 4rem;
+  height: 6rem;
   padding: 0 1rem;
   background-color: rgba(0, 0, 0, 0.1);
 }
@@ -765,12 +772,12 @@
   margin-left: 0.75rem;
 }
 .chat-container .chat-bg main {
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
 }
 .chat-container .chat-bg .chat-row {
   display: flex;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 2rem;
   margin-top: 1rem;
   width: 100%;
   min-height: 2rem;
@@ -836,6 +843,7 @@
   cursor: pointer;
   font-weight: 600;
   color: #ffffff;
+  transition: background-color 0.1s;
 }
 .chat-container .chat-bg .footer {
   display: flex;
@@ -851,6 +859,12 @@
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.1);
   padding: 0 0.5rem;
+}
+@media only screen and (min-width: 600px) {
+  .chat-container .btn-continue:hover {
+    background-color: rgba(38, 255, 103, 0.2);
+    transition: background-color 0.3s;
+  }
 }
 
 .article-container {
@@ -1166,11 +1180,16 @@
 }
 
 .contact-us-container {
+  display: flex;
+  align-items: center;
   position: relative;
   height: 100%;
   min-height: calc(100vh - 4rem);
-  padding-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
   overflow: hidden;
+  background: url(../assets/main-bg/wallpaperbetter1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .contact-us-container header {
   padding: 0 1rem 0;

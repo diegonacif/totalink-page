@@ -49,7 +49,7 @@ export const ContactUs = () => {
     <>
       <Header />
       <div className="contact-us-container">
-        <header>
+        {/* <header>
           {
             bgInTransition(
               (styles, item) => item &&
@@ -62,7 +62,7 @@ export const ContactUs = () => {
               <animated.h1 style={styles}>Entre em contato através do nosso WhatsApp. Insira as informações abaixo para que possamos atendê-lo da melhor forma.</animated.h1>
             )
           }
-        </header>
+        </header> */}
           
         {/* <form>
           <div className="form-input-wp input-select">

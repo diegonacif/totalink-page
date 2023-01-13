@@ -14,7 +14,7 @@ export const Chat = () => {
   const breakpoint = useBreakpoint();
 
    // Yup Validation
-   const schema = yup.object({
+  const schema = yup.object({
     department: yup.string().required(),
     subject: yup.string().required(),
     model: yup.string().required(),
