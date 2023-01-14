@@ -1,0 +1,18 @@
+.youtube-embed-container {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  overflow: hidden;
+  margin: 0 auto;
+
+  iframe {
+    max-width: 100%;
+    max-height: 60vw;
+    border: 0;
+  }
+
+  span {
+    text-align: center;
+  }
+  
+}

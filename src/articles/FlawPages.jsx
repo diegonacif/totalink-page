@@ -4,6 +4,7 @@ import { Header } from "../components/Header/Header"
 import { CopyrightFooter } from "../components/CopyrightFooter/CopyrightFooter"
 import { CaretRight, CaretDown } from 'phosphor-react';
 import falhasImg from '../assets/faq-assets/falhas.jpg';
+import { YoutubeEmbed } from "../components/YoutubeEmbed/YoutubeEmbed";
 
 export const FlawPages = () => {
   const [laserShow, setLaserShow] = useState(false);
@@ -49,7 +50,7 @@ export const FlawPages = () => {
             <>
               <p>Falhas na impressão podem ser devido a falta de tinta no cabeçote de impressão, entupimento nos dutos que transportam a tinta do bulk até o cabeçote, ou em casos mais graves, furos ou outros danos na lâmina do cabeçote.</p>
               <p>O procedimento mais básico é realizar uma limpeza no cabeçote. É um processo automatizado que pode ser feito no painel da impressora, ou em um computador que esteja conectado à ela.</p>
-              <p>*video procedimento</p>
+              <YoutubeEmbed embedId="6I7gmly_kn4" />
               <p>Se mesmo após 3 tentativas de limpeza do cabeçote, as impressões continuem com falhas, entre em contato com o suporte técnico clicando aqui.</p>
             </> :
             null

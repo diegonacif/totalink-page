@@ -867,6 +867,22 @@
   }
 }
 
+.youtube-embed-container {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.youtube-embed-container iframe {
+  max-width: 100%;
+  max-height: 60vw;
+  border: 0;
+}
+.youtube-embed-container span {
+  text-align: center;
+}
+
 .article-container {
   background: rgb(255, 255, 255);
   background: linear-gradient(330deg, rgb(255, 255, 255) 60%, rgb(128, 194, 129) 80%, rgb(18, 150, 27) 100%);
