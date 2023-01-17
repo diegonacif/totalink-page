@@ -941,6 +941,9 @@
   padding: 1.5rem 1rem;
   gap: 1.5rem;
 }
+.article-container .article-main .article-content .energy-images {
+  padding: 1rem;
+}
 .article-container .article-main .article-content .section-toggle {
   display: flex;
   align-items: center;
