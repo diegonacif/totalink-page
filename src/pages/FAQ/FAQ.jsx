@@ -43,7 +43,7 @@ export const FAQ = () => {
           {
             textInTransition(
               (styles, item) => item &&
-              <animated.h1 style={styles}>Encontre respostas rápidas pro seu problema, nas categorias abaixo.</animated.h1>
+              <animated.h1 style={styles}>Encontre aqui respostas rápidas para o seu problema.</animated.h1>
             )
           }
           {/* <h1></h1> */}
