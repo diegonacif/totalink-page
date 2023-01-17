@@ -5,6 +5,7 @@ export const HeaderNav = () => {
   const controlUrl = "http://54.94.82.25:4173"
   return (
     <div className="header-nav-container">
+      <Link to="/">Início</Link>
       <Link to="/aboutus">Sobre Nós</Link>
       <Link to="/contact">Fale Conosco</Link>
       <Link to="/faq">Dúvidas Frequentes</Link>

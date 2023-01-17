@@ -59,6 +59,10 @@ export const MenuButton = () => {
           (styles, item) => item &&
             <animated.div className="menu-modal" style={styles}>
               <div className="menu-item">
+                <Link to="/">Início</Link>
+              </div>
+              <hr />
+              <div className="menu-item">
                 <Link to="/aboutus">Sobre Nós</Link>
               </div>
               <div className="menu-item">
@@ -67,7 +71,6 @@ export const MenuButton = () => {
               <div className="menu-item">
                 <Link to="/faq">Dúvidas Frequentes</Link>
               </div>
-              <hr />
               <div className="menu-item">
               <a href={controlUrl}>Área Restrita</a>
               </div>
