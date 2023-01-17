@@ -64,9 +64,9 @@ export const MenuButton = () => {
               <div className="menu-item">
                 <Link to="/contact">Fale Conosco</Link>
               </div>
-              {/* <div className="menu-item">
+              <div className="menu-item">
                 <Link to="/faq">Dúvidas Frequentes</Link>
-              </div> */}
+              </div>
               <hr />
               <div className="menu-item">
               <a href={controlUrl}>Área Restrita</a>

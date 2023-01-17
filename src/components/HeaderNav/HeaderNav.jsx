@@ -7,6 +7,7 @@ export const HeaderNav = () => {
     <div className="header-nav-container">
       <Link to="/aboutus">Sobre Nós</Link>
       <Link to="/contact">Fale Conosco</Link>
+      <Link to="/faq">Dúvidas Frequentes</Link>
       <a href={controlUrl}>Área Restrita</a>
       {/* <Link to="/faq">Dúvidas Frequentes</Link> */}
     </div>
