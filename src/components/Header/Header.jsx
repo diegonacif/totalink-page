@@ -14,6 +14,7 @@ export const Header = () => {
   return (
     <div className="header-container">
       <Link to="/" >
+        <div className="shadow-wp"></div>
         <img src={totalLogo} alt="Total Ink Logo" />
       </Link>
       {

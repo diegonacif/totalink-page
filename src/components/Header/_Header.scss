@@ -10,13 +10,30 @@
   padding: 0 1rem;
 
   img {
+    position: relative;
     height: 100%;
     border-radius: 16px;
     transition: background-color 0.1s;
+    z-index: 2;
   }
 
   a {
     height: 100%;
+    position: relative;
+  }
+
+  .shadow-wp {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+    transition: box-shadow 0.2s;
   }
 
  @media only screen and ($tablet-size) {
@@ -26,10 +43,23 @@
   @media only screen and ($notebook-size) {
     padding: 0 6rem;
 
-    img:hover {
-      background-color: $green-bg-mirror-50;
-      transition: background-color 0.2s;
+    a:hover .shadow-wp {
+      -webkit-box-shadow: 0px 0px 25px 20px rgba(8,133,27,1);
+      -moz-box-shadow: 0px 0px 25px 20px rgba(8,133,27,1);
+      box-shadow: 0px 0px 25px 20px rgba(8,133,27,1);
+      transition: box-shadow 0.2s;
     }
+
+    // img:hover > .shadow-wp {
+      
+    // }
+
+    // img:hover {
+    //   -webkit-box-shadow: 0px 0px 20px 0px rgba(8,133,27,1);
+    //   -moz-box-shadow: 0px 0px 20px 0px rgba(8,133,27,1);
+    //   box-shadow: 0px 0px 20px 0px rgba(8,133,27,1);
+    //   transition: box-shadow 0.2s;
+    // }
   }
 
   @media only screen and ($desktop-size) {
