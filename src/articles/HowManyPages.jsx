@@ -11,7 +11,7 @@ export const HowManyPages = () => {
       <div className="article-container">
         <Header />
         <ArticleHeader
-          navText="Problemas com Toner"
+          navText=" "
           titleText="Quantas páginas meu toner imprime?"
         />
         <div className="article-main">

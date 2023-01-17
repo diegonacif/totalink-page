@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
-import { Note } from 'phosphor-react'
+import { Note, Printer } from 'phosphor-react'
 
 import { useTransition, animated } from '@react-spring/web';
 import Fade from 'react-reveal/Fade';
@@ -49,11 +49,11 @@ export const FAQ = () => {
           {/* <h1></h1> */}
         </header>
         <div className="faq-categories">
-          <Link to="/faq/toner">
+          <Link to="/article/how-many-pages">
             <div className="faq-category">
               <Fade left>
-                <span >Toner</span>
-                <div className="faq-category-img toner-card"></div>
+                <span >Quantas páginas meu toner imprime ?</span>
+                <Printer size={48} color="#75fc63" weight="duotone" />
               </Fade>
             </div>
           </Link>
