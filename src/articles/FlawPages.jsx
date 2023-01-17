@@ -5,6 +5,7 @@ import { CopyrightFooter } from "../components/CopyrightFooter/CopyrightFooter"
 import { CaretRight, CaretDown } from 'phosphor-react';
 import falhasImg from '../assets/faq-assets/falhas.jpg';
 import { YoutubeEmbed } from "../components/YoutubeEmbed/YoutubeEmbed";
+import '../css/App.css';
 
 export const FlawPages = () => {
   const [laserShow, setLaserShow] = useState(false);

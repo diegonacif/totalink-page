@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
-import { Note, Printer } from 'phosphor-react'
+import { Note, Printer, Plugs } from 'phosphor-react'
 
 import { useTransition, animated } from '@react-spring/web';
 import Fade from 'react-reveal/Fade';
@@ -57,12 +57,14 @@ export const FAQ = () => {
               </Fade>
             </div>
           </Link>
-          <div className="faq-category">
-            <Fade left>
-              <span id="drum-card-text">Fotocondutor</span>
-              <div className="faq-category-img drum-card"></div>
-            </Fade>
-          </div>
+          <Link to="/article/energy-issues">
+            <div className="faq-category">
+              <Fade left>
+                <span id="drum-card-text">Desligamento inesperado, mensagem de auto diagnóstico.</span>
+                <Plugs size={48} color="#75fc63" weight="duotone" />
+              </Fade>
+            </div>
+          </Link>
           <Link to="/article/flaw-pages">
             <div className="faq-category">
               <Fade left>
