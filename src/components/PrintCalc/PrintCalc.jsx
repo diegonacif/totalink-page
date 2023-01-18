@@ -3,10 +3,16 @@ import { useState } from "react"
 
 const toners = [
   { name: "Selecione um toner", pages: 0 },
-  { name: "Samsung 10K", pages: 10000 },
+  { name: "TN 1060", pages: 1000 },
+  { name: "TN 360", pages: 2600 },
+  { name: "TN 450", pages: 2600 },
+  { name: "TN 660", pages: 2600 },
+  { name: "TN 580", pages: 8000 },
+  { name: "540A", pages: 1800 },
+  { name: "12A", pages: 2000 },
+  { name: "85A", pages: 2000 },
   { name: "Samsung 3K", pages: 3000 },
-  { name: "TN 580", pages: 3500 },
-  { name: "85a", pages: 2600 },
+  { name: "Samsung 10K", pages: 10000 },
 ]
 
 export const PrintCalc = () => {
