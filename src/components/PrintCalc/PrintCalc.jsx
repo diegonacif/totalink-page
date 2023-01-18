@@ -37,7 +37,7 @@ export const PrintCalc = () => {
               value={option.pages}
               disabled= {option.pages === 0 ? true : false}
             >
-              {`${option.name} (${option.pages})`}
+              {`${option.name} - ${option.pages}`}
             </option>
           ))}
         </select>
