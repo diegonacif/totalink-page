@@ -30,17 +30,22 @@ export const PrintCalc = () => {
     <div className="print-calc-container">
       <section className="input-wrapper">
         <strong>Rendimento Estimado à 5%</strong>
-        <select name="" id="" defaultValue={0} onChange={(e) => {setInputValue(e.target.value)}}>
-          {toners.map((option, index) => (
-            <option 
-              key={index} 
-              value={option.pages}
-              disabled= {option.pages === 0 ? true : false}
-            >
-              {`${option.name} - ${option.pages}`}
-            </option>
-          ))}
-        </select>
+        <div className="input-row">
+          <select name="" id="" defaultValue={0} onChange={(e) => {setInputValue(e.target.value)}}>
+            {toners.map((option, index) => (
+              <>
+                <option 
+                  key={index} 
+                  value={option.pages}
+                  disabled= {option.pages === 0 ? true : false}
+                >
+                  {`${option.name}`}
+                </option>
+              </>
+            ))}
+          </select>
+          <span>{inputValue}</span>
+        </div>
       </section>
       <section className="content-wrapper">
         <header>

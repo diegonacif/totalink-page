@@ -15,7 +15,7 @@ export const EnergyIssues = () => {
       <Header />
       <ArticleHeader
         navText= " "
-        titleText="Desligamento inersperado, mensagem de auto diagnóstico."
+        titleText="Desligamento inesperado, mensagem de auto diagnóstico."
       />
       <div className="article-main">
         <div className="article-content">
