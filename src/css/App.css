@@ -949,15 +949,17 @@
   justify-content: center;
 }
 .print-calc-container .input-wrapper .input-row select {
-  height: 1.75rem;
+  height: 1.825rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   max-width: 100%;
   text-align: center;
   font-weight: 600;
+  font-size: 1.0625rem;
   border-radius: 8px;
   border: 1px solid white;
+  padding: 0 0.5rem;
   background-color: rgba(255, 255, 255, 0.25);
   transition: background-color 0.1s;
   cursor: pointer;
