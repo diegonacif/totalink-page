@@ -28,8 +28,9 @@ export const PrintCalc = () => {
 
   return (
     <div className="print-calc-container">
+
       <section className="input-wrapper">
-        <strong>Rendimento Estimado à 5%</strong>
+        {/* <strong>Rendimento Estimado à 5%</strong> */}
         <div className="input-row">
           <select name="" id="" defaultValue={0} onChange={(e) => {setInputValue(e.target.value)}}>
             {toners.map((option, index) => (
@@ -44,7 +45,7 @@ export const PrintCalc = () => {
               </>
             ))}
           </select>
-          <span>{inputValue}</span>
+          {/* <span>{inputValue}</span> */}
         </div>
       </section>
       <section className="content-wrapper">
@@ -52,6 +53,10 @@ export const PrintCalc = () => {
           <strong>Área Coberta</strong>
           <strong>Páginas</strong>
         </header>
+        <div className="content-row">
+          <span>5% (padrão)</span>
+          <span>{inputValue}</span>
+        </div>
         <div className="content-row">
           <span>10%</span>
           <span>{pagesCalc(0.1)}</span>
@@ -73,6 +78,9 @@ export const PrintCalc = () => {
           <span>{pagesCalc(1)}</span>
         </div>
       </section>
+      <iframe src="https://giphy.com/embed/5Wi8qSypThQUbNhtyX" width="480" height="362" frameBorder="0" class="giphy-embed"></iframe>
+      <div className="background"></div>
+
     </div>
   )
 }
