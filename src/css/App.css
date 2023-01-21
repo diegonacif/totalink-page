@@ -1084,6 +1084,7 @@
 }
 .article-header header {
   padding: 2rem 1rem 2rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -1125,6 +1126,11 @@
 }
 .article-header header nav .nav-variable-wrapper span {
   cursor: pointer;
+}
+.article-header header svg {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
 }
 
 .faq-container {

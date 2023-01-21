@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
-import { Note, Printer, Plugs, FileCloud } from 'phosphor-react'
+import { Note, Printer, Plugs, FileCloud } from 'phosphor-react';
 
 import { useTransition, animated } from '@react-spring/web';
 import Fade from 'react-reveal/Fade';
@@ -43,7 +43,7 @@ export const FAQ = () => {
           {
             textInTransition(
               (styles, item) => item &&
-              <animated.h1 style={styles}>Encontre aqui respostas rápidas para o seu problema.</animated.h1>
+              <animated.h1 style={styles}>Encontre aqui ajuda e informações para suas dúvidas ou problemas.</animated.h1>
             )
           }
           {/* <h1></h1> */}

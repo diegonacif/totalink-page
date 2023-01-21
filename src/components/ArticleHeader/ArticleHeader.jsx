@@ -1,9 +1,12 @@
 import { Link, useNavigate } from "react-router-dom";
 import greaterThan from '../../assets/greater-than-sign.svg';
 
-export const ArticleHeader = ({ navText, titleText }) => {
+export const ArticleHeader = ({ navText, titleText, iconName }) => {
   const nav = navText ? navText : null;
   const title = titleText ? titleText : null;
+  const icon = iconName ? iconName : null;
+
+  console.log(icon);
   
   const navigate = useNavigate();
   const NavigateUp = () => {
@@ -27,6 +30,7 @@ export const ArticleHeader = ({ navText, titleText }) => {
           }
         </nav>
         { title ? <h1>{title}</h1> : null }
+        {icon}
       </header>
     </div>
   );

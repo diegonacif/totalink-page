@@ -3,6 +3,7 @@
   
   header {
     @include responsive-padding(2rem, 2rem);
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -31,7 +32,15 @@
         }
       }
     }
+
+    svg {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+    }
   }
+
+  
 
   // @media only screen and ($notebook-size) {
   //   header {
