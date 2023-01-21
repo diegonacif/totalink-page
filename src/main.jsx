@@ -16,6 +16,7 @@ import { HowManyPages } from './articles/HowManyPages';
 import { StainPages } from './articles/StainPages';
 import { FlawPages } from './articles/FlawPages';
 import { EnergyIssues } from './articles/EnergyIssues';
+import { UsefullFiles } from './articles/UsefullFiles';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -34,6 +35,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="stain-pages" element={<StainPages />} />
           <Route path="flaw-pages" element={<FlawPages />} />
           <Route path="energy-issues" element={<EnergyIssues />} />
+          <Route path="usefull-files" element={<UsefullFiles />} />
         </Route>
       </Routes>
     </BrowserRouter>
