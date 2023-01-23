@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '../../components/Header/Header';
 import { CopyrightFooter } from '../../components/CopyrightFooter/CopyrightFooter';
-import { Note, Printer, Plugs, FileCloud } from 'phosphor-react';
+import { Note, Printer, Plugs, FileCloud, Repeat } from 'phosphor-react';
 
 import { useTransition, animated } from '@react-spring/web';
 import Fade from 'react-reveal/Fade';
@@ -86,6 +86,14 @@ export const FAQ = () => {
               <Fade left>
                 <span>Arquivos úteis</span>
                 <FileCloud size={48} color="#75fc63" weight="duotone" />
+              </Fade>
+            </div>
+          </Link>
+          <Link to="/article/resets">
+            <div className="faq-category">
+              <Fade left>
+                <span>Resets</span>
+                <Repeat size={48} color="#75fc63" weight="duotone" />
               </Fade>
             </div>
           </Link>

@@ -28,9 +28,9 @@ export const ArticleHeader = ({ navText, titleText, iconName }) => {
             :
             null
           }
+          {icon}
         </nav>
         { title ? <h1>{title}</h1> : null }
-        {icon}
       </header>
     </div>
   );

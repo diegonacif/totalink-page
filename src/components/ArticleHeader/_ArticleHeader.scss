@@ -14,9 +14,17 @@
     background-color: rgba(73, 134, 63, 0.2);
 
     nav {
+      position: relative;
       display: flex;
       gap: 0.5rem;
       font-weight: 600;
+
+      svg {
+        position: absolute;
+        right: 0rem;
+        top: -1rem;
+      }
+
       a {
         font-weight: 600;
       }
@@ -33,11 +41,7 @@
       }
     }
 
-    svg {
-      position: absolute;
-      right: 1rem;
-      top: 1rem;
-    }
+    
   }
 
   
