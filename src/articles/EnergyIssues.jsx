@@ -7,7 +7,7 @@ import { Header } from '../components/Header/Header';
 import rightWayImg from '../assets/faq-assets/rightWay.svg';
 import wrongWayImg from '../assets/faq-assets/wrongWay.svg';
 
-import { Note, Printer, Plugs, FileCloud } from 'phosphor-react';
+import { Plugs } from 'phosphor-react';
 
 import '../css/App.css';
 
@@ -18,7 +18,7 @@ export const EnergyIssues = () => {
       <ArticleHeader
         navText= " "
         titleText="Desligamento inesperado, mensagem de auto diagnóstico."
-        iconName={<Printer size={48} color="#75fc63" weight="duotone" />}
+        iconName={<Plugs size={48} color="#75fc63" weight="duotone" />}
       />
       <div className="article-main">
         <div className="article-content">

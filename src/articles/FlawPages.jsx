@@ -2,7 +2,7 @@ import { ArticleHeader } from "../components/ArticleHeader/ArticleHeader"
 import { useState } from "react";
 import { Header } from "../components/Header/Header"
 import { CopyrightFooter } from "../components/CopyrightFooter/CopyrightFooter"
-import { CaretRight, CaretDown } from 'phosphor-react';
+import { CaretRight, CaretDown, Note } from 'phosphor-react';
 import falhasImg from '../assets/faq-assets/falhas.jpg';
 import { YoutubeEmbed } from "../components/YoutubeEmbed/YoutubeEmbed";
 import '../css/App.css';
@@ -16,6 +16,7 @@ export const FlawPages = () => {
       <ArticleHeader 
         navText=" "
         titleText="Impressões com falhas"
+        iconName={<Note size={48} color="#75fc63" weight="duotone" />}
       />
       <div className="article-main">
         <div className="article-content">

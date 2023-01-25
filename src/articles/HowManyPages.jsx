@@ -2,6 +2,7 @@ import { Header } from '../components/Header/Header';
 import { CopyrightFooter } from '../components/CopyrightFooter/CopyrightFooter';
 import { ArticleHeader } from '../components/ArticleHeader/ArticleHeader';
 import { PrintCalc } from '../components/PrintCalc/PrintCalc';
+import { Printer } from 'phosphor-react';
 
 import coberturaImg from '../assets/faq-assets/area-de-cobertura.png';
 import '../css/App.css';
@@ -14,6 +15,7 @@ export const HowManyPages = () => {
         <ArticleHeader
           navText=" "
           titleText="Quantas páginas meu toner imprime?"
+          iconName={<Printer size={48} color="#75fc63" weight="duotone" />}
         />
         <div className="article-main">
           <div className="article-content">

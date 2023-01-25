@@ -28,7 +28,9 @@ export const ArticleHeader = ({ navText, titleText, iconName }) => {
             :
             null
           }
-          {icon}
+          <div className="icon-bg">
+            {icon}
+          </div>
         </nav>
         { title ? <h1>{title}</h1> : null }
       </header>
