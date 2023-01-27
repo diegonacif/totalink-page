@@ -16,7 +16,7 @@ export const UsefullFiles = () => {
       />
       <div className="article-main">
         <div className="article-content">
-          <a href="https://mega.nz/folder/2t1gnTrC#Qhub_eCqFYuzlSCc_C7fZw">Clique aqui para acessar.</a>
+          <p>Clique <a href="https://mega.nz/folder/2t1gnTrC#Qhub_eCqFYuzlSCc_C7fZw" target="_blank">aqui</a> para acessar.</p>
         </div>
       </div>
       <CopyrightFooter />

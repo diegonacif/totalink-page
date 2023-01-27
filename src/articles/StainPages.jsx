@@ -2,6 +2,7 @@ import { Header } from '../components/Header/Header';
 import { CopyrightFooter } from '../components/CopyrightFooter/CopyrightFooter';
 import { ArticleHeader } from '../components/ArticleHeader/ArticleHeader';
 import { Note } from 'phosphor-react';
+import { Link } from 'react-router-dom';
 
 import manchasImg from '../assets/faq-assets/manchas.jpg';
 import '../css/App.css';
@@ -20,7 +21,7 @@ export const StainPages = () => {
           <p>Caso sua impressão esteja apresentando manchas escuras que cobrem toda a área impressa, pontos aleatórios ou duplicando a impressão criando imagens “fantasmas”, seu toner pode ser a causa do problema.</p>
           <img src={manchasImg} alt="página com manchas" loading="lazy" />
           <p>Se possuir algum toner reserva, substitua para verificar se o problema persiste.</p>
-          <p>Caso não possua, entre em contato com a nossa equipe clicando aqui.</p>
+          <p>Caso não possua, entre em contato com a nossa equipe clicando <Link to="/contact" target="_blank">aqui</Link>.</p>
         </div>
       </div>
       <CopyrightFooter />

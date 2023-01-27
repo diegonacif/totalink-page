@@ -26,7 +26,7 @@ export const EnergyIssues = () => {
           <img src={rightWayImg} className="energy-images" alt="Maneira correta de ligar" />
           <p>Os problemas podem ocorrer quando a impressora é ligada diretamente à alimentação 220V, onde irá ocorrer uma sobrecarga, danificando o equipamento. Ou então, quando ela é ligada ao transformador, porém este está ligado à outra fonte 110V de alimentação. Nesse caso, a corrente se torna muito pequena pra alimentar a impressora, que por sua vez apresenta mau funcionamento.</p>
           <img src={wrongWayImg} className="energy-images" alt="Maneira incorreta de ligar" />
-          <p>Caso você detecte que tudo está conectado como deveria, mas ainda sim, um desses problemas persista, entre em contato com o suporte técnico clicando <Link to="/contact">aqui</Link>.</p>
+          <p>Caso você detecte que tudo está conectado como deveria, mas ainda sim, um desses problemas persista, entre em contato com o suporte técnico clicando <Link to="/contact" target="_blank">aqui</Link>.</p>
         </div>
       </div>
       <CopyrightFooter />
