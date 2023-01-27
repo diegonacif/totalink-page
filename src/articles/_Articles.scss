@@ -27,6 +27,23 @@
       padding: 1.5rem 1rem;
       gap: 1.5rem;
 
+      .article-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .article-row {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .article-row + .article-row {
+        margin-top: 1rem;
+      }
+
       .energy-images {
         padding: 1rem;
       }
@@ -53,6 +70,7 @@
         max-width: 40rem;
         align-self: center;
         border-radius: 8px;
+        margin: 0 auto;
 
         -webkit-box-shadow: -4px -3px 14px 0px rgba(0,0,0,0.5);
         -moz-box-shadow: -4px -3px 14px 0px rgba(0,0,0,0.5);
@@ -69,9 +87,29 @@
     }
   }
 
-  @media only screen and ($tablet-size) {
+  @media only screen and ($notebook-size) {
     .article-main {
       .article-content {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .article-column {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 1.5rem;
+
+          p {
+            line-height: 1.425rem;
+          }
+        }
+
+        .article-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+        }
+
         .section-toggle:hover {
           background-color: $green-bg-mirror-95;
           transition: background-color 0.3s;
